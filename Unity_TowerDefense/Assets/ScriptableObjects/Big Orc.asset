@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48e00c360c76134d8e4cab5d5301694, type: 3}
+  m_Name: Big Orc
+  m_EditorClassIdentifier: 
+  enemyName: Big Ork
+  enemyModel: {fileID: 1293356793197548, guid: 0d42bc61d684259409d481c6f5dd5d5c, type: 3}
+  health: 80
+  damage: 6
+  attackRate: 1
+  armour: 30
+  magicResistance: 0
+  speed: 3
+  bounty: 9
