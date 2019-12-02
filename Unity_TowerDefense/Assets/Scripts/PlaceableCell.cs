@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaceableCell : MonoBehaviour
 {
     public bool isAvailable;
-    public GameObject tower;
+    public Tower tower;
     
     public void SellTower()
     {
@@ -16,18 +16,28 @@ public class PlaceableCell : MonoBehaviour
 
     public void UpgradeTower()
     {
-        /*TowerSO nextTower = tower.nextTower;
+        TowerSO nextTower = tower.nextUpgrade;
+        
         Destroy(tower);
-        PlaceTower(nextTower);*/
+        tower = null;
+        
+        PlaceTower(nextTower);
     }
 
     public void PlaceTower(TowerSO towerData)
     {
-/*        tower = new GameObject(towerData.towerModel);*/
+        if (towerData.type == TowerType.MELEE)
+        {
+            tower = Instantiate(towerData.towerPrefab, transform).AddComponent<MeleeTower>();
+            tower.Init(towerData);
+        }
+        else
+        {
+            tower = Instantiate(towerData.towerPrefab, transform).AddComponent<RangedTower>();
+            tower.Init(towerData);
+        }
+
         tower.transform.position = transform.position;
-        
-        // init data selectedCell.tower.Init(towers[id]);
-        
         isAvailable = false;
     }
 }

@@ -34,6 +34,7 @@ public class BuildingSystem : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
                     selectedCell = hit.collider.GetComponent<PlaceableCell>();
+                    
                     if (selectedCell.isAvailable)
                     {
                         currentPanel = Instantiate(towerPanel, canvasRoot);
@@ -41,9 +42,11 @@ public class BuildingSystem : MonoBehaviour
 
                         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
 
-                        for (int i = 0; i < towers.Length; i++)
+                        int index;
+                        for (int i = 0; i < selectionPanel.buttons.Length; i++)
                         {
-                            selectionPanel.buttons[i].onClick.AddListener(() => SpawnTower(i));
+                            index = i;
+                            selectionPanel.buttons[i].onClick.AddListener(() => SpawnTower(index));
                             /*selectionPanel.costs[i] = towers[i].buildCost;*/
                         }
                     }
@@ -104,6 +107,7 @@ public class BuildingSystem : MonoBehaviour
 
     private void SpawnTower(int id)
     {
+        Debug.Log(id);
         selectedCell.PlaceTower(towers[id]);
         selectedCell = null;
         ClosePanel();

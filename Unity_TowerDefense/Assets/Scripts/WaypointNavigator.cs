@@ -15,11 +15,6 @@ public class WaypointNavigator : MonoBehaviour
         _controller = GetComponent<CharacterNavigationController>();
     }
 
-    private void Start()
-    {
-        _controller.SetDestination(currentWaypoint.GetPosition());
-    }
-
     private void Update()
     {
         if (_controller.reachedDestination)
@@ -41,6 +36,4 @@ public class WaypointNavigator : MonoBehaviour
         OnDestroy?.Invoke();
         Destroy(gameObject);
     }
-    
-    
 }

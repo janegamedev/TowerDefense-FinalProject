@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CharacterNavigationController : MonoBehaviour
 {
-    public float movementSpeed;
+    public float movementSpeed = 1f;
     public float rotationSpeed;
     public float stopDistance;
     public Vector3 destination;

@@ -15,7 +15,7 @@ public class Wave
 public class EnemySet
 {
     public int enemyCount;
-    public Enemy enemyType;
+    public EnemySO enemyData;
 }
 
 public class WavesManager : MonoBehaviour
@@ -58,13 +58,14 @@ public class WavesManager : MonoBehaviour
             nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
             
             Waypoint randomWaypoint = spawnWaypoints[Random.Range(0, spawnWaypoints.Length)];
+
+            EnemySO enemyData = currentEnemySet.enemyData;
+            Enemy spawnedEnemy = Instantiate(enemyData.enemyModel, randomWaypoint.transform.position,
+                Quaternion.identity).GetComponent<Enemy>();
             
-            Enemy spawnedEnemy = Instantiate(currentEnemySet.enemyType, randomWaypoint.transform.position, Quaternion.identity) as Enemy;
-            
-            spawnedEnemy.GetComponent<WaypointNavigator>().currentWaypoint = randomWaypoint;
-            
+            spawnedEnemy.Init(enemyData, randomWaypoint);
+
             spawnedEnemy.OnDeath += OnEnemyDeath;
-            spawnedEnemy.GetComponent<WaypointNavigator>().OnDestroy += OnEnemyDeath;
         }
         else
         {
