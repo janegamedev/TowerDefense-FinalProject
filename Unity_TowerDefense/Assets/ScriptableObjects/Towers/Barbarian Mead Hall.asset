@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
   m_Name: Barbarian Mead Hall
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   level: 0
   buildCost: 0
   damage: 0

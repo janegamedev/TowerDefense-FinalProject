@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
   m_Name: Knight Baracks
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   level: 0
   buildCost: 0
   damage: 0
   attackRate: 0
   range: 0
   towerPrefab: {fileID: 0}
-  nextUpgrade: {fileID: 0}
+  nextUpgrade: {fileID: 11400000, guid: da903582541f9f640ad11088bdb08f95, type: 2}
