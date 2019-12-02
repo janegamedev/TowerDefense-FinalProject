@@ -21,21 +21,21 @@ public class MainMenu : MonoBehaviour
     }
     public void mainMenuToggle()
     {
-        menuPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+        menuPanel.SetActive(!menuPanel.activeSelf);
+        settingsPanel.SetActive(!settingsPanel.activeSelf);
+        creditsPanel.SetActive(!creditsPanel.activeSelf);
     }
 
     public void settingsMenuToggle()
     {
-        settingsPanel.SetActive(true);
-        menuPanel.SetActive(false);
+        settingsPanel.SetActive(!settingsPanel.activeSelf);
+        menuPanel.SetActive(!menuPanel.activeSelf);
     }
 
     public void CreditsMenuToggle()
     {
-        creditsPanel.SetActive(true);
-        menuPanel.SetActive(false);
+        creditsPanel.SetActive(!creditsPanel.activeSelf);
+        menuPanel.SetActive(!menuPanel.activeSelf);
     }
 
     public void QuitMenuToggle()
