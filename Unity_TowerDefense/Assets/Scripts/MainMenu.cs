@@ -24,23 +24,28 @@ public class MainMenu : MonoBehaviour
         menuPanel.SetActive(!menuPanel.activeSelf);
         settingsPanel.SetActive(!settingsPanel.activeSelf);
         creditsPanel.SetActive(!creditsPanel.activeSelf);
+        newGameBtns.SetActive(!newGameBtns.activeSelf);
     }
 
     public void settingsMenuToggle()
     {
+
         settingsPanel.SetActive(!settingsPanel.activeSelf);
         menuPanel.SetActive(!menuPanel.activeSelf);
+        newGameBtns.SetActive(!newGameBtns.activeSelf);
     }
 
     public void CreditsMenuToggle()
     {
         creditsPanel.SetActive(!creditsPanel.activeSelf);
         menuPanel.SetActive(!menuPanel.activeSelf);
+        newGameBtns.SetActive(!newGameBtns.activeSelf);
     }
 
     public void QuitMenuToggle()
     {
         quitPanel.SetActive(!quitPanel.activeSelf);
+        newGameBtns.SetActive(!newGameBtns.activeSelf);
     }
 
     public void Quit()
