@@ -18,5 +18,6 @@ MonoBehaviour:
   damage: 8
   attackRate: 10
   range: 300
-  towerPrefab: {fileID: 0}
+  towerPrefab: {fileID: 5724407448328903163, guid: 66143a801cf05464aa066b6c81d6f20b,
+    type: 3}
   nextUpgrade: {fileID: 11400000, guid: da903582541f9f640ad11088bdb08f95, type: 2}
