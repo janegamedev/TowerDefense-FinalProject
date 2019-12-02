@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Footman Baracks
   m_EditorClassIdentifier: 
   type: 1
-  level: 0
-  buildCost: 0
-  damage: 0
-  attackRate: 0
-  range: 0
+  level: 2
+  buildCost: 110
+  damage: 4
+  attackRate: 10
+  range: 300
   towerPrefab: {fileID: 0}
   nextUpgrade: {fileID: 11400000, guid: 118463592dc4a6540b1755cde1923f4a, type: 2}

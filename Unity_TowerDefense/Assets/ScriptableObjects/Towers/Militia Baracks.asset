@@ -18,5 +18,6 @@ MonoBehaviour:
   damage: 0
   attackRate: 0
   range: 0
-  towerPrefab: {fileID: 0}
+  towerPrefab: {fileID: 6492792737427458144, guid: 9de1da05333eb6646b45c2889a6d303a,
+    type: 3}
   nextUpgrade: {fileID: 11400000, guid: 5c776f98fc6b2cc49a39a047a5fb13b3, type: 2}

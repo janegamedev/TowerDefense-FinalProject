@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Barbarian Mead Hall
   m_EditorClassIdentifier: 
   type: 1
-  level: 0
-  buildCost: 0
-  damage: 0
-  attackRate: 0
-  range: 0
+  level: 4
+  buildCost: 230
+  damage: 16
+  attackRate: 10
+  range: 300
   towerPrefab: {fileID: 0}
   nextUpgrade: {fileID: 0}
