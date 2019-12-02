@@ -7,6 +7,8 @@ public class LevelSelect : MonoBehaviour
 {
     public GameObject selectPanel;
     public GameObject settingsPanel;
+    public GameObject upgradePanel;
+    public GameObject encylopediaPanel;
     //public GameObject creditsPanel;
     //public GameObject quitPanel;
     //public GameObject newGameBtns;
@@ -20,6 +22,7 @@ public class LevelSelect : MonoBehaviour
     //{   
     //        newGameBtns.SetActive(!newGameBtns.activeSelf);
     //}
+
     //public void mainMenuToggle()
     //{
     //    selectPanel.SetActive(!selectPanel.activeSelf);
@@ -30,10 +33,22 @@ public class LevelSelect : MonoBehaviour
 
     public void settingsMenuToggle()
     {
-
         settingsPanel.SetActive(!settingsPanel.activeSelf);
         selectPanel.SetActive(!selectPanel.activeSelf);
-        //newGameBtns.SetActive(!newGameBtns.activeSelf);
+
+    }
+
+    public void upgradeMenuToggle()
+    {
+        upgradePanel.SetActive(!settingsPanel.activeSelf);
+        selectPanel.SetActive(!selectPanel.activeSelf);
+
+    }
+    public void encylopediaToggle()
+    {
+        encylopediaPanel.SetActive(!settingsPanel.activeSelf);
+        selectPanel.SetActive(!selectPanel.activeSelf);
+
     }
 
     //public void CreditsMenuToggle()
