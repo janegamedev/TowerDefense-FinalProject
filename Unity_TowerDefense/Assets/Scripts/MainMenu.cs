@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject menuPanel;
     public GameObject settingsPanel;
     public GameObject creditsPanel;
+    public GameObject quitPanel;
     public GameObject newGameBtns;
 
     public void startGame()
@@ -23,7 +24,6 @@ public class MainMenu : MonoBehaviour
         menuPanel.SetActive(true);
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
-
     }
 
     public void settingsMenuToggle()
@@ -38,9 +38,15 @@ public class MainMenu : MonoBehaviour
         menuPanel.SetActive(false);
     }
 
+    public void QuitMenuToggle()
+    {
+        quitPanel.SetActive(!quitPanel.activeSelf);
+    }
+
     public void Quit()
     {
         Debug.Log("I quit");
+        
         Application.Quit();
     }
 }
