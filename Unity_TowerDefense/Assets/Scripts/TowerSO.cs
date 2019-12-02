@@ -2,27 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public enum TowerType
+public class TowerSO : MonoBehaviour
 {
-    RANGED,
-    MELEE,
-    MAGIC,
-    ARTILLERY
-}
-[CreateAssetMenu(fileName = "New Tower", menuName = "Tower/New Tower", order = 1)]
-public class TowerSO : ScriptableObject
-{
-    public TowerType type;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-    public int level;
-    public int buildCost;
-    public int damage;
-    public float attackRate;
-    public int range;
-    public GameObject towerPrefab;
-
-    public TowerSO nextUpgrade;
-
-
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
