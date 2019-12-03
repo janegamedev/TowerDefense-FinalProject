@@ -1,28 +1,58 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
 
 public class PlayerStats : Singleton<PlayerStats>
 {
-    public int currency;
-    public TextMeshProUGUI currencyUi;
+    private int coins = 150;
+    public int Coins => coins;
 
-    public int lives;
-    public TextMeshProUGUI livesUi;
+    private int lives;
+    public int Lives => lives;
 
-    public int wavesTotal;
-    public int currentWave;
+    private int currentWave;
+    public int CurrentWave => currentWave;
 
-    public TextMeshProUGUI wavesTotalUi;
-    public TextMeshProUGUI currentWaveUi;
+    private int wavesTotal;
 
-    private void Update()
+    public int WavesTotal
     {
-        currencyUi.text = currency.ToString();
-        livesUi.text = lives.ToString();
-        wavesTotalUi.text = wavesTotal.ToString();
-        currentWaveUi.text = currentWave.ToString();
+        get => wavesTotal;
+        set => wavesTotal = value;
+    }
+
+    public UiManager _uiManager;
+
+    private void Start()
+    {
+        _uiManager = GetComponent<UiManager>();
+        
+        // all data set up
+        
+        _uiManager.UpdateUi();
+    }
+
+    public void ChangeCoinsAmount(int amount)
+    {
+        coins -= amount;
+        _uiManager.UpdateUi();
+    }
+
+    public void ChangeLives(int amount)
+    {
+        lives -= amount;
+        _uiManager.UpdateUi();
+    }
+
+    public void ChangeCurrentWave(int number)
+    {
+        currentWave = number;
+        _uiManager.UpdateUi();
+    }
+
+    public void GetBounty(int amount)
+    {
+        coins += amount;
+        _uiManager.UpdateUi();
     }
 }

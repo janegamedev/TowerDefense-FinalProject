@@ -21,6 +21,20 @@ public class SelectionPanel : MonoBehaviour
     private void Update()
     {
         if(cell!=null)
-        transform.position = _camera.WorldToScreenPoint(cell.position);
+            transform.position = _camera.WorldToScreenPoint(cell.position);
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            int.TryParse(costs[i].text, out int result);
+
+            if (PlayerStats.Instance.Coins < result)
+            {
+                buttons[i].interactable = false;
+            }
+            else
+            {
+                buttons[i].interactable = true;
+            }
+        }
     }
 }

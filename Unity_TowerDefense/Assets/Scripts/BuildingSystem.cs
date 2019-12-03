@@ -45,7 +45,7 @@ public class BuildingSystem : MonoBehaviour
                         {
                             int index = i;
                             selectionPanel.buttons[i].onClick.AddListener(() => SpawnTower(index));
-                            /*selectionPanel.costs[i] = towers[i].buildCost;*/
+                            selectionPanel.costs[i].text = towers[i].buildCost.ToString();
                         }
                     }
                     else

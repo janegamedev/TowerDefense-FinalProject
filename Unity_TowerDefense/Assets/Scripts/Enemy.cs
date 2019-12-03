@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class Enemy : MonoBehaviour
     public int bounty;
     
     public float startingHp;
-    public float hp;
     public bool dead;
 
     public event System.Action OnDeath;
@@ -24,18 +24,30 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        hp = startingHp;
+        health = startingHp;
         _characterNavigationController = GetComponent<CharacterNavigationController>();
         _waypointNavigator = GetComponent<WaypointNavigator>();
 
         _waypointNavigator.OnDestroy += Die;
     }
 
-    public void TakeHit(float damage)
+    public void TakeHit(float amount, DamageType type)
     {
-        hp -= damage;
-
-        if (hp <= 0 && !dead)
+        switch (type)
+        {
+            case DamageType.PHYSICAL:
+                health -= amount * (1 - armour);
+                break;
+            
+            case DamageType.MAGIC:
+                health -= amount * (1 - magicResistance);
+                break;
+            
+            default:
+                throw new ArgumentOutOfRangeException(nameof(type), type, null);
+        }
+        
+        if (health <= 0 && !dead)
         {
             Die();
         }
@@ -43,6 +55,11 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        if (health <= 0)
+        {
+            PlayerStats.Instance.GetBounty(bounty);
+        }
+        
         dead = true;
         OnDeath?.Invoke();
         Destroy(gameObject);

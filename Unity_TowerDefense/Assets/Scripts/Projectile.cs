@@ -1,7 +1,14 @@
 using UnityEngine;
 
+public enum DamageType
+{
+    PHYSICAL,
+    MAGIC
+}
 public class Projectile : MonoBehaviour
 {
+    public DamageType type;
+    public int damage;
     public float speed; 
     private Transform target;
 
@@ -21,7 +28,7 @@ public class Projectile : MonoBehaviour
         Vector3 direction = target.position - transform.position;
         float distance = speed * Time.deltaTime;
 
-        if (direction.magnitude <= distance)
+        if (Vector3.Distance(transform.position, target.position)<= 1)
         {
             HitEnemy();
             return;
@@ -33,7 +40,7 @@ public class Projectile : MonoBehaviour
 
     private void HitEnemy()
     {
-        Debug.Log("Hit");
+        target.GetComponentInParent<Enemy>().TakeHit(damage, type);
         Destroy(gameObject);
     }
 }

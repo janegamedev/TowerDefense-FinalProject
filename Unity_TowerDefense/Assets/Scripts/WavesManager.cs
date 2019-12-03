@@ -47,7 +47,7 @@ public class WavesManager : MonoBehaviour
             }
         }
 
-        PlayerStats.Instance.wavesTotal = waves.Length;
+        PlayerStats.Instance.WavesTotal = waves.Length;
     }
 
     private void Update()
@@ -106,7 +106,7 @@ public class WavesManager : MonoBehaviour
         currentWaveNumber++;
         if (currentWaveNumber - 1 < waves.Length)
         {
-            PlayerStats.Instance.currentWave = currentWaveNumber;
+            PlayerStats.Instance.ChangeCurrentWave(currentWaveNumber);
             currentWave = waves[currentWaveNumber - 1];
             currentSetNumber = 0;
             

@@ -54,6 +54,7 @@ public class RangedTower : Tower, IDealRangedDamage
             {
                 Projectile spawnedProjectile = Instantiate(Projectiles[i], firePoints[i].position, firePoints[i].rotation).GetComponent<Projectile>();
                 spawnedProjectile.SetTarget(enemyToAttack);
+                spawnedProjectile.damage = Damage;
             }
         }
     }
