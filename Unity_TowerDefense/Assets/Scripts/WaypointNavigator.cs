@@ -34,6 +34,7 @@ public class WaypointNavigator : MonoBehaviour
     void Die()
     {
         OnDestroy?.Invoke();
+        PlayerStats.Instance.ChangeLives(1);
         Destroy(gameObject);
     }
 }

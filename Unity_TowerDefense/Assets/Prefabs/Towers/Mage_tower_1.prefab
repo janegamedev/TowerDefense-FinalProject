@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1020531399121707621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6977244792021001554}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6977244792021001554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020531399121707621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 365, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4246460356637957680}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1444635650403054005
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,6 +41,7 @@ GameObject:
   - component: {fileID: 2349784130730766422}
   - component: {fileID: 8735750560062060535}
   - component: {fileID: 7176651114831302865}
+  - component: {fileID: -4271433134308663889}
   m_Layer: 0
   m_Name: Mage_tower_1
   m_TagString: Untagged
@@ -79,6 +110,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-4271433134308663889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444635650403054005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  level: 0
+  buildCost: 0
+  range: 0
+  rangeObject: {fileID: 0}
+  nextUpgrade: {fileID: 0}
+  enemyToAttack: {fileID: 0}
+  nextAttackTime: 0
+  weaponBody: {fileID: 0}
+  firePoints:
+  - {fileID: 6977244792021001554}
 --- !u!1 &6677727108437853930
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +164,8 @@ Transform:
   m_LocalRotation: {x: 1.4210855e-14, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 0.000061035156, y: 0.00024414062, z: 0.0009765625}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6977244792021001554}
   m_Father: {fileID: 2349784130730766422}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

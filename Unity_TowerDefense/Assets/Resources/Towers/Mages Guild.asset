@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
-  m_Name: Arcane User
+  m_Name: Mages Guild
   m_EditorClassIdentifier: 
   type: 2
-  level: 1
-  buildCost: 100
-  damage: 15
-  attackRate: 1.5
-  range: 280
-  towerPrefab: {fileID: 1444635650403054005, guid: ada431c7b18fd87489dad5d1f3b72981,
+  level: 4
+  buildCost: 300
+  damage: 110
+  attackRate: 2
+  range: 400
+  towerPrefab: {fileID: 6911482660649102478, guid: ac4f5c979d3a2a641add1526d7cce3f8,
     type: 3}
-  nextUpgrade: {fileID: 11400000, guid: 489e99131af0edb4fa7be5d2b8f3e1a3, type: 2}
+  projectiles:
+  - {fileID: 3001018431736961524, guid: 1e9f898527016684f84cfee1fe5c4de6, type: 3}
+  nextUpgrade: {fileID: 0}

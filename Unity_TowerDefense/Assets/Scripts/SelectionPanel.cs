@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,8 +19,8 @@ public class SelectionPanel : MonoBehaviour
     {
         if(cell!=null)
             transform.position = _camera.WorldToScreenPoint(cell.position);
-
-        for (int i = 0; i < buttons.Length; i++)
+        
+        for (int i = 0; i < costs.Length; i++)
         {
             int.TryParse(costs[i].text, out int result);
 

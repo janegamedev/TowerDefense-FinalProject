@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     public DamageType type;
     public int damage;
     public float speed; 
-    private Transform target;
+    public Transform target;
 
     public void SetTarget(Transform _target)
     {
@@ -38,9 +38,8 @@ public class Projectile : MonoBehaviour
         transform.LookAt(target);
     }
 
-    private void HitEnemy()
+    public virtual void HitEnemy()
     {
-        target.GetComponentInParent<Enemy>().TakeHit(damage, type);
         Destroy(gameObject);
     }
 }

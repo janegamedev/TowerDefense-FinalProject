@@ -55,7 +55,7 @@ public class BuildingSystem : MonoBehaviour
                         selectionPanel.cell = selectedCell.transform;
                         
                         selectionPanel.buttons[0].onClick.AddListener(UpgradeTower);
-                        /*selectionPanel.costs[0] = towers[0].upgradeCost;*/
+                        selectionPanel.costs[0].text = towers[0].nextUpgrade.buildCost.ToString();
                         selectionPanel.buttons[1].onClick.AddListener(SellTower);
                         /*selectionPanel.costs[1] = towers[1].sell;*/
                     }

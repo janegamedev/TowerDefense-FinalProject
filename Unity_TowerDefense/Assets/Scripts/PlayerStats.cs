@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public class PlayerStats : Singleton<PlayerStats>
 {
-    private int coins = 150;
+    private int coins = 550;
     public int Coins => coins;
 
-    private int lives;
+    private int lives = 20;
     public int Lives => lives;
 
     private int currentWave;

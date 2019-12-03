@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 5407296191029735061}
   - component: {fileID: 2061639364420123809}
   - component: {fileID: 2394719930770955788}
+  - component: {fileID: -6285972427360225734}
   m_Layer: 0
   m_Name: Mage_tower_3
   m_TagString: Untagged
@@ -158,6 +159,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-6285972427360225734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3380591013976474732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  level: 0
+  buildCost: 0
+  range: 0
+  rangeObject: {fileID: 0}
+  nextUpgrade: {fileID: 0}
+  enemyToAttack: {fileID: 0}
+  nextAttackTime: 0
+  weaponBody: {fileID: 0}
+  firePoints:
+  - {fileID: 1495459534379994191}
 --- !u!1 &3956295628774693268
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +213,8 @@ Transform:
   m_LocalRotation: {x: 1.4210855e-14, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -0.000030517578, y: 0.00024414062, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1495459534379994191}
   m_Father: {fileID: 5407296191029735061}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -236,3 +264,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &5065545360091223255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495459534379994191}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495459534379994191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065545360091223255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 592, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2719865968068330831}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
