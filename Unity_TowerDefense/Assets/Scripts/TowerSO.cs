@@ -20,8 +20,12 @@ public class TowerSO : ScriptableObject
     public float attackRate;
     public int range;
     public GameObject towerPrefab;
+    
+    public GameObject[] projectiles;
 
     public TowerSO nextUpgrade;
+    
+    
 
 
 }

@@ -20,4 +20,8 @@ MonoBehaviour:
   range: 400
   towerPrefab: {fileID: 8161575880885104807, guid: fbbaa1e56cf930c40ade171cc1cb8a33,
     type: 3}
+  projectiles:
+  - {fileID: 4534244823174170384, guid: 294f006d6f374e349b2522bcec80bbba, type: 3}
+  - {fileID: 383358023409905064, guid: 93ce43f17e947c14d854157021d8dea6, type: 3}
+  - {fileID: 3285396644649477877, guid: 8651f16b90511aa478d56daee5b569ce, type: 3}
   nextUpgrade: {fileID: 0}

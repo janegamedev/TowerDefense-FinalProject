@@ -38,14 +38,12 @@ public class BuildingSystem : MonoBehaviour
                     if (selectedCell.isAvailable)
                     {
                         currentPanel = Instantiate(towerPanel, canvasRoot);
-                        currentPanel.transform.position = _camera.WorldToScreenPoint(selectedCell.transform.position);
-
                         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
-
-                        int index;
+                        selectionPanel.cell = selectedCell.transform;
+                        
                         for (int i = 0; i < selectionPanel.buttons.Length; i++)
                         {
-                            index = i;
+                            int index = i;
                             selectionPanel.buttons[i].onClick.AddListener(() => SpawnTower(index));
                             /*selectionPanel.costs[i] = towers[i].buildCost;*/
                         }
@@ -53,13 +51,12 @@ public class BuildingSystem : MonoBehaviour
                     else
                     {
                         currentPanel = Instantiate(upgradePanel, canvasRoot);
-                        currentPanel.transform.position = _camera.WorldToScreenPoint(selectedCell.transform.position);
-
                         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
+                        selectionPanel.cell = selectedCell.transform;
                         
-                        selectionPanel.buttons[0].onClick.AddListener(SellTower);
+                        selectionPanel.buttons[0].onClick.AddListener(UpgradeTower);
                         /*selectionPanel.costs[0] = towers[0].upgradeCost;*/
-                        selectionPanel.buttons[1].onClick.AddListener(UpgradeTower);
+                        selectionPanel.buttons[1].onClick.AddListener(SellTower);
                         /*selectionPanel.costs[1] = towers[1].sell;*/
                     }
                 }
@@ -107,7 +104,6 @@ public class BuildingSystem : MonoBehaviour
 
     private void SpawnTower(int id)
     {
-        Debug.Log(id);
         selectedCell.PlaceTower(towers[id]);
         selectedCell = null;
         ClosePanel();

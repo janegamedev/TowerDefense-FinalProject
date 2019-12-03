@@ -9,7 +9,7 @@ public class PlaceableCell : MonoBehaviour
     
     public void SellTower()
     {
-        Destroy(tower);
+        Destroy(tower.gameObject);
         tower = null;
         isAvailable = true;
     }
@@ -18,7 +18,7 @@ public class PlaceableCell : MonoBehaviour
     {
         TowerSO nextTower = tower.nextUpgrade;
         
-        Destroy(tower);
+        Destroy(tower.gameObject);
         tower = null;
         
         PlaceTower(nextTower);
@@ -26,16 +26,8 @@ public class PlaceableCell : MonoBehaviour
 
     public void PlaceTower(TowerSO towerData)
     {
-        if (towerData.type == TowerType.MELEE)
-        {
-            tower = Instantiate(towerData.towerPrefab, transform).AddComponent<MeleeTower>();
-            tower.Init(towerData);
-        }
-        else
-        {
-            tower = Instantiate(towerData.towerPrefab, transform).AddComponent<RangedTower>();
-            tower.Init(towerData);
-        }
+        tower = Instantiate(towerData.towerPrefab, transform).GetComponent<Tower>();
+        tower.Init(towerData);
 
         tower.transform.position = transform.position;
         isAvailable = false;

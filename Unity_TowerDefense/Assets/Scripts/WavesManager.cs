@@ -46,14 +46,14 @@ public class WavesManager : MonoBehaviour
                 totalEnemyCount += set.enemyCount;
             }
         }
+
+        PlayerStats.Instance.wavesTotal = waves.Length;
     }
 
     private void Update()
     {
         if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
         {
-            Debug.Log(currentWaveNumber + " wave " + currentSetNumber + " set");
-            
             enemiesRemainingToSpawn--;
             nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
             
@@ -84,7 +84,7 @@ public class WavesManager : MonoBehaviour
     }
 
 
-    public void NextSet()
+    private void NextSet()
     {
         currentSetNumber++;
         
@@ -101,12 +101,12 @@ public class WavesManager : MonoBehaviour
         }
     }
 
-    public void NextWave()
+    private void NextWave()
     {
-        Debug.Log("here");
         currentWaveNumber++;
         if (currentWaveNumber - 1 < waves.Length)
         {
+            PlayerStats.Instance.currentWave = currentWaveNumber;
             currentWave = waves[currentWaveNumber - 1];
             currentSetNumber = 0;
             

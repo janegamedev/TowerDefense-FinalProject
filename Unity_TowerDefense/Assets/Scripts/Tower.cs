@@ -1,16 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
     public TowerType type;
+    public LayerMask enemyLayerMask;
 
     public int level;
     public int buildCost;
     public int range;
-    
+
+    public GameObject rangeObject;
     public TowerSO nextUpgrade;
+
+    public Transform enemyToAttack;
+    public float nextAttackTime;
 
     public virtual void Init(TowerSO towerData)
     {
@@ -23,31 +29,14 @@ public class Tower : MonoBehaviour
     }
 }
 
-public class RangedTower : Tower, IDealDamage
-{
-    public int Damage { get; set; }
-    public float AttackRate { get; set; }
-
-    public override void Init(TowerSO towerData)
-    {
-        base.Init(towerData);
-        
-        Damage = towerData.damage;
-        AttackRate = towerData.attackRate;
-    }
-
-    public void Attack()
-    {
-        throw new System.NotImplementedException();
-    }
-}
-
-public interface IDealDamage
+public interface IDealRangedDamage
 {
     int Damage {get;set;}
     float AttackRate  {get;set;}
     
-    void Attack();
+    GameObject[] Projectiles { get; set; }
+
+    void Attack(Transform enemy);
 }
 
 public interface IHaveWarrior
@@ -61,29 +50,4 @@ public interface IHaveWarrior
     
     
     void SpawnWarrior();
-}
-
-public class MeleeTower : Tower, IHaveWarrior
-{
-    public int Damage { get; set; }
-    public float AttackRate { get; set; }
-    
-    public int WarriorHealth { get; set; }
-    public int WarriorAmount { get; set; }
-
-
-    public override void Init(TowerSO towerData)
-    {
-        base.Init(towerData);
-        
-        Damage = towerData.damage;
-        AttackRate = towerData.attackRate;
-    }
-    
-    public void SpawnWarrior()
-    {
-        throw new System.NotImplementedException();
-    }
-
- 
 }
