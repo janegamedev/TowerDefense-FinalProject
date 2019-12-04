@@ -6,7 +6,7 @@ using UnityEngine;
 public class WaypointNavigator : MonoBehaviour
 {
     private CharacterNavigationController _controller;
-    public Waypoint currentWaypoint;
+    public RoadTile currentWaypoint;
     
     public event System.Action OnDestroy;
 
@@ -19,10 +19,10 @@ public class WaypointNavigator : MonoBehaviour
     {
         if (_controller.reachedDestination)
         {
-            if (currentWaypoint.nextWaypoint != null)
+            if (currentWaypoint.nextTile != null)
             {
-                currentWaypoint = currentWaypoint.nextWaypoint;
-                _controller.SetDestination(currentWaypoint.GetPosition());
+                currentWaypoint = currentWaypoint.nextTile;
+                _controller.SetDestination(currentWaypoint.transform.position);
             }
             else
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -22,7 +23,7 @@ public class WavesManager : MonoBehaviour
 {
     public Wave[] waves;
 
-    public Waypoint[] spawnWaypoints;
+    public RoadTile[] spawnTiles;
 
     public Wave currentWave;
     public EnemySet currentEnemySet;
@@ -35,19 +36,25 @@ public class WavesManager : MonoBehaviour
     
     public int totalEnemyCount;
 
-    private void Start()
+    public bool isInit;
+
+    public void InitWaves()
     {
-        NextWave();
-
-        foreach (var wave in waves)
+        if (!isInit)
         {
-            foreach (var set in wave.enemySets)
-            {
-                totalEnemyCount += set.enemyCount;
-            }
-        }
+            spawnTiles = FindObjectsOfType<RoadTile>().Where(x => x.isStart).ToArray();
+            NextWave();
 
-        PlayerStats.Instance.WavesTotal = waves.Length;
+            foreach (var wave in waves)
+            {
+                foreach (var set in wave.enemySets)
+                {
+                    totalEnemyCount += set.enemyCount;
+                }
+            }
+
+            PlayerStats.Instance.WavesTotal = waves.Length;
+        }
     }
 
     private void Update()
@@ -57,7 +64,7 @@ public class WavesManager : MonoBehaviour
             enemiesRemainingToSpawn--;
             nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
             
-            Waypoint randomWaypoint = spawnWaypoints[Random.Range(0, spawnWaypoints.Length)];
+            RoadTile randomWaypoint = spawnTiles[Random.Range(0, spawnTiles.Length)];
 
             EnemySO enemyData = currentEnemySet.enemyData;
             Enemy spawnedEnemy = Instantiate(enemyData.enemyModel, randomWaypoint.transform.position,
@@ -66,11 +73,7 @@ public class WavesManager : MonoBehaviour
             spawnedEnemy.Init(enemyData, randomWaypoint);
 
             spawnedEnemy.OnDeath += OnEnemyDeath;
-        }
-        else
-        {
-            
-        }
+        } 
     }
 
     void OnEnemyDeath()

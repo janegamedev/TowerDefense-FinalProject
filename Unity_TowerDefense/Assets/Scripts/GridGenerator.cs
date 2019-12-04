@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -18,6 +16,12 @@ public class GridGenerator : MonoBehaviour
     private float _hexH;
     public Vector3 _startPosition = Vector3.zero;
 
+    private RoadTile endTile;
+
+
+    public GameObject[] trees;
+/*    public GameObject[] trees;*/
+
     private void Start()
     {
         grid = new Tile[mapTexture.width, mapTexture.height];
@@ -29,7 +33,12 @@ public class GridGenerator : MonoBehaviour
         _startPosition.z =_hexH * 2 * (mapTexture.width / 2);
 
         CreateGrid();
-        RoadTile endTile = tileRoots[2].GetComponentsInChildren<RoadTile>().First(x => x.isEnd == true);
+        endTile = tileRoots[2].GetComponentsInChildren<RoadTile>().First(x => x.isEnd == true);
+        Invoke("Overlap", 0.1f );
+    }
+
+    public void Overlap()
+    {
         endTile.PropagateRoad(null);
     }
 

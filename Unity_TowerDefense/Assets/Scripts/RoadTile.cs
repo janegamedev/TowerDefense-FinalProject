@@ -1,18 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
 using UnityEngine;
 
 public class RoadTile : Tile
 {
     public bool isEnd;
+    public bool isStart;
     public RoadTile nextTile;
     public bool isVisited;
-    public Collider[] n;
-    public float radios;
-    
+    public float r;
+
     public void PropagateRoad(RoadTile caller)
     {
         isVisited = true;
@@ -22,21 +17,30 @@ public class RoadTile : Tile
             nextTile = caller;
         }
         
-        n = Physics.OverlapSphere(transform.position, radios , LayerMask.GetMask("Road"));
+        Collider[] n = Physics.OverlapSphere(transform.position, r , LayerMask.GetMask("Road"));
+
+        bool isPropagated = false;
         
         foreach (Collider neighbour in n)
         {
-            Debug.Log("asd");
             RoadTile road = neighbour.GetComponent<RoadTile>();
-            if (road != null && !road.isVisited)
+            
+            if (!road.isVisited)
             {
                 road.PropagateRoad(this);
+                isPropagated = true;
             }
+        }
+
+        if (!isPropagated)
+        {
+            isStart = true;
+            Invoke("CallWave", 0.1f);
         }
     }
 
-    public void OnDrawGizmosSelected()
+    public void CallWave()
     {
-        Gizmos.DrawSphere(transform.position, radios);
+        FindObjectOfType<WavesManager>().InitWaves();
     }
 }

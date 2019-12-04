@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Init(EnemySO enemyData, Waypoint waypoint)
+    public void Init(EnemySO enemyData, RoadTile waypoint)
     {
         health = enemyData.health;
         damage = enemyData.damage;
@@ -78,6 +78,6 @@ public class Enemy : MonoBehaviour
         bounty = enemyData.bounty;
 
         _waypointNavigator.currentWaypoint = waypoint;
-        _characterNavigationController.SetDestination(waypoint.GetPosition());
+        _characterNavigationController.SetDestination(waypoint.transform.position);
     }
 }
