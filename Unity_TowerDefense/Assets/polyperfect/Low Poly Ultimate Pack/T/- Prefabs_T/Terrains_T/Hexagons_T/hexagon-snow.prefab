@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33775453723126370}
   - component: {fileID: 23719138357421250}
   - component: {fileID: 64027668405690488}
+  - component: {fileID: 5060650150280229033}
   m_Layer: 0
   m_Name: hexagon-snow
   m_TagString: Untagged
@@ -93,3 +94,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 611d9a1a3a7334859b2745866c9da887, type: 3}
+--- !u!114 &5060650150280229033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033885242515990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06feab43d874c3f9a858ea79ce5c378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

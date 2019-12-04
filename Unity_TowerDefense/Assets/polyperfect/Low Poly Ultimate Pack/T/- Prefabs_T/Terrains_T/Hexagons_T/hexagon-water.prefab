@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33809041205031708}
   - component: {fileID: 23237613112360604}
   - component: {fileID: 64409175687218198}
+  - component: {fileID: -6504003893722901422}
   m_Layer: 0
   m_Name: hexagon-water
   m_TagString: Untagged
@@ -93,3 +94,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 1f4003faf833a459abca2529d38804a4, type: 3}
+--- !u!114 &-6504003893722901422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667114109718088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06feab43d874c3f9a858ea79ce5c378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2b22bbd122c4f42aba2905347575b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapTexture: {fileID: 2800000, guid: 4187175e6ff86dd4faa388a7dbc524b3, type: 3}
+  mapTexture: {fileID: 2800000, guid: d61677341c84cd040a419d0435671364, type: 3}
   colors:
   - serializedVersion: 2
     rgba: 4282630267
@@ -475,16 +475,21 @@ MonoBehaviour:
     rgba: 4288214269
   - serializedVersion: 2
     rgba: 4291793411
+  - serializedVersion: 2
+    rgba: 4281680110
   hexPrefabs:
   - {fileID: 1001236920876868, guid: b52e6fdb9179d4ef19097ea8727a4496, type: 3}
   - {fileID: 1221241471288320, guid: 4601f921d60d341d387570ecf26a007a, type: 3}
   - {fileID: 1266813705471474, guid: aa67ed5cc473046058070c067eb29ce0, type: 3}
   - {fileID: 1667114109718088, guid: 6cd5499abd3794228b6e7e318fa60b9a, type: 3}
+  - {fileID: 1266813705471474, guid: 8532b3597dcb84d4f83676645b5e61a6, type: 3}
   tileRoots:
   - {fileID: 1892356502}
   - {fileID: 1510224982}
   - {fileID: 1235831671}
   - {fileID: 533731231}
+  - {fileID: 1235831671}
+  grid: []
   _startPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &226771087
 Transform:

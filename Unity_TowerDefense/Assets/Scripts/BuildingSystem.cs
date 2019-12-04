@@ -11,7 +11,7 @@ public class BuildingSystem : MonoBehaviour
     public GameObject towerPanel;
     public GameObject upgradePanel;
     public GameObject currentPanel;
-    public PlaceableCell selectedCell;
+    public TowerTile selectedTile;
 
     private Camera _camera;
 
@@ -19,7 +19,7 @@ public class BuildingSystem : MonoBehaviour
     {
         _camera = Camera.main;
         currentPanel = null;
-        selectedCell = null;
+        selectedTile = null;
     }
 
     private void Update()
@@ -33,13 +33,13 @@ public class BuildingSystem : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
-                    selectedCell = hit.collider.GetComponent<PlaceableCell>();
+                    selectedTile = hit.collider.GetComponent<TowerTile>();
                     
-                    if (selectedCell.isAvailable)
+                    if (selectedTile.isAvailable)
                     {
                         currentPanel = Instantiate(towerPanel, canvasRoot);
                         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
-                        selectionPanel.cell = selectedCell.transform;
+                        selectionPanel.cell = selectedTile.transform;
                         
                         for (int i = 0; i < selectionPanel.buttons.Length; i++)
                         {
@@ -52,7 +52,7 @@ public class BuildingSystem : MonoBehaviour
                     {
                         currentPanel = Instantiate(upgradePanel, canvasRoot);
                         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
-                        selectionPanel.cell = selectedCell.transform;
+                        selectionPanel.cell = selectedTile.transform;
                         
                         selectionPanel.buttons[0].onClick.AddListener(UpgradeTower);
                         selectionPanel.costs[0].text = towers[0].nextUpgrade.buildCost.ToString();
@@ -70,7 +70,7 @@ public class BuildingSystem : MonoBehaviour
 
     private void ClosePanel()
     {
-        selectedCell = null;
+        selectedTile = null;
             
         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
 
@@ -85,8 +85,8 @@ public class BuildingSystem : MonoBehaviour
 
     private void SellTower()
     {
-        selectedCell.SellTower();
-        selectedCell = null;
+        selectedTile.SellTower();
+        selectedTile = null;
         ClosePanel();
         
         //Decrease money
@@ -95,8 +95,8 @@ public class BuildingSystem : MonoBehaviour
 
     private void UpgradeTower()
     {
-        selectedCell.UpgradeTower();
-        selectedCell = null;
+        selectedTile.UpgradeTower();
+        selectedTile = null;
         ClosePanel();
         
         //GameManager.Instance.Currency -= selectedCell.tower.nextUpgrade.buildCost;
@@ -105,8 +105,8 @@ public class BuildingSystem : MonoBehaviour
     private void SpawnTower(int id)
     {
         Debug.Log("here");
-        selectedCell.PlaceTower(towers[id]);
-        selectedCell = null;
+        selectedTile.PlaceTower(towers[id]);
+        selectedTile = null;
         ClosePanel();
         
         //GameManager.Instance.Currency -= towers[id].buildCost;
