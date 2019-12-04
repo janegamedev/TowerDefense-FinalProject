@@ -19,5 +19,5 @@ MonoBehaviour:
   attackRate: 1.5
   armour: 0
   magicResistance: 0
-  speed: 5
+  speed: 100
   bounty: 5

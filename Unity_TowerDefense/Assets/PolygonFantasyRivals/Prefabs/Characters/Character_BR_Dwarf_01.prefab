@@ -2547,9 +2547,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4692428868606460}
   - component: {fileID: 95439086998023792}
-  - component: {fileID: -9151932240683343499}
-  - component: {fileID: -8648048227491579938}
-  - component: {fileID: -1420537988544977728}
   m_Layer: 9
   m_Name: Character_BR_Dwarf_01
   m_TagString: Untagged
@@ -2566,7 +2563,7 @@ Transform:
   m_GameObject: {fileID: 1820919466449660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 4782599394604862}
   - {fileID: 4117656802366982}
@@ -2602,59 +2599,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-9151932240683343499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820919466449660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5abdd586e2b0b5444b509b96e0615771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyName: 
-  health: 0
-  damage: 0
-  attackRate: 0
-  armour: 0
-  magicResistance: 0
-  speed: 0
-  bounty: 0
-  startingHp: 0
-  hp: 0
-  dead: 0
---- !u!114 &-8648048227491579938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820919466449660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3917611ab5c112d4d905ed4ba220b92b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWaypoint: {fileID: 0}
---- !u!114 &-1420537988544977728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820919466449660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992d24300f14214419cea39b7446261c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 0
-  rotationSpeed: 0
-  stopDistance: 0
-  destination: {x: 0, y: 0, z: 0}
-  reachedDestination: 0
 --- !u!1 &1833544915534518
 GameObject:
   m_ObjectHideFlags: 0

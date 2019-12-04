@@ -104,6 +104,7 @@ public class BuildingSystem : MonoBehaviour
 
     private void SpawnTower(int id)
     {
+        Debug.Log("here");
         selectedCell.PlaceTower(towers[id]);
         selectedCell = null;
         ClosePanel();

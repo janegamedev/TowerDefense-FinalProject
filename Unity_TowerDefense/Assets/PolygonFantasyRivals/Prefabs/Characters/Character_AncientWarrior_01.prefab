@@ -2702,7 +2702,7 @@ Transform:
   m_GameObject: {fileID: 1909744818002174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 8, y: 9, z: 8}
   m_Children:
   - {fileID: 4868563894848118}
   - {fileID: 4143310240068030}
@@ -2758,7 +2758,6 @@ MonoBehaviour:
   speed: 0
   bounty: 0
   startingHp: 0
-  hp: 0
   dead: 0
 --- !u!114 &-1858158147363580037
 MonoBehaviour:

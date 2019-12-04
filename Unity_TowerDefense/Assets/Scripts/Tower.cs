@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
@@ -41,9 +42,9 @@ public interface IHaveWarrior
     int Damage {get;set;}
     float AttackRate  {get;set;}
     
-    int WarriorHealth { get; set; }
-    
-    int WarriorAmount { get; set; }
+
+    List<GameObject> WarriorsAlive { get; set; }
+
     
     
     void SpawnWarrior();
