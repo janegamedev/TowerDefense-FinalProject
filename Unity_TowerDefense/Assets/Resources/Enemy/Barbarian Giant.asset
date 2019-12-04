@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48e00c360c76134d8e4cab5d5301694, type: 3}
+  m_Name: Barbarian Giant
+  m_EditorClassIdentifier: 
+  enemyName: Barbarian Giant
+  enemyModel: {fileID: 1652650793432430, guid: d9162a78a8deb714a9bddd8038021008, type: 3}
+  health: 800
+  damage: 50
+  attackRate: 1
+  armour: 0
+  magicResistance: 0
+  speed: 1
+  bounty: 50

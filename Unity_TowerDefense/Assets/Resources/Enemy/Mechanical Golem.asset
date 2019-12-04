@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48e00c360c76134d8e4cab5d5301694, type: 3}
+  m_Name: Mechanical Golem
+  m_EditorClassIdentifier: 
+  enemyName: Mechanical Golem
+  enemyModel: {fileID: 1170732337855516, guid: 5aed7f791a03c2a4ba0040d2fa161639, type: 3}
+  health: 340
+  damage: 0
+  attackRate: 0
+  armour: 0
+  magicResistance: 0
+  speed: 5
+  bounty: 30

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48e00c360c76134d8e4cab5d5301694, type: 3}
+  m_Name: Fort Golem
+  m_EditorClassIdentifier: 
+  enemyName: Fort Golem
+  enemyModel: {fileID: 1691206179217438, guid: fe16b94572a04254e9757241e9e92235, type: 3}
+  health: 2000
+  damage: 100
+  attackRate: 2.5
+  armour: 0
+  magicResistance: 0
+  speed: 1
+  bounty: 120
