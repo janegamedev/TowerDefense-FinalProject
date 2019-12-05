@@ -10,25 +10,27 @@ public class CameraController : MonoBehaviour
     
     [SerializeField] private float movementSpeed;
     [SerializeField] private float zoomSpeed;
+    [SerializeField] private float rotationSpeed;
     
     [SerializeField] private float hMax = 20f;
     private float _hNormal;   
     
-    [SerializeField] private float rMin = 30f;
-    private float _rNormal;
+    [SerializeField] private Quaternion rMin;
+    private Quaternion _rNormal;
     
     private Camera _camera;
 
     private void Start()
     {
         _hNormal = transform.position.y;
-        _rNormal = transform.rotation.x;
+        _rNormal = transform.rotation;
         
         _camera = Camera.main;
     }
 
     private void Update()
         {
+            Debug.Log(transform.rotation);
             if (Input.GetKey(KeyCode.W) && transform.position.z <= verticalMaxBorder)
             {
                 transform.position += Vector3.forward * movementSpeed;
@@ -49,11 +51,11 @@ public class CameraController : MonoBehaviour
                 transform.position += Vector3.right * movementSpeed;
             }
 
-            if (Input.GetAxis("Mouse ScrollWheel") > 0f ) // forward
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f )
             {
                 ZoomIn();
             }
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f )
             {
                 ZoomOut();
             }
@@ -64,7 +66,11 @@ public class CameraController : MonoBehaviour
         if (_camera.fieldOfView > hMax)
         {
             transform.position = new Vector3(transform.position.x,Mathf.Lerp(transform.position.y, hMax, Time.deltaTime * zoomSpeed), transform.position.z);
-            //lerp angle
+        }
+        
+        if (transform.rotation.x >= rMin.x)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, rMin, Time.deltaTime * rotationSpeed);
         }
     }
 
@@ -73,7 +79,11 @@ public class CameraController : MonoBehaviour
         if (_camera.fieldOfView < _hNormal)
         {
             transform.position = new Vector3(transform.position.x,Mathf.Lerp(transform.position.y, _hNormal, Time.deltaTime * zoomSpeed), transform.position.z);
-            //lerp angle
+        }
+
+        if (transform.rotation.x <= _rNormal.x)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, _rNormal, Time.deltaTime * rotationSpeed);
         }
     }
 }
