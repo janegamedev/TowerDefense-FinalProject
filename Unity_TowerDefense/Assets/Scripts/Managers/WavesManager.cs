@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -76,9 +77,10 @@ public class WavesManager : MonoBehaviour
         } 
     }
 
-    void OnEnemyDeath()
+    void OnEnemyDeath(GameObject go)
     {
         enemiesRemainingAlive--;
+        Destroy(go);
 
         if (enemiesRemainingAlive == 0)
         {

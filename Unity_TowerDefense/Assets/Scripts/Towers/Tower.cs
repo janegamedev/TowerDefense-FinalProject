@@ -26,7 +26,7 @@ public class Tower : MonoBehaviour
 
         _nextUpgrade = towerData.nextUpgrade;
     }
-
+    
     public void EnableDome()
     {
         rangeDome.SetActive(true);

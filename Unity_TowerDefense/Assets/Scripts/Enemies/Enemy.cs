@@ -1,90 +1,83 @@
 ﻿using System;
-using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Character
 {
-    private string _enemyName;
-    
-    private float _maxHealth;
-    private float _health;
-    private int _damage;
-    private float _attackRate;
-    private float _armour;
-    
-    private float _magicResistance;
-    private float _speed;
     private int _bounty;
-    
-    private bool _dead;
+    private RoadTile _currentTile;
 
-    public Warrior warriorToAttack;
-
-    public event System.Action OnDeath;
-
-    private CharacterNavigationController _characterNavigationController;
-    private CharacterNavigator _characterNavigator;
-    private HealthBar _healthBar;
-
-    private void Awake()
+    public override void Init(EnemySO characterData, RoadTile startTile)
     {
-        _characterNavigationController = GetComponent<CharacterNavigationController>();
-        _characterNavigator = GetComponent<CharacterNavigator>();
-        _healthBar = GetComponentInChildren<HealthBar>();
+        _bounty = characterData.bounty;
 
-        _characterNavigator.OnDestroy += Die;
+        _currentTile = startTile;
+        
+        base.Init(characterData, startTile);
     }
 
-    public void TakeHit(float amount, DamageType type)
+    private void Update()
     {
-        switch (type)
+        if (characterState != CharacterState.DEAD)
         {
-            case DamageType.PHYSICAL:
-                _health -= amount * (1 - _armour);
+            characterState = characterToAttack != null ? CharacterState.ATTACKING : CharacterState.RUNNING;
+        }
+        
+        switch (characterState)
+        {
+            case CharacterState.RUNNING:
+                if (characterNavigationController.reachedDestination)
+                {
+                    if (_currentTile != null)
+                    {
+                        _currentTile = _currentTile.nextTile;
+                    }
+                    else
+                    {
+                        characterState = CharacterState.DEAD;
+                    }
+                }
+                
+                destination = _currentTile.transform.position;
                 break;
             
-            case DamageType.MAGIC:
-                _health -= amount * (1 - _magicResistance);
+            case CharacterState.ATTACKING:
+                if (!characterNavigationController.reachedDestination)
+                {
+                    destination = characterToAttack.transform.position;
+                }
+                else
+                {
+                    AttackEnemy();
+                }
                 break;
-            
+            case CharacterState.DEAD:
+                Die();
+                break;
             default:
-                throw new ArgumentOutOfRangeException(nameof(type), type, null);
+                throw new ArgumentOutOfRangeException();
         }
-        
-        _healthBar.UpdateHealth(_health, _maxHealth);
-        
-        if (_health <= 0 && !_dead)
-        {
-            Die();
-        }
+
+        characterNavigationController.SetDestination(destination);
     }
 
-    private void Die()
+    protected override void SetDefaultState()
     {
-        if (_health <= 0)
-        {
-            PlayerStats.Instance.GetBounty(_bounty);
-        }
-        
-        _dead = true;
-        OnDeath?.Invoke();
-        Destroy(gameObject);
+        characterState = CharacterState.RUNNING;
     }
 
-    public void Init(EnemySO enemyData, RoadTile startTile)
+    protected override void Die()
     {
-        _enemyName = enemyData.enemyName;
-        _maxHealth = enemyData.health;
-        _health = _maxHealth;
-        _damage = enemyData.damage;
-        _attackRate = enemyData.attackRate;
+        if (!isDead)
+        {
+            isDead = true;
+            if (health <= 0)
+            {
+                PlayerStats.Instance.GetBounty(_bounty);
+            }
         
-        _armour = enemyData.armour;
-        _magicResistance = enemyData.magicResistance;
-
-        _characterNavigationController.movementSpeed = enemyData.speed;
-        _bounty = enemyData.bounty;
-
-        _characterNavigator.CurrentTile = startTile;
-        _characterNavigationController.SetDestination(startTile.transform.position);
+            PlayerStats.Instance.ChangeLives(1);
+            
+            base.Die();
+        }
     }
 }
+

@@ -1,149 +1,94 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.AccessControl;
 using UnityEngine;
-using UnityEngine.XR.WSA.Input;
 
-public class Warrior : MonoBehaviour
+
+public class Warrior : Character
 {
-    public enum State
-    {
-        RESTING,
-        RUNNING,
-        ATTACKING,
-        DEAD
-    }
-    
-    public event System.Action <GameObject> OnDeath;
-
-    public State warriorState;
-    public DamageType damageType;
     public Vector3 restPosition;
     public int lookingRange;
-    public int stoppingDistance;
-    public int attackRate;
-    public int damage;
-    public float maxHealth;
-    public float health;
-    public int movementSpeed;
-    public Enemy enemyToAttack;
-    public float nextAttackTime;
-    public bool dead;
 
-    private CharacterController _characterController;
-
-    private void Start()
+    public override void Init(EnemySO characterData, Vector3 pos)
     {
-        _characterController = GetComponent<CharacterController>();
-    }
-
-    public void Init(Vector3 pos)
-    {
-        restPosition = restPosition;
+        restPosition = pos;
+/*        lookingRange = enemyData.AttackRange;*/
     }
 
     private void Update()
     { 
-        switch (warriorState)
+        characterState = characterToAttack ? CharacterState.ATTACKING : CharacterState.RESTING;
+        
+        switch (characterState)
         {
-            case State.RESTING:
-                MoveTowards(restPosition);
-                CheckForEnemy();
+            case CharacterState.RESTING:
+                
+                destination = restPosition;
+                
+                Collider[] n = Physics.OverlapSphere(transform.position, lookingRange , LayerMask.GetMask("Enemy"));
+
+                if (n.Length > 0)
+                {
+                    foreach (var enemy in n)
+                    {
+                        Enemy e = enemy.GetComponent<Enemy>();
+                        if (e.GetCharacterToAttack() == null || e.GetCharacterToAttack() == this)
+                        {
+                            e.SetCharacterToAttack(this);
+                            characterToAttack = e;
+                            characterState = CharacterState.RUNNING;
+                            
+                            break;
+                        }
+                    }
+                }
+                
                 break;
             
-            case State.RUNNING:
-                MoveTowards(enemyToAttack.transform.position);
+            case CharacterState.RUNNING:
+                destination = characterToAttack.transform.position;
+
+                if (characterNavigationController.reachedDestination)
+                {
+                    characterState = CharacterState.ATTACKING;
+                }
+
                 break;
             
-            case State.ATTACKING:
-                MoveTowards(enemyToAttack.transform.position);
+            case CharacterState.ATTACKING:
+                destination = characterToAttack.transform.position;
+                
                 AttackEnemy();
                 break;
             
-            case State.DEAD:
-                Dead();
+            case CharacterState.DEAD:
+                Die();
                 
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        
+        characterNavigationController.SetDestination(destination);
+    }
+
+    protected override void SetDefaultState()
+    {
+        characterState = CharacterState.RESTING;
     }
 
     public void ResetStats()
     {
+        isDead = false;
         health = maxHealth;
-        enemyToAttack = null;
-        warriorState = State.RESTING;
-        dead = false;
+        characterToAttack = null;
+        SetDefaultState();
     }
 
-    void MoveTowards(Vector3 d)
+    protected override void Die()
     {
-        Vector3 offset = d - transform.position;
-
-        if (offset.magnitude > stoppingDistance)
+        if (!isDead)
         {
-            offset = offset.normalized * movementSpeed;
-            _characterController.Move(offset * Time.deltaTime);
-            transform.LookAt(d);
-        }
-        
-        warriorState = enemyToAttack ? State.ATTACKING : State.RESTING;
-    }
-    void CheckForEnemy()
-    {
-        Collider[] n = Physics.OverlapSphere(transform.position, lookingRange , LayerMask.GetMask("Enemy"));
-
-        if (n.Length > 0)
-        {
-            Debug.Log(n.Length);
-            foreach (var enemy in n)
-            {
-                Enemy e = enemy.GetComponent<Enemy>();
-                if (e.warriorToAttack == null || e.warriorToAttack == this)
-                {
-                    e.warriorToAttack = this;
-                    enemyToAttack = e;
-                    warriorState = State.RUNNING;
-                    break;
-                }
-            }
-        }
-    }
-
-    void AttackEnemy()
-    {
-        if (enemyToAttack)
-        {
-            if (Time.deltaTime > nextAttackTime)
-            {
-                nextAttackTime = Time.time + attackRate;
-                enemyToAttack.TakeHit(damage, damageType);
-            }
-        }
-        else
-        {
-            warriorState = State.RESTING;
-        }
-    }
-    
-    public void TakeHit(int damage)
-    {
-        health -= this.damage;
-
-        if (health <= 0)
-        {
-            warriorState = State.DEAD;
-        }
-    }
-
-    void Dead()
-    {
-        if (!dead)
-        {
-            dead = true;
-            OnDeath?.Invoke(gameObject);
+            isDead = true;
+            base.Die();
         }
     }
 }

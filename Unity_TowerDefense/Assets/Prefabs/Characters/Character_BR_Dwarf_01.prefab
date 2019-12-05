@@ -2549,7 +2549,7 @@ GameObject:
   - component: {fileID: 95439086998023792}
   - component: {fileID: 7965404417954819751}
   - component: {fileID: 7291079287593071166}
-  - component: {fileID: 244376964300871816}
+  - component: {fileID: -187087728466449875}
   m_Layer: 11
   m_Name: Character_BR_Dwarf_01
   m_TagString: Untagged
@@ -2644,24 +2644,22 @@ MonoBehaviour:
   movementSpeed: 5
   enemyToAttack: {fileID: 0}
   nextAttackTime: 0
-  dead: 0
---- !u!1818360609 &244376964300871816
-RotationConstraint:
+  isDead: 0
+--- !u!114 &-187087728466449875
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820919466449660}
   m_Enabled: 1
-  m_Weight: 1
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationOffset: {x: 0, y: 0, z: 0}
-  m_AffectRotationX: 1
-  m_AffectRotationY: 0
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 1
-  m_Sources: []
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992d24300f14214419cea39b7446261c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 1
+  stopDistance: 0
+  reachedDestination: 0
 --- !u!1 &1833544915534518
 GameObject:
   m_ObjectHideFlags: 0

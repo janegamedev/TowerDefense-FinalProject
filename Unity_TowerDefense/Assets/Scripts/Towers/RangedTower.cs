@@ -26,9 +26,8 @@ public class RangedTower : Tower, IDealRangedDamage
 
     private void Update()
     {
-        Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, range, enemyLayerMask); 
-        Debug.Log(range + " " + enemiesInRange.Length);
-        
+        Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, range, enemyLayerMask);
+
         if (enemiesInRange.Length > 0)
         {
             if (!_enemyToAttack || !enemiesInRange.Contains(_enemyToAttack.GetComponent<Collider>()))
