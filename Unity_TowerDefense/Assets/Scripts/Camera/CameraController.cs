@@ -30,7 +30,6 @@ public class CameraController : MonoBehaviour
 
     private void Update()
         {
-            Debug.Log(transform.rotation);
             if (Input.GetKey(KeyCode.W) && transform.position.z <= verticalMaxBorder)
             {
                 transform.position += Vector3.forward * movementSpeed;

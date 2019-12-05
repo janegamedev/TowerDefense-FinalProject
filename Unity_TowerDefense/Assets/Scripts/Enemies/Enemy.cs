@@ -3,31 +3,33 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public string enemyName;
+    private string _enemyName;
     
-    public float maxHealth;
-    public float health;
-    public int damage;
-    public float attackRate;
-    public float armour;
+    private float _maxHealth;
+    private float _health;
+    private int _damage;
+    private float _attackRate;
+    private float _armour;
     
-    public float magicResistance;
-    public float speed;
-    public int bounty;
+    private float _magicResistance;
+    private float _speed;
+    private int _bounty;
     
-    public float startingHp;
-    public bool dead;
+    private bool _dead;
+
+    public Warrior warriorToAttack;
 
     public event System.Action OnDeath;
 
     private CharacterNavigationController _characterNavigationController;
     private CharacterNavigator _characterNavigator;
+    private HealthBar _healthBar;
 
     private void Awake()
     {
-        health = startingHp;
         _characterNavigationController = GetComponent<CharacterNavigationController>();
         _characterNavigator = GetComponent<CharacterNavigator>();
+        _healthBar = GetComponentInChildren<HealthBar>();
 
         _characterNavigator.OnDestroy += Die;
     }
@@ -37,18 +39,20 @@ public class Enemy : MonoBehaviour
         switch (type)
         {
             case DamageType.PHYSICAL:
-                health -= amount * (1 - armour);
+                _health -= amount * (1 - _armour);
                 break;
             
             case DamageType.MAGIC:
-                health -= amount * (1 - magicResistance);
+                _health -= amount * (1 - _magicResistance);
                 break;
             
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
         }
         
-        if (health <= 0 && !dead)
+        _healthBar.UpdateHealth(_health, _maxHealth);
+        
+        if (_health <= 0 && !_dead)
         {
             Die();
         }
@@ -56,30 +60,31 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        if (health <= 0)
+        if (_health <= 0)
         {
-            PlayerStats.Instance.GetBounty(bounty);
+            PlayerStats.Instance.GetBounty(_bounty);
         }
         
-        dead = true;
+        _dead = true;
         OnDeath?.Invoke();
         Destroy(gameObject);
     }
 
-    public void Init(EnemySO enemyData, RoadTile waypoint)
+    public void Init(EnemySO enemyData, RoadTile startTile)
     {
-        maxHealth = enemyData.health;
-        health = maxHealth;
-        damage = enemyData.damage;
-        attackRate = enemyData.attackRate;
+        _enemyName = enemyData.enemyName;
+        _maxHealth = enemyData.health;
+        _health = _maxHealth;
+        _damage = enemyData.damage;
+        _attackRate = enemyData.attackRate;
         
-        armour = enemyData.armour;
-        magicResistance = enemyData.magicResistance;
+        _armour = enemyData.armour;
+        _magicResistance = enemyData.magicResistance;
 
         _characterNavigationController.movementSpeed = enemyData.speed;
-        bounty = enemyData.bounty;
+        _bounty = enemyData.bounty;
 
-        _characterNavigator.currentWaypoint = waypoint;
-        _characterNavigationController.SetDestination(waypoint.transform.position);
+        _characterNavigator.CurrentTile = startTile;
+        _characterNavigationController.SetDestination(startTile.transform.position);
     }
 }

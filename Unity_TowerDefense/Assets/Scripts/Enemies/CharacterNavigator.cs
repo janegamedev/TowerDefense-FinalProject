@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterNavigator : MonoBehaviour
 {
     private CharacterNavigationController _controller;
-    public RoadTile currentWaypoint;
-    
+    private RoadTile _currentTile;
+    public RoadTile CurrentTile
+    {
+        get => _currentTile;
+        set => _currentTile = value;
+    }
+
     public event System.Action OnDestroy;
 
     private void Awake()
@@ -19,10 +21,10 @@ public class CharacterNavigator : MonoBehaviour
     {
         if (_controller.reachedDestination)
         {
-            if (currentWaypoint.nextTile != null)
+            if (_currentTile.nextTile != null)
             {
-                currentWaypoint = currentWaypoint.nextTile;
-                _controller.SetDestination(currentWaypoint.transform.position);
+                _currentTile = _currentTile.nextTile;
+                _controller.SetDestination(_currentTile.transform.position);
             }
             else
             {

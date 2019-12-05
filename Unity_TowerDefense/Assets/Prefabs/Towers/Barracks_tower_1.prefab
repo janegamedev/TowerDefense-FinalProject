@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2126735472251362437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3005881202259339257}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3005881202259339257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126735472251362437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 217}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8425776505689716052}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6492792737427458144
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,7 +59,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
-  m_Children: []
+  m_Children:
+  - {fileID: 3005881202259339257}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -91,18 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1c4cabe4cc4671b51d7b9074e89b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 512
-  level: 0
-  buildCost: 0
-  range: 0
-  rangeObject: {fileID: 0}
-  nextUpgrade: {fileID: 0}
-  enemyToAttack: {fileID: 0}
-  nextAttackTime: 0
+  rangeDome: {fileID: 0}
   warriorPrefab: {fileID: 1820919466449660, guid: 00df519327294ce4da5a577098c3ed4f,
     type: 3}
   warriorAmount: 3
-  spawnPosition: {fileID: 0}
+  warriorRespawn: 5
+  spawnPosition: {fileID: 3005881202259339257}
+  restRadius: 10
+  tile: {fileID: 0}
