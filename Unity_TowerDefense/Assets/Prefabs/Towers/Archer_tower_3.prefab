@@ -29,7 +29,7 @@ Transform:
   m_LocalPosition: {x: 0.067092896, y: 400.8794, z: -1.0771484}
   m_LocalScale: {x: 0.885551, y: 0.932723, z: 0.932723}
   m_Children:
-  - {fileID: 5868430253380625025}
+  - {fileID: 4716195544143857827}
   m_Father: {fileID: 5651322861696308240}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -182,16 +182,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6002419620751829379}
-  m_LocalRotation: {x: 1.0658141e-14, y: -1, z: 0.000000059604645, w: 0.000000043711392}
-  m_LocalPosition: {x: 0.6012115, y: 59.61258, z: -6.541012}
+  m_LocalRotation: {x: -0.000000024480341, y: 0.9961947, z: 0.08715578, w: 0.00000027981145}
+  m_LocalPosition: {x: 0.6012114, y: 59.61261, z: -6.541013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7053261526870447287}
   - {fileID: 6423028464811937337}
   - {fileID: 6207975301976207841}
-  m_Father: {fileID: 619870049724224673}
+  m_Father: {fileID: 4716195544143857827}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10, y: 179.99998, z: 0}
 --- !u!33 &542480820785966368
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -360,21 +360,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  level: 0
-  buildCost: 0
-  range: 0
-  rangeObject: {fileID: 0}
-  nextUpgrade: {fileID: 0}
-  enemyToAttack: {fileID: 0}
-  nextAttackTime: 0
-  weaponBody: {fileID: 5868430253380625025}
+  rangeDome: {fileID: 0}
+  weaponBody: {fileID: 4716195544143857827}
   firePoints:
   - {fileID: 6423028464811937337}
   - {fileID: 6207975301976207841}
+  _enemyToAttack: {fileID: 0}
+--- !u!1 &7225512092144893942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4716195544143857827}
+  m_Layer: 0
+  m_Name: BowRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4716195544143857827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7225512092144893942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5868430253380625025}
+  m_Father: {fileID: 619870049724224673}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8850396625751755895
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,10 @@ public class PlayerStats : Singleton<PlayerStats>
 
     private int wavesTotal;
 
+    private float _sellPercentage = 0.7f;
+    public float SellPercentage => _sellPercentage;
+    
+
     public int WavesTotal
     {
         get => wavesTotal;

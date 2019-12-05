@@ -53,12 +53,11 @@ public class BuildingSystem : MonoBehaviour
                         currentPanel = Instantiate(upgradePanel, canvasRoot);
                         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
                         selectionPanel.tile = selectedTile;
-                        selectedTile.tower.EnableDome();
+                        /*selectedTile.tower.EnableDome();*/
                         
                         selectionPanel.buttons[0].onClick.AddListener(UpgradeTower);
                         selectionPanel.costs[0].text = towers[0].nextUpgrade.buildCost.ToString();
                         selectionPanel.buttons[1].onClick.AddListener(SellTower);
-                        /*selectionPanel.costs[1] = towers[1].sell;*/
                     }
                 }
             }
@@ -71,10 +70,10 @@ public class BuildingSystem : MonoBehaviour
 
     private void ClosePanel()
     {
-        if (selectedTile.tower != null)
+/*        if (selectedTile.tower != null)
         {
             selectedTile.tower.DisableDome();
-        }
+        }*/
         
         selectedTile = null;
 
@@ -93,24 +92,17 @@ public class BuildingSystem : MonoBehaviour
     {
         selectedTile.SellTower();
         ClosePanel();
-        
-        //Decrease money
-        //GameManager.Instance.Currency += (int)(selectedCell.tower.buildCost * 0.7f);
     }
 
     private void UpgradeTower()
     {
         selectedTile.UpgradeTower();
         ClosePanel();
-        
-        //GameManager.Instance.Currency -= selectedCell.tower.nextUpgrade.buildCost;
     }
 
     private void SpawnTower(int id)
     {
         selectedTile.PlaceTower(towers[id]);
         ClosePanel();
-        
-        //GameManager.Instance.Currency -= towers[id].buildCost;
     }
 }

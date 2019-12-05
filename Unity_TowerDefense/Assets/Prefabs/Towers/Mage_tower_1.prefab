@@ -122,20 +122,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  level: 0
-  buildCost: 0
-  range: 0
-  rangeObject: {fileID: 0}
-  nextUpgrade: {fileID: 0}
-  enemyToAttack: {fileID: 0}
-  nextAttackTime: 0
+  rangeDome: {fileID: 0}
   weaponBody: {fileID: 0}
   firePoints:
   - {fileID: 6977244792021001554}
+  _enemyToAttack: {fileID: 0}
 --- !u!1 &6677727108437853930
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +141,7 @@ GameObject:
   - component: {fileID: 4246460356637957680}
   - component: {fileID: 1370465104774946395}
   - component: {fileID: 770110105497954631}
+  - component: {fileID: 4603234723810474126}
   m_Layer: 0
   m_Name: Crystal_1
   m_TagString: Untagged
@@ -161,14 +156,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6677727108437853930}
-  m_LocalRotation: {x: 1.4210855e-14, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.5067862, z: 0, w: 0.86207175}
   m_LocalPosition: {x: 0.000061035156, y: 0.00024414062, z: 0.0009765625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6977244792021001554}
   m_Father: {fileID: 2349784130730766422}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 60.9, z: 0}
 --- !u!33 &1370465104774946395
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -215,3 +210,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4603234723810474126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677727108437853930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc327137ad9a1f749af5328dcc17cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minAmount: 0
+  maxAmount: 7
+  rotate: 1
+  rotationSpeed: 4
+  direction: 1

@@ -10,14 +10,14 @@ public class TowerTile : Tile
     public void SellTower()
     {
         Destroy(tower.gameObject);
-        PlayerStats.Instance.ChangeCoinsAmount((int)(-tower.buildCost * 0.5));
+        PlayerStats.Instance.ChangeCoinsAmount((int)(-tower.BuildCost * PlayerStats.Instance.SellPercentage));
         tower = null;
         isAvailable = true;
     }
 
     public void UpgradeTower()
     {
-        TowerSO nextTower = tower.nextUpgrade;
+        TowerSO nextTower = tower.GetNextUpdate();
         
         Destroy(tower.gameObject);
         tower = null;

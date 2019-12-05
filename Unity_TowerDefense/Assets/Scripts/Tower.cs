@@ -3,29 +3,28 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public TowerType type;
-    public LayerMask enemyLayerMask;
+    private TowerType _type;
+    [SerializeField] private protected LayerMask enemyLayerMask;
 
-    public int level;
-    public int buildCost;
-    public int range;
+    private int _level;
+    public int Level => _level;
 
-    public GameObject rangeObject;
-    public TowerSO nextUpgrade;
+    private int _buildCost;
+    public int BuildCost => _buildCost;
 
-    public Transform enemyToAttack;
-    public float nextAttackTime;
+    private protected int range;
+    private TowerSO _nextUpgrade;
 
-    public GameObject rangeDome;
+    [SerializeField] public GameObject rangeDome;
     
     public virtual void Init(TowerSO towerData)
     {
-        type = towerData.type;
-        level = towerData.level;
-        buildCost = towerData.buildCost;
+        _type = towerData.type;
+        _level = towerData.level;
+        _buildCost = towerData.buildCost;
         range = towerData.range;
 
-        nextUpgrade = towerData.nextUpgrade;
+        _nextUpgrade = towerData.nextUpgrade;
     }
 
     public void EnableDome()
@@ -36,6 +35,11 @@ public class Tower : MonoBehaviour
     public void DisableDome()
     {
         rangeDome.SetActive(false);
+    }
+
+    public TowerSO GetNextUpdate()
+    {
+        return _nextUpgrade;
     }
 }
 

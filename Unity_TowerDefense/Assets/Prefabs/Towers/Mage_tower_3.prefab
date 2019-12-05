@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 73800113283436375}
   - component: {fileID: 6752907446201825482}
   - component: {fileID: 5030949324283118608}
+  - component: {fileID: 2800621626158230945}
   m_Layer: 0
   m_Name: SmallCrystals_3
   m_TagString: Untagged
@@ -78,6 +79,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2800621626158230945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683638725331789248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc327137ad9a1f749af5328dcc17cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minAmount: -2
+  maxAmount: 2
+  rotate: 1
+  rotationSpeed: 3
+  direction: -1
 --- !u!1 &3380591013976474732
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,20 +189,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  level: 0
-  buildCost: 0
-  range: 0
-  rangeObject: {fileID: 0}
-  nextUpgrade: {fileID: 0}
-  enemyToAttack: {fileID: 0}
-  nextAttackTime: 0
+  rangeDome: {fileID: 0}
   weaponBody: {fileID: 0}
   firePoints:
   - {fileID: 1495459534379994191}
+  _enemyToAttack: {fileID: 0}
 --- !u!1 &3956295628774693268
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +208,7 @@ GameObject:
   - component: {fileID: 2719865968068330831}
   - component: {fileID: 5766955895297099000}
   - component: {fileID: 4647139364837017665}
+  - component: {fileID: 78704851741018818}
   m_Layer: 0
   m_Name: Crystal_3
   m_TagString: Untagged
@@ -264,6 +277,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &78704851741018818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956295628774693268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc327137ad9a1f749af5328dcc17cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minAmount: 0
+  maxAmount: 5
+  rotate: 1
+  rotationSpeed: 5
+  direction: 1
 --- !u!1 &5065545360091223255
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8374744831751044937}
   - component: {fileID: 104583748206334288}
   - component: {fileID: 1526896967298056900}
+  - component: {fileID: 1475832885922099818}
   m_Layer: 0
   m_Name: Crystal_4
   m_TagString: Untagged
@@ -79,6 +80,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1475832885922099818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707221069862782239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc327137ad9a1f749af5328dcc17cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minAmount: 0
+  maxAmount: 10
+  rotate: 1
+  rotationSpeed: 5
+  direction: 1
 --- !u!1 &1269266581118607077
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +108,7 @@ GameObject:
   - component: {fileID: 8960094421875003788}
   - component: {fileID: 1224778303154016242}
   - component: {fileID: 4668021433745122006}
+  - component: {fileID: 6282935139778030767}
   m_Layer: 0
   m_Name: SmallCrystals_4
   m_TagString: Untagged
@@ -157,6 +176,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6282935139778030767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269266581118607077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc327137ad9a1f749af5328dcc17cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minAmount: -2
+  maxAmount: 2
+  rotate: 1
+  rotationSpeed: 3
+  direction: -1
 --- !u!1 &1463134898495885320
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +204,7 @@ GameObject:
   - component: {fileID: 9025688605405790189}
   - component: {fileID: 2259087556916700178}
   - component: {fileID: 8733036553663263224}
+  - component: {fileID: 1935860246947087947}
   m_Layer: 0
   m_Name: MediumCrystals_4
   m_TagString: Untagged
@@ -235,6 +272,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1935860246947087947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463134898495885320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc327137ad9a1f749af5328dcc17cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minAmount: -3
+  maxAmount: 3
+  rotate: 1
+  rotationSpeed: 5
+  direction: 1
 --- !u!1 &6911482660649102478
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,20 +383,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  level: 0
-  buildCost: 0
-  range: 0
-  rangeObject: {fileID: 0}
-  nextUpgrade: {fileID: 0}
-  enemyToAttack: {fileID: 0}
-  nextAttackTime: 0
+  rangeDome: {fileID: 0}
   weaponBody: {fileID: 0}
   firePoints:
   - {fileID: 7278894670230410040}
+  _enemyToAttack: {fileID: 0}
 --- !u!1 &7332034167357952824
 GameObject:
   m_ObjectHideFlags: 0

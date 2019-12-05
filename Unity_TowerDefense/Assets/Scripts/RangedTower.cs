@@ -8,9 +8,12 @@ public class RangedTower : Tower, IDealRangedDamage
     public float AttackRate { get; set; }
     public GameObject[] Projectiles { get; set; }
     
-    public Transform weaponBody;
-    public Transform[] firePoints;
+    [SerializeField] private Transform weaponBody;
+    [SerializeField] private Transform[] firePoints;
 
+    public Transform _enemyToAttack;
+    private float _nextAttackTime;
+    
     public override void Init(TowerSO towerData)
     {
         base.Init(towerData);
@@ -24,37 +27,41 @@ public class RangedTower : Tower, IDealRangedDamage
     private void Update()
     {
         Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, range, enemyLayerMask); 
+        Debug.Log(range + " " + enemiesInRange.Length);
         
         if (enemiesInRange.Length > 0)
         {
-            if (!enemyToAttack || !enemiesInRange.Contains(enemyToAttack.GetComponent<Collider>()))
+            if (!_enemyToAttack || !enemiesInRange.Contains(_enemyToAttack.GetComponent<Collider>()))
             {
-                enemyToAttack = enemiesInRange[Random.Range(0, enemiesInRange.Length)].transform;
+                _enemyToAttack = enemiesInRange[Random.Range(0, enemiesInRange.Length)].transform;
             }
-            
-            Vector3 lookPos = enemyToAttack.position - weaponBody.transform.position;
-            lookPos.y = 0;
-            Quaternion rotation = Quaternion.LookRotation(lookPos);
-            weaponBody.transform.rotation = Quaternion.Slerp(weaponBody.transform.rotation, rotation, Time.deltaTime * 2);
-          
-            Attack(enemyToAttack);
+
+            if (weaponBody != null)
+            {
+                Vector3 lookPos = _enemyToAttack.position - weaponBody.transform.position;
+                lookPos.y = 0;
+                Quaternion rotation = Quaternion.LookRotation(lookPos);
+                weaponBody.transform.rotation = Quaternion.Slerp(weaponBody.transform.rotation, rotation, Time.deltaTime * 2);
+            }
+
+            Attack(_enemyToAttack);
         }
         else
         {
-            enemyToAttack = null;
+            _enemyToAttack = null;
         }
     }
 
     public void Attack(Transform enemy)
     {
-        if (Time.time > nextAttackTime)
+        if (Time.time > _nextAttackTime)
         {
-            nextAttackTime = Time.time + AttackRate;
+            _nextAttackTime = Time.time + AttackRate;
 
             for (int i = 0; i < Projectiles.Length; i++)
             {
                 Projectile spawnedProjectile = Instantiate(Projectiles[i], firePoints[i].position, firePoints[i].rotation).GetComponent<Projectile>();
-                spawnedProjectile.SetTarget(enemyToAttack);
+                spawnedProjectile.SetTarget(_enemyToAttack);
                 spawnedProjectile.damage = Damage;
             }
         }
@@ -62,7 +69,6 @@ public class RangedTower : Tower, IDealRangedDamage
     
     void OnDrawGizmosSelected()
     {
-        // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(transform.position, range);
     }

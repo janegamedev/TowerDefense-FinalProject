@@ -139,6 +139,37 @@ Transform:
   m_Father: {fileID: 4410302042692191327}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3193452739731262558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461375281110005079}
+  m_Layer: 0
+  m_Name: BowRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1461375281110005079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193452739731262558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8888438636177294103}
+  m_Father: {fileID: 4760537523963318623}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3348627758009746913
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,15 +305,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6171732802909786061}
-  m_LocalRotation: {x: 0.0000001629207, y: 1, z: -0.00000007549789, w: -1.2300169e-14}
-  m_LocalPosition: {x: 0.6011963, y: 59.61255, z: -6.5410156}
+  m_LocalRotation: {x: -0.000000024480341, y: 0.9961947, z: 0.08715578, w: 0.00000027981145}
+  m_LocalPosition: {x: 0.6011962, y: 59.612545, z: -6.5410156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3636966280056378890}
   - {fileID: 2409747406671709889}
-  m_Father: {fileID: 4760537523963318623}
+  m_Father: {fileID: 1461375281110005079}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10, y: 179.99998, z: 0}
 --- !u!33 &3134134658557221734
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -358,7 +389,7 @@ Transform:
   m_LocalPosition: {x: -1.0940552, y: 408.06223, z: -1.0771484}
   m_LocalScale: {x: 0.885551, y: 0.932723, z: 0.932723}
   m_Children:
-  - {fileID: 8888438636177294103}
+  - {fileID: 1461375281110005079}
   m_Father: {fileID: 6667621327903552447}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -500,19 +531,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  level: 0
-  buildCost: 0
-  range: 0
-  rangeObject: {fileID: 0}
-  nextUpgrade: {fileID: 0}
-  enemyToAttack: {fileID: 0}
-  nextAttackTime: 0
-  weaponBody: {fileID: 8888438636177294103}
+  rangeDome: {fileID: 0}
+  weaponBody: {fileID: 1461375281110005079}
   firePoints:
   - {fileID: 3636966280056378890}
   - {fileID: 1560635517111408454}
   - {fileID: 5915836618147301639}
+  _enemyToAttack: {fileID: 0}
