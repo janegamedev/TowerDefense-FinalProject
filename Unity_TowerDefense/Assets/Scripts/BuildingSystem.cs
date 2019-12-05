@@ -39,7 +39,7 @@ public class BuildingSystem : MonoBehaviour
                     {
                         currentPanel = Instantiate(towerPanel, canvasRoot);
                         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
-                        selectionPanel.cell = selectedTile.transform;
+                        selectionPanel.tile = selectedTile;
                         
                         for (int i = 0; i < selectionPanel.buttons.Length; i++)
                         {
@@ -52,7 +52,8 @@ public class BuildingSystem : MonoBehaviour
                     {
                         currentPanel = Instantiate(upgradePanel, canvasRoot);
                         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
-                        selectionPanel.cell = selectedTile.transform;
+                        selectionPanel.tile = selectedTile;
+                        selectedTile.tower.EnableDome();
                         
                         selectionPanel.buttons[0].onClick.AddListener(UpgradeTower);
                         selectionPanel.costs[0].text = towers[0].nextUpgrade.buildCost.ToString();
@@ -70,8 +71,13 @@ public class BuildingSystem : MonoBehaviour
 
     private void ClosePanel()
     {
+        if (selectedTile.tower != null)
+        {
+            selectedTile.tower.DisableDome();
+        }
+        
         selectedTile = null;
-            
+
         SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
 
         foreach (var button in selectionPanel.buttons)
@@ -86,7 +92,6 @@ public class BuildingSystem : MonoBehaviour
     private void SellTower()
     {
         selectedTile.SellTower();
-        selectedTile = null;
         ClosePanel();
         
         //Decrease money
@@ -96,7 +101,6 @@ public class BuildingSystem : MonoBehaviour
     private void UpgradeTower()
     {
         selectedTile.UpgradeTower();
-        selectedTile = null;
         ClosePanel();
         
         //GameManager.Instance.Currency -= selectedCell.tower.nextUpgrade.buildCost;
@@ -104,9 +108,7 @@ public class BuildingSystem : MonoBehaviour
 
     private void SpawnTower(int id)
     {
-        Debug.Log("here");
         selectedTile.PlaceTower(towers[id]);
-        selectedTile = null;
         ClosePanel();
         
         //GameManager.Instance.Currency -= towers[id].buildCost;

@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ public class SelectionPanel : MonoBehaviour
 {
     public Button[] buttons;
     public TextMeshProUGUI[] costs;
-    public Transform cell;
+    public TowerTile tile;
 
     private Camera _camera;
 
@@ -17,8 +18,8 @@ public class SelectionPanel : MonoBehaviour
 
     private void Update()
     {
-        if(cell!=null)
-            transform.position = _camera.WorldToScreenPoint(cell.position);
+        if(tile!=null)
+            transform.position = _camera.WorldToScreenPoint(tile.transform.position);
         
         for (int i = 0; i < costs.Length; i++)
         {
@@ -34,4 +35,5 @@ public class SelectionPanel : MonoBehaviour
             }
         }
     }
+
 }

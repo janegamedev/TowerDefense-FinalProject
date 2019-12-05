@@ -32,12 +32,11 @@ public class RangedTower : Tower, IDealRangedDamage
                 enemyToAttack = enemiesInRange[Random.Range(0, enemiesInRange.Length)].transform;
             }
             
-            /*
-            Vector3 direction = enemyToAttack.position - weaponBody.position;
-            Quaternion toRotation = Quaternion.FromToRotation(weaponBody.forward, direction);
-            weaponBody.rotation = Quaternion.Lerp(weaponBody.rotation, toRotation, 0.02f * Time.time);
-            */
-
+            Vector3 lookPos = enemyToAttack.position - weaponBody.transform.position;
+            lookPos.y = 0;
+            Quaternion rotation = Quaternion.LookRotation(lookPos);
+            weaponBody.transform.rotation = Quaternion.Slerp(weaponBody.transform.rotation, rotation, Time.deltaTime * 2);
+          
             Attack(enemyToAttack);
         }
         else

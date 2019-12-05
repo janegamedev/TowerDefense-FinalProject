@@ -16,6 +16,8 @@ public class Tower : MonoBehaviour
     public Transform enemyToAttack;
     public float nextAttackTime;
 
+    public GameObject rangeDome;
+    
     public virtual void Init(TowerSO towerData)
     {
         type = towerData.type;
@@ -24,6 +26,16 @@ public class Tower : MonoBehaviour
         range = towerData.range;
 
         nextUpgrade = towerData.nextUpgrade;
+    }
+
+    public void EnableDome()
+    {
+        rangeDome.SetActive(true);
+    }
+
+    public void DisableDome()
+    {
+        rangeDome.SetActive(false);
     }
 }
 
