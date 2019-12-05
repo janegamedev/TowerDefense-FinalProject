@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     public string enemyName;
     
+    public float maxHealth;
     public float health;
     public int damage;
     public float attackRate;
@@ -67,7 +68,8 @@ public class Enemy : MonoBehaviour
 
     public void Init(EnemySO enemyData, RoadTile waypoint)
     {
-        health = enemyData.health;
+        maxHealth = enemyData.health;
+        health = maxHealth;
         damage = enemyData.damage;
         attackRate = enemyData.attackRate;
         

@@ -17,8 +17,6 @@ public class Projectile : MonoBehaviour
         target = _target;
     }
 
-    
-
     public virtual void HitEnemy()
     {
         Destroy(gameObject);

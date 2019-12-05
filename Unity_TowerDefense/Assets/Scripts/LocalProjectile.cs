@@ -9,18 +9,20 @@ public class LocalProjectile : Projectile
             Destroy(gameObject);
             return;
         }
+        
+        Vector3 targetPos = new Vector3(target.position.x, target.GetComponentInChildren<Renderer>().bounds.size.y/2 , target.position.z);
 
-        Vector3 direction = target.position - transform.position;
+        Vector3 direction = targetPos - transform.position;
         float distance = speed * Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, target.position)<= 1)
+        if (Vector3.Distance(transform.position, targetPos)<= 1)
         {
             HitEnemy();
             return;
         }
         
         transform.Translate(direction.normalized * distance, Space.World);
-        transform.LookAt(target);
+        transform.LookAt(targetPos);
     }
     
     public override void HitEnemy()
