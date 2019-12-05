@@ -49,18 +49,19 @@ public class MeleeTower : Tower, IHaveWarrior
     }
 
     
-    List<Vector3> GetRestPositions(RoadTile tile)
+    List<Vector3> GetRestPositions(RoadTile rTile)
     {
         List<Vector3> positions = new List<Vector3>();
         
-        Vector3 center = tile.transform.position;
+        Vector3 center = rTile.transform.position;
         Vector3 p1 = center + Vector3.forward * restRadius;
 
-        float cos30_R = Mathf.Cos(120 * Mathf.Deg2Rad) * restRadius;
+        float cos = Mathf.Cos(120 * Mathf.Deg2Rad) * restRadius;
+        float sin = Mathf.Sin(120 * Mathf.Deg2Rad);
         
-        var x2 = p1.x + cos30_R;
-        var x3 = p1.x -  cos30_R;
-        var z2 = p1.z - Mathf.Sin(120 * Mathf.Deg2Rad) * restRadius;
+        var x2 = p1.x + cos;
+        var x3 = p1.x -  cos;
+        var z2 = p1.z - sin * restRadius;
         
         Vector3 p2 = new Vector3(x2, center.y, z2);
         Vector3 p3 = new Vector3(x3, center.y, z2);

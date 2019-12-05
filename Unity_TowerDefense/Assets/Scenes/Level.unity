@@ -278,6 +278,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2860524442104973861, guid: 185449b21df6147478730583c4b5f5cb,
+        type: 3}
+      propertyPath: waves.Array.data[0].enemySets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 185449b21df6147478730583c4b5f5cb, type: 3}
 --- !u!1001 &178495296
@@ -534,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2b22bbd122c4f42aba2905347575b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapTexture: {fileID: 2800000, guid: d61677341c84cd040a419d0435671364, type: 3}
+  mapTexture: {fileID: 2800000, guid: 3131ef5ed75744b46b71a760ef682c5d, type: 3}
   seed: 0
   colors:
   - serializedVersion: 2
@@ -564,7 +569,7 @@ MonoBehaviour:
   generateGrass: 1
   generateFlowers: 1
   generateBuildings: 1
-  treesAmount: 25
+  treesAmount: 45
   grassAmountPerTile: 2
   flowersAmountPerTile: 2
   buldingsAmount: 7
