@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Serialization;
 
 public class GridGenerator : MonoBehaviour
@@ -56,6 +57,7 @@ public class GridGenerator : MonoBehaviour
 
     private void Overlap()
     {
+        GetComponent<NavMeshSurface>().BuildNavMesh();
         _endTile.PropagateRoad(null);
     }
 
