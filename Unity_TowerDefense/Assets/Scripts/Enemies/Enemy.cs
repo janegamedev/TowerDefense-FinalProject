@@ -1,4 +1,6 @@
 ﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : Character
 {
@@ -18,45 +20,65 @@ public class Enemy : Character
     {
         if (characterState != CharacterState.DEAD)
         {
-            characterState = characterToAttack != null ? CharacterState.ATTACKING : CharacterState.RUNNING;
+            if (characterToAttack != null && characterNavigationController.reachedDestination)
+            {
+                characterState = CharacterState.ATTACKING;
+            }
+            else
+            {
+                characterState = CharacterState.RUNNING;
+            }
         }
         
         switch (characterState)
         {
             case CharacterState.RUNNING:
-                if (characterNavigationController.reachedDestination)
-                {
-                    if (_currentTile != null)
-                    {
-                        _currentTile = _currentTile.nextTile;
-                    }
-                    else
-                    {
-                        characterState = CharacterState.DEAD;
-                    }
-                }
                 
-                destination = _currentTile.transform.position;
-                break;
-            
-            case CharacterState.ATTACKING:
-                if (!characterNavigationController.reachedDestination)
+                if (characterToAttack != null)
                 {
                     destination = characterToAttack.transform.position;
+                    characterNavigationController.SetDestination(destination);
                 }
                 else
                 {
-                    AttackEnemy();
+                    if (characterNavigationController.reachedDestination)
+                    {
+                        if (_currentTile != null)
+                        {
+                            _currentTile = _currentTile.nextTile;
+                            destination = _currentTile.transform.position + Random.insideUnitSphere * 5;
+                            destination.y = transform.position.y;
+                            characterNavigationController.SetDestination(destination);
+                        }
+                        else
+                        {
+                            characterState = CharacterState.DEAD;
+                        }
+                    }
+                    else
+                    {
+                        if (characterNavigationController.GetVelocity() > 0.2 && characterNavigationController.GetVelocity() <= 0.5f)
+                        {
+                            destination += Random.insideUnitSphere * 5;
+                            destination.y = transform.position.y;
+                            characterNavigationController.SetDestination(destination);
+                        }
+                    }
                 }
                 break;
+            
+            case CharacterState.ATTACKING:
+                AttackEnemy();
+                
+                break;
+            
             case CharacterState.DEAD:
                 Die();
                 break;
+            
             default:
                 throw new ArgumentOutOfRangeException();
         }
-
-        characterNavigationController.SetDestination(destination);
     }
 
     protected override void SetDefaultState()

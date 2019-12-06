@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using UnityEngine;
@@ -10,7 +12,6 @@ public class Wave
     public EnemySet[] enemySets;
     public float timeBetweenSpawns;
     public float timeBetweenSets;
-    
 }
 
 [Serializable]
@@ -37,44 +38,38 @@ public class WavesManager : MonoBehaviour
     
     public int totalEnemyCount;
 
+    public bool canStart = false;
     public bool isInit;
 
-    public void InitWaves()
+    public void Init()
     {
-        if (!isInit)
-        {
-            spawnTiles = FindObjectsOfType<RoadTile>().Where(x => x.isStart).ToArray();
-            NextWave();
-
-            foreach (var wave in waves)
-            {
-                foreach (var set in wave.enemySets)
-                {
-                    totalEnemyCount += set.enemyCount;
-                }
-            }
-
-            PlayerStats.Instance.WavesTotal = waves.Length;
-        }
+        spawnTiles = FindObjectsOfType<RoadTile>().Where(x => x.isStart).ToArray();
+        
+        PlayerStats.Instance.WavesTotal = waves.Length;
+        isInit = true;
+        StartCoroutine(StartWave());
     }
 
     private void Update()
     {
-        if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
+        if (isInit)
         {
-            enemiesRemainingToSpawn--;
-            nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
+            if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
+            {
+                enemiesRemainingToSpawn--;
+                nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
             
-            RoadTile randomWaypoint = spawnTiles[Random.Range(0, spawnTiles.Length)];
+                RoadTile randomWaypoint = spawnTiles[Random.Range(0, spawnTiles.Length)];
 
-            EnemySO enemyData = currentEnemySet.enemyData;
-            Enemy spawnedEnemy = Instantiate(enemyData.enemyModel, randomWaypoint.transform.position,
-                Quaternion.identity).GetComponent<Enemy>();
+                EnemySO enemyData = currentEnemySet.enemyData;
+                Enemy spawnedEnemy = Instantiate(enemyData.enemyModel, randomWaypoint.transform.position,
+                    Quaternion.identity).GetComponent<Enemy>();
             
-            spawnedEnemy.Init(enemyData, randomWaypoint);
+                spawnedEnemy.Init(enemyData, randomWaypoint);
 
-            spawnedEnemy.OnDeath += OnEnemyDeath;
-        } 
+                spawnedEnemy.OnDeath += OnEnemyDeath;
+            }
+        }
     }
 
     void OnEnemyDeath(GameObject go)
@@ -102,24 +97,32 @@ public class WavesManager : MonoBehaviour
         }
         else
         {
-            NextWave();
+            canStart = false;
+            StartCoroutine(StartWave());
         }
     }
 
-    private void NextWave()
+    IEnumerator StartWave()
     {
         currentWaveNumber++;
+
         if (currentWaveNumber - 1 < waves.Length)
         {
             PlayerStats.Instance.ChangeCurrentWave(currentWaveNumber);
             currentWave = waves[currentWaveNumber - 1];
             currentSetNumber = 0;
-            
-            NextSet();
+
         }
         else
         {
             Debug.Log(currentWaveNumber + "Level finished");
         }
+
+        while (!canStart)
+        {
+            yield return null;
+        }
+
+        NextSet();
     }
 }

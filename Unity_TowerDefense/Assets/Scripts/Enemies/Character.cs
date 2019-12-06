@@ -78,7 +78,7 @@ public class Character : MonoBehaviour
         {
             _nextAttackTime = Time.time + _attackRate;
             
-            if (Time.deltaTime > _nextAttackTime)
+            if (Time.deltaTime >= _nextAttackTime)
             {
                 characterToAttack.TakeHit(_damage, damageType);
             }

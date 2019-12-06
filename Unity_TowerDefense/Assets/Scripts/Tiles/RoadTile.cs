@@ -41,6 +41,6 @@ public class RoadTile : Tile
 
     public void CallWave()
     {
-        FindObjectOfType<WavesManager>().InitWaves();
+        FindObjectOfType<WavesManager>().Init();
     }
 }

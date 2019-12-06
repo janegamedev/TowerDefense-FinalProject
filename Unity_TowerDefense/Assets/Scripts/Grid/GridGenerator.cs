@@ -1,22 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GridGenerator : MonoBehaviour
 {
-    public Texture2D mapTexture;
-    public int seed;
+    private Texture2D mapTexture;
     public Color32[] colors;
     public GameObject[] hexPrefabs;
     public Transform[] tileRoots;
 
-    public Tile[,] grid;
+    private Tile[,] _grid;
 
     private float _hexW;
     private float _hexH;
-    public Vector3 _startPosition = Vector3.zero;
+    private Vector3 _startPosition = Vector3.zero;
 
-    private RoadTile endTile;
+    private RoadTile _endTile;
 
     public bool generateTrees;
     public bool generateGrass;
@@ -26,7 +26,7 @@ public class GridGenerator : MonoBehaviour
     public int treesAmount;
     public int grassAmountPerTile;
     public int flowersAmountPerTile;
-    public int buldingsAmount;
+    [FormerlySerializedAs("buldingsAmount")] public int buildingsAmount;
     
     public GameObject[] trees;
     public GameObject[] grass;
@@ -34,11 +34,13 @@ public class GridGenerator : MonoBehaviour
     public GameObject[] buildings;
     
     public Transform envRoot;
-/*    public GameObject[] trees;*/
 
-    private void Start()
+
+    public void Init(LevelSO levelData)
     {
-        grid = new Tile[mapTexture.width, mapTexture.height];
+        mapTexture = levelData.levelMap.texture;
+        
+        _grid = new Tile[mapTexture.width, mapTexture.height];
         
         _hexW = hexPrefabs[0].GetComponent<Renderer>().bounds.size.x / 2;
         _hexH = hexPrefabs[0].GetComponent<Renderer>().bounds.size.z / 2;
@@ -49,14 +51,14 @@ public class GridGenerator : MonoBehaviour
         CreateGrid();
         GenerateEnv();
         
-        endTile = tileRoots[2].GetComponentsInChildren<RoadTile>().First(x => x.isEnd == true);
+        _endTile = tileRoots[2].GetComponentsInChildren<RoadTile>().First(x => x.isEnd == true);
         
         Invoke("Overlap", 0.1f );
     }
 
     private void Overlap()
     {
-        endTile.PropagateRoad(null);
+        _endTile.PropagateRoad(null);
     }
 
     private void GenerateEnv()
@@ -126,7 +128,7 @@ public class GridGenerator : MonoBehaviour
 
         if (generateBuildings)
         {
-            for (int i = 0; i < buldingsAmount; i++)
+            for (int i = 0; i < buildingsAmount; i++)
             {
                 int index = Random.Range(0, tileRoots[0].childCount);
                 Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
@@ -137,7 +139,7 @@ public class GridGenerator : MonoBehaviour
                 }
                 else
                 {
-                    buldingsAmount++;
+                    buildingsAmount++;
                 }
             }
             
@@ -163,7 +165,7 @@ public class GridGenerator : MonoBehaviour
                 Tile hex = Instantiate(hexPrefabs[index], tileRoots[index]).GetComponent<Tile>();
                 hex.SetGridPosition(gridPos);
                 hex.transform.localPosition = CalcWorldPos(gridPos);
-                grid[x,y] = hex;
+                _grid[x,y] = hex;
                 hex.name = "Hexagon X: " + x + " Y: " + y;
             }
         }

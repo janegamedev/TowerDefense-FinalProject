@@ -15,14 +15,29 @@ public class Warrior : Character
 
     private void Update()
     { 
-        characterState = characterToAttack ? CharacterState.ATTACKING : CharacterState.RESTING;
-        
+        if (characterState != CharacterState.DEAD)
+        {
+            if (characterToAttack != null && characterNavigationController.reachedDestination)
+            {
+                characterState = CharacterState.ATTACKING;
+            }
+            else if(characterToAttack != null)
+            {
+                characterState = CharacterState.RUNNING;
+            }
+            else
+            {
+                characterState = CharacterState.RESTING;
+            }
+        }
+
         switch (characterState)
         {
             case CharacterState.RESTING:
                 
                 destination = restPosition;
-                
+                characterNavigationController.SetDestination(destination);
+
                 Collider[] n = Physics.OverlapSphere(transform.position, lookingRange , LayerMask.GetMask("Enemy"));
 
                 if (n.Length > 0)
@@ -45,17 +60,10 @@ public class Warrior : Character
             
             case CharacterState.RUNNING:
                 destination = characterToAttack.transform.position;
-
-                if (characterNavigationController.reachedDestination)
-                {
-                    characterState = CharacterState.ATTACKING;
-                }
-
+                characterNavigationController.SetDestination(destination);
                 break;
             
             case CharacterState.ATTACKING:
-                destination = characterToAttack.transform.position;
-                
                 AttackEnemy();
                 break;
             
@@ -67,7 +75,7 @@ public class Warrior : Character
                 throw new ArgumentOutOfRangeException();
         }
         
-        characterNavigationController.SetDestination(destination);
+        
     }
 
     protected override void SetDefaultState()

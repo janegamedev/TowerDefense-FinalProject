@@ -2593,7 +2593,7 @@ Animator:
   m_GameObject: {fileID: 1820919466449660}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a50cd06a0668d1a418d586a2944e3ed5, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af28e7418574ed545b7893421b2082d5, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2632,19 +2632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb66c03fd8d9f13489cfa3be07f8597b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warriorState: 0
-  damageType: 0
   restPosition: {x: 0, y: 0, z: 0}
   lookingRange: 10
-  stoppingDistance: 2
-  attackRate: 1
-  damage: 15
-  maxHealth: 100
-  health: 0
-  movementSpeed: 5
-  enemyToAttack: {fileID: 0}
-  nextAttackTime: 0
-  isDead: 0
 --- !u!114 &-187087728466449875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2658,7 +2647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1
-  stopDistance: 0
+  stopDistance: 5
   reachedDestination: 0
 --- !u!1 &1833544915534518
 GameObject:

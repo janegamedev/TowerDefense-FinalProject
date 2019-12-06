@@ -76,9 +76,9 @@ public class MeleeTower : Tower, IHaveWarrior
     private void DestroyWarrior(GameObject warrior)
     {
         warrior.SetActive(false);
-        warrior.transform.position = spawnPosition.position;
+/*        warrior.transform.position = spawnPosition.position;
 
-        StartCoroutine(Respawn(warrior));
+        StartCoroutine(Respawn(warrior));*/
     }
 
     IEnumerator Respawn(GameObject warrior)

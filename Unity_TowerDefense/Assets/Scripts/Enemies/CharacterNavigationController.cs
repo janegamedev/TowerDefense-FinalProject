@@ -21,46 +21,39 @@ public class CharacterNavigationController : MonoBehaviour
 
     public void SetDestination(Vector3 position)
     {
-        _destination = position + Random.insideUnitSphere * 5;
-        _destination.y = transform.position.y;
+        _destination = position;
         reachedDestination = false;
+    }
+
+    public float GetVelocity()
+    {
+        return _characterController.velocity.magnitude;
     }
 
     private void Update()
     {
-        MoveTowardsTarget();
-        UpdateAnim();
-    }
-
-    void MoveTowardsTarget()
-    {
-        Vector3 offset = _destination - transform.position;
-
-        if (offset.magnitude > 0.1f)
+        if (!IsAtDestination())
         {
-            offset = offset.normalized * movementSpeed;
+            reachedDestination = false;
+            Vector3 offset = (_destination - transform.position).normalized * movementSpeed;
             _characterController.Move(offset * Time.deltaTime);
             transform.LookAt(_destination);
         }
-
-        if (IsAtDestination())
+        else
         {
             reachedDestination = true;
         }
+        
+        _animator.SetFloat("speed", _characterController.velocity.magnitude);
     }
-    
+
     private bool IsAtDestination()
     {
         if(_destination != Vector3.zero)
-            return Vector3.Distance(transform.position, _destination) < stopDistance;
+            return Vector3.Distance(transform.position, _destination) <= stopDistance;
         else
         {
             return false;
         }
-    }
-
-    void UpdateAnim()
-    {
-        _animator.SetFloat("speed", _characterController.velocity.magnitude);
     }
 }
