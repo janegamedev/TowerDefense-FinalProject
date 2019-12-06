@@ -120,4 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minAmount: 1
-  maxAmount: 4
+  maxAmount: 7
+  rotate: 0
+  rotationSpeed: 0
+  direction: 0

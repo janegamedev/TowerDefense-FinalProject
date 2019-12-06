@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 public class GridGenerator : MonoBehaviour
 {
-    private Texture2D mapTexture;
+    public Texture2D mapTexture;
     public Color32[] colors;
     public GameObject[] hexPrefabs;
     public Transform[] tileRoots;
@@ -36,10 +36,8 @@ public class GridGenerator : MonoBehaviour
     public Transform envRoot;
 
 
-    public void Init(LevelSO levelData)
+    public void Start()
     {
-        mapTexture = levelData.levelMap.texture;
-        
         _grid = new Tile[mapTexture.width, mapTexture.height];
         
         _hexW = hexPrefabs[0].GetComponent<Renderer>().bounds.size.x / 2;

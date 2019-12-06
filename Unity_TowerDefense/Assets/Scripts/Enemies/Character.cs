@@ -96,6 +96,12 @@ public class Character : MonoBehaviour
 
     protected virtual void Die()
     {
+        characterNavigationController.SetDestination(transform.position);
+        GetComponent<Animator>().SetTrigger("dead");
+    }
+
+    public void OnEndDeathAnimation()
+    {
         OnDeath?.Invoke(gameObject);
     }
     
