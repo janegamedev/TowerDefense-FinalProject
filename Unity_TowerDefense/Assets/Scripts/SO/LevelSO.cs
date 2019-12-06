@@ -6,5 +6,8 @@ using UnityEngine;
 public class LevelSO : ScriptableObject
 {
     public string levelName;
+    public Sprite levelMap;
+
+    public LevelSO nextLevel;
     
 }

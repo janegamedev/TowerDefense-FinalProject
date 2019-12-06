@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Level 3
   m_EditorClassIdentifier: 
   levelName: Level 3
+  levelMap: {fileID: 21300000, guid: aa3ed3e09b2168944bce5f4f8d655188, type: 3}
+  nextLevel: {fileID: 11400000, guid: 2d952891d6e187645b8173d1cd4d94bf, type: 2}
