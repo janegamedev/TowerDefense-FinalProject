@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 [Serializable]
@@ -23,6 +22,7 @@ public class EnemySet
 
 public class WavesManager : MonoBehaviour
 {
+    [SerializeField] private Button waveButton;
     public Wave[] waves;
 
     public RoadTile[] spawnTiles;
@@ -37,45 +37,55 @@ public class WavesManager : MonoBehaviour
     public float nextSpawnTime;
     
     public int totalEnemyCount;
-
-    public bool canStart = false;
-    public bool isInit;
-
+    
+    private bool _canSpawn;
+    private bool _isFinished;
+    
     public void Init()
     {
         spawnTiles = FindObjectsOfType<RoadTile>().Where(x => x.isStart).ToArray();
         
         PlayerStats.Instance.WavesTotal = waves.Length;
-        isInit = true;
-        StartCoroutine(StartWave());
+        waveButton.onClick.AddListener(StartWave);
     }
-
+    
     private void Update()
     {
-        if (isInit)
+        if (_canSpawn)
         {
-            if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
+            _canSpawn = false;
+            if (enemiesRemainingToSpawn > 0)
             {
-                enemiesRemainingToSpawn--;
-                nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
-            
-                RoadTile randomWaypoint = spawnTiles[Random.Range(0, spawnTiles.Length)];
+                StartCoroutine(EnemySpawn());
+            }
+            else
+            {
+                NextSet();
+            }
+        }
 
-                EnemySO enemyData = currentEnemySet.enemyData;
-                Enemy spawnedEnemy = Instantiate(enemyData.enemyModel, randomWaypoint.transform.position,
-                    Quaternion.identity).GetComponent<Enemy>();
-            
-                spawnedEnemy.Init(enemyData, randomWaypoint);
+        if (enemiesRemainingAlive <= 0)
+        {
+            waveButton.interactable = true;
 
-                spawnedEnemy.OnDeath += OnEnemyDeath;
+            if (currentWaveNumber >= waves.Length)
+            {
+                EndLevel();
             }
         }
     }
 
-    void OnEnemyDeath(GameObject go)
+    void OnEnemyDeath(Enemy enemy)
     {
         enemiesRemainingAlive--;
-        Destroy(go);
+        
+        if (enemy.Health > 0)
+        {
+            PlayerStats.Instance.GetBounty(enemy.Bounty);
+            PlayerStats.Instance.ChangeLives(1);
+        }
+        
+        Destroy(enemy.gameObject);
 
         if (enemiesRemainingAlive == 0)
         {
@@ -83,6 +93,21 @@ public class WavesManager : MonoBehaviour
         }
     }
 
+    IEnumerator EnemySpawn()
+    {
+        yield return new WaitForSeconds(currentWave.timeBetweenSpawns);
+        enemiesRemainingToSpawn--;
+            
+        RoadTile randomWaypoint = spawnTiles[Random.Range(0, spawnTiles.Length)];
+
+        EnemySO enemyData = currentEnemySet.enemyData;
+        Enemy spawnedEnemy = Instantiate(enemyData.enemyModel, randomWaypoint.transform.position,
+            Quaternion.identity).GetComponent<Enemy>();
+        spawnedEnemy.Init(enemyData, randomWaypoint);
+        spawnedEnemy.OnDeath += OnEnemyDeath;
+
+        _canSpawn = true;
+    }
 
     private void NextSet()
     {
@@ -94,35 +119,30 @@ public class WavesManager : MonoBehaviour
             
             enemiesRemainingToSpawn = currentEnemySet.enemyCount;
             enemiesRemainingAlive = currentEnemySet.enemyCount;
-        }
-        else
-        {
-            canStart = false;
-            StartCoroutine(StartWave());
+            _canSpawn = true;
         }
     }
 
-    IEnumerator StartWave()
+    private void StartWave()
     {
         currentWaveNumber++;
+        waveButton.interactable = false;
 
-        if (currentWaveNumber - 1 < waves.Length)
+        if (currentWaveNumber <= waves.Length)
         {
             PlayerStats.Instance.ChangeCurrentWave(currentWaveNumber);
             currentWave = waves[currentWaveNumber - 1];
             currentSetNumber = 0;
-
+            NextSet();
         }
-        else
+    }
+
+    private void EndLevel()
+    {
+        if (!_isFinished)
         {
-            Debug.Log(currentWaveNumber + "Level finished");
+            _isFinished = true;
+            Debug.Log( "Level has been finished");
         }
-
-        while (!canStart)
-        {
-            yield return null;
-        }
-
-        NextSet();
     }
 }

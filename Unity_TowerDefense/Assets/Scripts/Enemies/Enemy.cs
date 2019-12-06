@@ -1,74 +1,111 @@
-﻿using System;
+using System;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-public class Enemy : Character
+public enum CharacterState
 {
+    ALIVE,
+    DEAD
+}
+
+public class Enemy : MonoBehaviour
+{
+    private string _enemyName;
+    public CharacterState characterState;
+    private DamageType damageType;
+    
+    private protected float maxHealth;
+    private protected float health;
+    public float Health => health;
+
+    private int _damage;
+    private float _attackRate;
+    private float _armour;
+    private float _magicResistance;
+    private float _speed;
+    
+    public float movementSpeed = 1f;
+    private float _stopDistance;
+    
     private int _bounty;
+    public int Bounty => _bounty;
+
     private RoadTile _currentTile;
+    
+    private protected bool isDead;
+    
+    public event System.Action<Enemy> OnDeath;
+    
+    private HealthBar _healthBar;
+    
+    private protected Vector3 destination;
+    private protected Enemy enemyToAttack;
+    
+    private NavMeshAgent _navMeshAgent;
+    private Animator _animator;
 
-    public override void Init(EnemySO characterData, RoadTile startTile)
+    private float _nextAttackTime;
+
+    private void Awake()
     {
-        _bounty = characterData.bounty;
-
-        _currentTile = startTile;
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
+        _healthBar = GetComponentInChildren<HealthBar>();
+    }
+    
+    public void Init(EnemySO characterData, RoadTile startTile)
+    {
+        characterState = CharacterState.ALIVE;
         
-        base.Init(characterData, startTile);
+        _enemyName = characterData.enemyName;
+        maxHealth = characterData.health;
+        health = maxHealth;
+        _damage = characterData.damage;
+        _attackRate = characterData.attackRate;
+        
+        _armour = characterData.armour;
+        _magicResistance = characterData.magicResistance;
+
+        _navMeshAgent.speed = characterData.speed;
+        
+        _bounty = characterData.bounty;
+        _currentTile = startTile;
+
+        Vector2 rp = Random.insideUnitCircle * 5;
+        destination = startTile.transform.position + new Vector3(rp.x, startTile.transform.position.y , rp.y);
+        _stopDistance = 5;
     }
 
     private void Update()
     {
-        if (characterState != CharacterState.DEAD)
-        {
-            if (characterToAttack != null && characterNavigationController.reachedDestination)
-            {
-                characterState = CharacterState.ATTACKING;
-            }
-            else
-            {
-                characterState = CharacterState.RUNNING;
-            }
-        }
-        
         switch (characterState)
         {
-            case CharacterState.RUNNING:
+            case CharacterState.ALIVE:
                 
-                if (characterToAttack != null)
+                if (IsAtDestination())
                 {
-                    destination = characterToAttack.transform.position;
-                    characterNavigationController.SetDestination(destination);
-                }
-                else
-                {
-                    if (characterNavigationController.reachedDestination)
+                    if (_currentTile.nextTile != null)
                     {
-                        if (_currentTile != null)
+                        _currentTile = _currentTile.nextTile;
+                        destination = _currentTile.transform.position + Random.insideUnitSphere * 5;
+                        destination.y = transform.position.y;
+                            
+                        NavMeshHit hit;
+                        if (NavMesh.SamplePosition(destination, out hit, 1.0f, NavMesh.AllAreas)) 
                         {
-                            _currentTile = _currentTile.nextTile;
-                            destination = _currentTile.transform.position + Random.insideUnitSphere * 5;
-                            destination.y = transform.position.y;
-                            characterNavigationController.SetDestination(destination);
+                            destination = hit.position;
                         }
-                        else
-                        {
-                            characterState = CharacterState.DEAD;
-                        }
+                        
                     }
                     else
                     {
-                        if (characterNavigationController.GetVelocity() > 0.2 && characterNavigationController.GetVelocity() <= 0.5f)
-                        {
-                            destination += Random.insideUnitSphere * 5;
-                            destination.y = transform.position.y;
-                            characterNavigationController.SetDestination(destination);
-                        }
+                        characterState = CharacterState.DEAD;
                     }
                 }
-                break;
-            
-            case CharacterState.ATTACKING:
-                AttackEnemy();
+                
+                SetDestination();
+                UpdateAnimation();
                 
                 break;
             
@@ -81,25 +118,88 @@ public class Enemy : Character
         }
     }
 
-    protected override void SetDefaultState()
+    private protected void SetDestination()
     {
-        characterState = CharacterState.RUNNING;
+        _navMeshAgent.SetDestination(destination);
     }
 
-    protected override void Die()
+    private protected void UpdateAnimation()
+    {
+        _animator.SetFloat("velocity", _navMeshAgent.velocity.magnitude);
+    }
+
+
+    private protected bool IsAtDestination()
+    {
+        if(_navMeshAgent.destination != Vector3.zero)
+            return Vector3.Distance(transform.position, destination) <= _stopDistance;
+        else
+        {
+            return true;
+        }
+    }
+    
+    
+    private protected bool NeedsDestination()
+    {
+        if (_navMeshAgent.destination == Vector3.zero)
+        {
+            return true;
+        }
+
+        var distance = Vector3.Distance(destination, _navMeshAgent.destination);
+        if(distance <= _stopDistance)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    
+
+    protected virtual void Die()
     {
         if (!isDead)
         {
             isDead = true;
             if (health <= 0)
             {
-                PlayerStats.Instance.GetBounty(_bounty);
+                
             }
-        
-            PlayerStats.Instance.ChangeLives(1);
             
-            base.Die();
+            destination = transform.position;
+            SetDestination();
+            GetComponent<Animator>().SetTrigger("dead");
+        }
+    }
+
+    public void OnEndDeathAnimation()
+    {
+        OnDeath?.Invoke(this);
+    }
+
+    public void TakeHit(float amount, DamageType type)
+    {
+        switch (type)
+        {
+            case DamageType.PHYSICAL:
+                health -= amount * (1 - _armour);
+                break;
+            
+            case DamageType.MAGIC:
+                health -= amount * (1 - _magicResistance);
+                break;
+            
+            default:
+                throw new ArgumentOutOfRangeException(nameof(type), type, null);
+        }
+        
+        _healthBar.UpdateHealth(health, maxHealth);
+        
+        if (health <= 0)
+        {
+            characterState = CharacterState.DEAD;
         }
     }
 }
-

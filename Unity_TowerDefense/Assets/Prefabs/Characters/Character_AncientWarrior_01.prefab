@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 922547931}
   - component: {fileID: 922547930}
   - component: {fileID: 3312141619491809362}
-  - component: {fileID: 4043567389537254648}
   m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
@@ -190,23 +189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1356936940}
---- !u!1818360608 &4043567389537254648
-PositionConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922547928}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 0.593, z: 1.44}
-  m_TranslationOffset: {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 0
-  m_AffectTranslationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 1
-  m_Sources: []
 --- !u!1 &1356936938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,9 +2934,8 @@ GameObject:
   - component: {fileID: 95042069359887848}
   - component: {fileID: 6615688084451277338}
   - component: {fileID: 7104129005689350171}
-  - component: {fileID: -7692949247635370402}
-  - component: {fileID: -3075427125918152354}
   - component: {fileID: 9217172633781994843}
+  - component: {fileID: 2644181357499638186}
   m_Layer: 9
   m_Name: Character_AncientWarrior_01
   m_TagString: Untagged
@@ -3029,41 +3010,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909744818002174}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.005
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-7692949247635370402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909744818002174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5abdd586e2b0b5444b509b96e0615771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-3075427125918152354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909744818002174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992d24300f14214419cea39b7446261c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 0
-  stopDistance: 5
-  reachedDestination: 0
 --- !u!195 &9217172633781994843
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3086,6 +3040,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2644181357499638186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909744818002174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd2ecd2dcac4d5ca39a9595f44bb170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterState: 0
+  movementSpeed: 1
 --- !u!1 &1913753442458408
 GameObject:
   m_ObjectHideFlags: 0

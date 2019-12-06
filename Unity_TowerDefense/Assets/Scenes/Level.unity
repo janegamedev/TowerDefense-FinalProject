@@ -283,6 +283,11 @@ PrefabInstance:
       propertyPath: waves.Array.data[0].enemySets.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2860524442104973861, guid: 185449b21df6147478730583c4b5f5cb,
+        type: 3}
+      propertyPath: waveButton
+      value: 
+      objectReference: {fileID: 252251155}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 185449b21df6147478730583c4b5f5cb, type: 3}
 --- !u!1001 &178495296
@@ -646,6 +651,18 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 27e67b5a59c9d33438a3815c140b1baa, type: 2}
+--- !u!114 &252251155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2193436471867782454, guid: ed19ca44c7369dc47a0bfba90faf7dde,
+    type: 3}
+  m_PrefabInstance: {fileID: 178495296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &405640643 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6977192030686059705, guid: ed19ca44c7369dc47a0bfba90faf7dde,
