@@ -2,14 +2,16 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class GridGenerator : MonoBehaviour
 {
-    public Texture2D mapTexture;
-    public Color32[] colors;
-    public GameObject[] hexPrefabs;
+    public LevelSO levelSo;
     public Transform[] tileRoots;
+    
+    private Texture2D mapTexture;
+    private Color32[] colors;
+    private GameObject[] hexPrefabs;
 
     private Tile[,] _grid;
 
@@ -19,26 +21,52 @@ public class GridGenerator : MonoBehaviour
 
     private RoadTile _endTile;
 
-    public bool generateTrees;
-    public bool generateGrass;
-    public bool generateFlowers;
-    public bool generateBuildings;
+    private bool _generateTrees = false;
+    private GameObject[] _treesPrefabs;
+    private int _treesAmount;
     
-    public int treesAmount;
-    public int grassAmountPerTile;
-    public int flowersAmountPerTile;
-    [FormerlySerializedAs("buldingsAmount")] public int buildingsAmount;
-    
-    public GameObject[] trees;
-    public GameObject[] grass;
-    public GameObject[] flowers;
-    public GameObject[] buildings;
-    
-    public Transform envRoot;
+    private bool _generateGrass = false;
+    private GameObject[] _grassPrefabs;
+    private int _grassAmount;
 
+    private bool _generateProps = false;
+    private GameObject[] _propsPrefabs;
+    private int _propsAmount;
 
-    public void Start()
+    private void Start()
     {
+        Init(levelSo);
+    }
+
+    public void Init(LevelSO data)
+    {
+        mapTexture = data.mapTexture;
+        colors = data.colorsOnTheMap;
+        hexPrefabs = data.hexPrefabs;
+        _generateTrees = data.generateTrees;
+
+        if (_generateTrees)
+        {
+            _treesPrefabs = data.treesPrefabs;
+            _treesAmount = data.treesAmount;
+        }
+        
+        _generateGrass = data.generateGrass;
+
+        if (_generateGrass)
+        {
+            _grassPrefabs = data.grassPrefabs;
+            _grassAmount = data.grassAmount;
+        }
+        
+        _generateProps = data.generateProps;
+
+        if (_generateProps)
+        {
+            _propsPrefabs = data.propsPrefabs;
+            _propsAmount = data.propsAmount;
+        }
+        
         _grid = new Tile[mapTexture.width, mapTexture.height];
         
         _hexW = hexPrefabs[0].GetComponent<Renderer>().bounds.size.x / 2;
@@ -50,109 +78,9 @@ public class GridGenerator : MonoBehaviour
         CreateGrid();
         GenerateEnv();
         
-        _endTile = tileRoots[2].GetComponentsInChildren<RoadTile>().First(x => x.isEnd == true);
-        
-        Invoke("Overlap", 0.1f );
+        Invoke("BuildRoads", 0.1f );
     }
-
-    private void Overlap()
-    {
-        GetComponent<NavMeshSurface>().BuildNavMesh();
-        _endTile.PropagateRoad(null);
-    }
-
-    private void GenerateEnv()
-    { 
-        List<Tile> tilesTrees = new List<Tile>();
-        List<Tile> tilesBuildings = new List<Tile>();
-        
-        if (generateTrees)
-        {
-            
-            for (int i = 0; i < treesAmount; i++)
-            {
-                int index = Random.Range(0, tileRoots[0].childCount);
-                Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
-
-                if (!tilesTrees.Contains(tile))
-                {
-                    tilesTrees.Add(tile);
-                }
-                else
-                {
-                    treesAmount++;
-                }
-            }
-            
-            foreach (var tile in tilesTrees)
-            {
-                int index = Random.Range(0, trees.Length);
-                GameObject tree = Instantiate(trees[index], tile.transform.position, Quaternion.identity, envRoot);
-            }
-        }
-
-        if (generateGrass)
-        {
-            for (int i = 0; i < Random.Range(5,15); i++)
-            {
-                for (int j = 0; j < grassAmountPerTile; j++)
-                {
-                    int index = Random.Range(0, tileRoots[0].childCount);
-                    Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
-                    
-                    Vector3 pos = tile.transform.position + Random.insideUnitSphere * 10;
-                    pos.y = envRoot.transform.position.y;
-                    Quaternion rot = Quaternion.Euler(0, Random.Range(0, 360), 0);
-                    GameObject gr = Instantiate(grass[Random.Range(0, grass.Length)], pos, rot, envRoot);
-                }
-            }
-        }
-
-        if (generateFlowers)
-        {
-            for (int i = 0; i < Random.Range(5,15); i++)
-            {
-                for (int j = 0; j < flowersAmountPerTile; j++)
-                {
-                    int index = Random.Range(0, tileRoots[0].childCount);
-                    Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
-            
-                    int flower = Random.Range(0, flowers.Length);
-                    Vector3 pos = tile.transform.position + Random.insideUnitSphere * 10;
-                    pos.y = envRoot.transform.position.y;
-                    Quaternion rot = Quaternion.Euler(0, Random.Range(0, 360), 0);
-                    GameObject f = Instantiate(flowers[flower], pos, rot, envRoot);
-                }
-            }
-        }
-
-        if (generateBuildings)
-        {
-            for (int i = 0; i < buildingsAmount; i++)
-            {
-                int index = Random.Range(0, tileRoots[0].childCount);
-                Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
-
-                if (!tilesTrees.Contains(tile) && !tilesBuildings.Contains(tile))
-                {
-                    tilesBuildings.Add(tile);
-                }
-                else
-                {
-                    buildingsAmount++;
-                }
-            }
-            
-            foreach (var tile in tilesBuildings)
-            {
-                int index = Random.Range(0, buildings.Length);
-                Quaternion rot = Quaternion.Euler(0, Random.Range(0, 360), 0);
-                GameObject building = Instantiate(buildings[index], tile.transform.position, rot, envRoot);
-            }
-        }
-
-    }
-
+    
     void CreateGrid()
     {
         for (int y = 0; y < mapTexture.height; y++)
@@ -171,26 +99,80 @@ public class GridGenerator : MonoBehaviour
         }
     }
     
-
-    List<RoadTile> GetNeighboursRoad(RoadTile tile)
+    private void GenerateEnv()
     {
-        List<RoadTile> roadTiles = new List<RoadTile>();
+        Transform root = tileRoots[tileRoots.Length - 1];
+        List<Tile> tilesTrees = new List<Tile>();
+        List<Tile> tilesProps = new List<Tile>();
         
-        Collider[] neighbours = Physics.OverlapSphere(tile.transform.position, 50);
-        
-        if (neighbours.Length > 0)
+        if (_generateTrees)
         {
-            Debug.Log("Here");
-            foreach (var n in neighbours)
+            
+            for (int i = 0; i < _treesAmount; i++)
             {
-                RoadTile road = n.GetComponent<RoadTile>();
-                if (road)
+                int index = Random.Range(0, tileRoots[0].childCount);
+                Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
+
+                if (!tilesTrees.Contains(tile))
                 {
-                    roadTiles.Add(road);
+                    tilesTrees.Add(tile);
+                }
+                else
+                {
+                    _treesAmount++;
                 }
             }
+            
+            foreach (var tile in tilesTrees)
+            {
+                int index = Random.Range(0, _treesPrefabs.Length);
+                Quaternion rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+                GameObject tree = Instantiate(_treesPrefabs[index], tile.transform.position, rotation, root);
+            }
         }
-        return roadTiles;
+
+        if (_generateGrass)
+        {
+            for (int j = 0; j < _grassAmount; j++)
+            {
+                int index = Random.Range(0, tileRoots[0].childCount);
+                Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
+                    
+                Vector3 pos = tile.transform.position + Random.insideUnitSphere * 10;
+                pos.y = root.position.y;
+                Quaternion rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+                GameObject gr = Instantiate(_grassPrefabs[Random.Range(0, _grassPrefabs.Length)], pos, rotation, root);
+            }
+        }
+
+        if (_generateProps)
+        {
+            for (int i = 0; i < _propsAmount; i++)
+            {
+                int index = Random.Range(0, tileRoots[0].childCount);
+                Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
+
+                if (!tilesTrees.Contains(tile) && !tilesProps.Contains(tile))
+                {
+                    tilesProps.Add(tile);
+                }
+            }
+            
+            foreach (var tile in tilesProps)
+            {
+                int index = Random.Range(0, _propsPrefabs.Length);
+                Quaternion rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+                GameObject building = Instantiate(_propsPrefabs[index], tile.transform.position, rotation, root);
+            }
+        }
+
+    }
+
+    private void BuildRoads()
+    {
+        _endTile = tileRoots[1].GetComponentsInChildren<RoadTile>().First(x => x.isEnd == true);
+        GetComponent<NavMeshSurface>().BuildNavMesh();
+        _endTile.PropagateRoad(null);
     }
     
     int GetTileFromImage(int x, int y)
@@ -205,7 +187,7 @@ public class GridGenerator : MonoBehaviour
                 index = i;
             }
         }
-        
+
         return index;
     }
     

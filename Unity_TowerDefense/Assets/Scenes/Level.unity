@@ -545,64 +545,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2b22bbd122c4f42aba2905347575b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapTexture: {fileID: 2800000, guid: aa3ed3e09b2168944bce5f4f8d655188, type: 3}
-  colors:
-  - serializedVersion: 2
-    rgba: 4282630267
-  - serializedVersion: 2
-    rgba: 4281759731
-  - serializedVersion: 2
-    rgba: 4288214269
-  - serializedVersion: 2
-    rgba: 4291793411
-  - serializedVersion: 2
-    rgba: 4281680110
-  hexPrefabs:
-  - {fileID: 1001236920876868, guid: b52e6fdb9179d4ef19097ea8727a4496, type: 3}
-  - {fileID: 1221241471288320, guid: 4601f921d60d341d387570ecf26a007a, type: 3}
-  - {fileID: 1266813705471474, guid: aa67ed5cc473046058070c067eb29ce0, type: 3}
-  - {fileID: 1667114109718088, guid: 6cd5499abd3794228b6e7e318fa60b9a, type: 3}
-  - {fileID: 1266813705471474, guid: 8532b3597dcb84d4f83676645b5e61a6, type: 3}
+  levelSo: {fileID: 11400000, guid: e04eed2837331f84fb11405095d2a55f, type: 2}
   tileRoots:
   - {fileID: 1892356502}
-  - {fileID: 1510224982}
   - {fileID: 1235831671}
+  - {fileID: 1510224982}
   - {fileID: 533731231}
   - {fileID: 1235831671}
-  generateTrees: 1
-  generateGrass: 1
-  generateFlowers: 1
-  generateBuildings: 0
-  treesAmount: 3
-  grassAmountPerTile: 2
-  flowersAmountPerTile: 2
-  buildingsAmount: 7
-  trees:
-  - {fileID: 1000013497436514, guid: ddf7f5e45e33643f29f98935b0a24dd3, type: 3}
-  - {fileID: 1000010757296548, guid: 82bd0e3eef3cc854eae31c6f4cd718bf, type: 3}
-  - {fileID: 1000011132149452, guid: 9d7f29b770d624f689e53cccd7e83eb6, type: 3}
-  - {fileID: 1000013131209694, guid: 140836445facb496ea496a3d5dff7037, type: 3}
-  - {fileID: 1000012021262986, guid: 225ec0802551d9340bc86557a67b08fd, type: 3}
-  grass:
-  - {fileID: 1000010809830414, guid: 7ee30a12973dcb3469d7f62d34a28f12, type: 3}
-  - {fileID: 1000012435560724, guid: b9fd96550c6ef8c48ac42fffcad3eeb0, type: 3}
-  - {fileID: 1000010651977466, guid: 1689020eaa3b542b1ae54fbdb838f290, type: 3}
-  - {fileID: 1000011460035558, guid: f023a4e9862e54b47b8bfac12ce80ccd, type: 3}
-  - {fileID: 1000014289357120, guid: 5d43bd8198132492795c84a7a66997e0, type: 3}
-  - {fileID: 1000011471527648, guid: aa2aba1c609347b46a000dcb4078c820, type: 3}
-  - {fileID: 1000011669407258, guid: 03b67f53c002a4af881d7049bc3e950b, type: 3}
-  - {fileID: 1000011460197470, guid: c3591d4a38d50e440931ebbe367ff068, type: 3}
-  - {fileID: 1000011497609644, guid: 86c8aa56418d04c11b5a28c96bc80f96, type: 3}
-  - {fileID: 1000012002960424, guid: 44f06f083d27f4a75bdf4b52d745f453, type: 3}
-  flowers:
-  - {fileID: 1000012618888018, guid: 653cb796147c84b24abcb5e780e76a6a, type: 3}
-  - {fileID: 1000012594744698, guid: 8f978411889e34ca6aee658176b5ad6d, type: 3}
-  - {fileID: 1000012396999754, guid: 81a81558ba91f4bb781add930fdd759a, type: 3}
-  buildings:
-  - {fileID: 1000012191212250, guid: 02b6852f899a15d44957b934349e7e9a, type: 3}
-  - {fileID: 1000012383013900, guid: be44107002abe0046a8a7f08bbf0eef1, type: 3}
-  - {fileID: 1000012625864402, guid: d9f771127f198ea40869d419a85f3b89, type: 3}
-  envRoot: {fileID: 949627727}
+  - {fileID: 949627727}
 --- !u!4 &226771087
 Transform:
   m_ObjectHideFlags: 0
@@ -615,8 +565,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1892356502}
-  - {fileID: 1510224982}
   - {fileID: 1235831671}
+  - {fileID: 1510224982}
   - {fileID: 533731231}
   - {fileID: 949627727}
   m_Father: {fileID: 0}
@@ -727,7 +677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 949627727}
   m_Layer: 0
-  m_Name: Env
+  m_Name: Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -787,7 +737,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 226771087}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1374274183 stripped
 MonoBehaviour:
@@ -895,7 +845,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 226771087}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1892356501
 GameObject:
