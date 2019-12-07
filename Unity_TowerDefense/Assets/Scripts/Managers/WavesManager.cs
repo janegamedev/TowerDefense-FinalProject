@@ -83,11 +83,16 @@ public class WavesManager : MonoBehaviour
         {
             PlayerStats.Instance.GetBounty(enemy.Bounty);
             PlayerStats.Instance.ChangeLives(1);
+
+            if (PlayerStats.Instance.Lives <= 0)
+            {
+                EndLevel();
+            }
         }
         
         Destroy(enemy.gameObject);
 
-        if (enemiesRemainingAlive == 0)
+        if (enemiesRemainingAlive <= 0)
         {
             NextSet();
         }
@@ -142,7 +147,7 @@ public class WavesManager : MonoBehaviour
         if (!_isFinished)
         {
             _isFinished = true;
-            Debug.Log( "Level has been finished");
+            GameManager.Instance.GameOver();
         }
     }
 }

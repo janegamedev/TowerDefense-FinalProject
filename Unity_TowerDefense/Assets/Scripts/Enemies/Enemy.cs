@@ -15,8 +15,8 @@ public class Enemy : MonoBehaviour
     public CharacterState characterState;
     private DamageType damageType;
     
-    private protected float maxHealth;
-    private protected float health;
+    private float maxHealth;
+    private float health;
     public float Health => health;
 
     private int _damage;
@@ -33,13 +33,13 @@ public class Enemy : MonoBehaviour
 
     private RoadTile _currentTile;
     
-    private protected bool isDead;
+    private bool _isDead;
     
     public event System.Action<Enemy> OnDeath;
     
     private HealthBar _healthBar;
     
-    private protected Vector3 destination;
+    private Vector3 _destination;
     private protected Enemy enemyToAttack;
     
     private NavMeshAgent _navMeshAgent;
@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
         _currentTile = startTile;
 
         Vector2 rp = Random.insideUnitCircle * 5;
-        destination = startTile.transform.position + new Vector3(rp.x, startTile.transform.position.y , rp.y);
+        _destination = startTile.transform.position + new Vector3(rp.x, startTile.transform.position.y , rp.y);
         _stopDistance = 5;
     }
 
@@ -88,13 +88,13 @@ public class Enemy : MonoBehaviour
                     if (_currentTile.nextTile != null)
                     {
                         _currentTile = _currentTile.nextTile;
-                        destination = _currentTile.transform.position + Random.insideUnitSphere * 5;
-                        destination.y = transform.position.y;
+                        _destination = _currentTile.transform.position + Random.insideUnitSphere * (_stopDistance - 1);
+                        _destination.y = transform.position.y;
                             
                         NavMeshHit hit;
-                        if (NavMesh.SamplePosition(destination, out hit, 1.0f, NavMesh.AllAreas)) 
+                        if (NavMesh.SamplePosition(_destination, out hit, 1.0f, NavMesh.AllAreas)) 
                         {
-                            destination = hit.position;
+                            _destination = hit.position;
                         }
                         
                     }
@@ -118,9 +118,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private protected void SetDestination()
+    private void SetDestination()
     {
-        _navMeshAgent.SetDestination(destination);
+        _navMeshAgent.SetDestination(_destination);
         
         Ray ray = new Ray(transform.position, Vector3.down);
         RaycastHit hit;
@@ -133,56 +133,38 @@ public class Enemy : MonoBehaviour
                 {
                     _speedMultiplayer = road.speedMultiplayer;
                     _navMeshAgent.speed = _navMeshAgent.speed * road.speedMultiplayer;
-                    Debug.Log(_navMeshAgent.speed);
                 }
             }
         }
     }
 
-    private protected void UpdateAnimation()
+    private void UpdateAnimation()
     {
         _animator.SetFloat("velocity", _navMeshAgent.velocity.magnitude);
     }
 
 
-    private protected bool IsAtDestination()
+    private bool IsAtDestination()
     {
         if(_navMeshAgent.destination != Vector3.zero)
-            return Vector3.Distance(transform.position, destination) <= _stopDistance;
+            return Vector3.Distance(transform.position, _destination) <= _stopDistance;
         else
         {
             return true;
         }
     }
     
-    
-    private protected bool NeedsDestination()
+    private void Die()
     {
-        if (_navMeshAgent.destination == Vector3.zero)
+        if (!_isDead)
         {
-            return true;
-        }
-
-        var distance = Vector3.Distance(destination, _navMeshAgent.destination);
-        if(distance <= _stopDistance)
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    protected virtual void Die()
-    {
-        if (!isDead)
-        {
-            isDead = true;
+            _isDead = true;
             if (health <= 0)
             {
                 
             }
             
-            destination = transform.position;
+            _destination = transform.position;
             SetDestination();
             GetComponent<Animator>().SetTrigger("dead");
         }

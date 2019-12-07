@@ -29,6 +29,8 @@ public class CameraController : MonoBehaviour
     }
 
     private void Update()
+    {
+        if (GameManager.Instance.CurrentGameState == GameState.RUNNING)
         {
             if (Input.GetKey(KeyCode.W) && transform.position.z <= verticalMaxBorder)
             {
@@ -59,6 +61,8 @@ public class CameraController : MonoBehaviour
                 ZoomOut();
             }
         }
+    }
+        
 
     void ZoomIn()
     {

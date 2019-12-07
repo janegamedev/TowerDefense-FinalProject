@@ -1,71 +1,92 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BuildingSystem : MonoBehaviour
 {
     [SerializeField] private TowerSO[] towers;
     [SerializeField] private LayerMask layerMask;
     
-    public Transform canvasRoot;
-    public GameObject towerPanel;
-    public GameObject upgradePanel;
-    public GameObject currentPanel;
-    public TowerTile selectedTile;
-
+    [SerializeField] private GameObject towerSelectionPanel;
+    [SerializeField] private GameObject towerUpgradePanel;
+    
+    private GameObject _currentPanel = null;
+    private TowerTile _selectedTile = null;
+    
+    private Transform _canvas;
     private Camera _camera;
 
     private void Start()
     {
+        _canvas = FindObjectOfType<InGameUi>().transform;
         _camera = Camera.main;
-        currentPanel = null;
-        selectedTile = null;
+        GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChanged);
+    }
+
+    private void HandleGameStateChanged(GameState previousState, GameState currentState)
+    {
+        if (currentState == GameState.PAUSED && _currentPanel!= null)
+        {
+            ClosePanel();
+        }
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (GameManager.Instance.CurrentGameState == GameState.RUNNING)
         {
-            if (currentPanel == null)
+            if (Input.GetMouseButtonDown(0) && _currentPanel == null)
             {
                 RaycastHit hit;
                 Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
-                    selectedTile = hit.collider.GetComponent<TowerTile>();
+                    _selectedTile = hit.collider.GetComponent<TowerTile>();
                     
-                    if (selectedTile.isAvailable)
+                    if (_selectedTile.isAvailable)
                     {
-                        currentPanel = Instantiate(towerPanel, canvasRoot);
-                        SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
-                        selectionPanel.tile = selectedTile;
-                        
-                        for (int i = 0; i < selectionPanel.buttons.Length; i++)
-                        {
-                            int index = i;
-                            selectionPanel.buttons[i].onClick.AddListener(() => SpawnTower(index));
-                            selectionPanel.costs[i].text = towers[i].buildCost.ToString();
-                        }
+                        ShowSelectionPanel();
                     }
                     else
                     {
-                        currentPanel = Instantiate(upgradePanel, canvasRoot);
-                        SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
-                        selectionPanel.tile = selectedTile;
-                        /*selectedTile.tower.EnableDome();*/
-                        
-                        selectionPanel.buttons[0].onClick.AddListener(UpgradeTower);
-                        selectionPanel.costs[0].text = towers[0].nextUpgrade.buildCost.ToString();
-                        selectionPanel.buttons[1].onClick.AddListener(SellTower);
+                        ShowUpgradePanel();
                     }
                 }
             }
+            else if (Input.GetMouseButtonDown(1) && _currentPanel != null)
+            {
+                ClosePanel();
+            }
         }
-        else if (Input.GetMouseButtonDown(1) && currentPanel != null)
+    }
+
+    private void ShowSelectionPanel()
+    {
+        _currentPanel = Instantiate(towerSelectionPanel, _canvas);
+        SelectionPanel selectionPanel = _currentPanel.GetComponent<SelectionPanel>();
+        selectionPanel.tile = _selectedTile;
+                        
+        for (int i = 0; i < selectionPanel.buttons.Length; i++)
         {
-            ClosePanel();
+            int index = i;
+            selectionPanel.buttons[i].onClick.AddListener(() => SpawnTower(index));
+            selectionPanel.costs[i].text = towers[i].buildCost.ToString();
         }
+    }
+
+    private void ShowUpgradePanel()
+    {
+        _currentPanel = Instantiate(towerUpgradePanel, _canvas);
+        SelectionPanel selectionPanel = _currentPanel.GetComponent<SelectionPanel>();
+        selectionPanel.tile = _selectedTile;
+        /*selectedTile.tower.EnableDome();*/
+                        
+        selectionPanel.buttons[0].onClick.AddListener(UpgradeTower);
+        selectionPanel.costs[0].text = towers[0].nextUpgrade.buildCost.ToString();
+        
+        selectionPanel.buttons[1].onClick.AddListener(SellTower);
     }
 
     private void ClosePanel()
@@ -74,35 +95,34 @@ public class BuildingSystem : MonoBehaviour
         {
             selectedTile.tower.DisableDome();
         }*/
-        
-        selectedTile = null;
+        _selectedTile = null;
 
-        SelectionPanel selectionPanel = currentPanel.GetComponent<SelectionPanel>();
+        SelectionPanel selectionPanel = _currentPanel.GetComponent<SelectionPanel>();
 
         foreach (var button in selectionPanel.buttons)
         {
             button.onClick.RemoveAllListeners();
         }
 
-        Destroy(currentPanel);
-        currentPanel = null;
+        Destroy(_currentPanel);
+        _currentPanel = null;
     }
 
     private void SellTower()
     {
-        selectedTile.SellTower();
+        _selectedTile.SellTower();
         ClosePanel();
     }
 
     private void UpgradeTower()
     {
-        selectedTile.UpgradeTower();
+        _selectedTile.UpgradeTower();
         ClosePanel();
     }
 
     private void SpawnTower(int id)
     {
-        selectedTile.PlaceTower(towers[id]);
+        _selectedTile.PlaceTower(towers[id]);
         ClosePanel();
     }
 }

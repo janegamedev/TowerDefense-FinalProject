@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 public class PlayerStats : Singleton<PlayerStats>
 {
     private int coins = 550;
     public int Coins => coins;
 
-    private int lives = 20;
+    private int lives = 5;
     public int Lives => lives;
 
     private int currentWave;
@@ -24,38 +25,38 @@ public class PlayerStats : Singleton<PlayerStats>
         set => wavesTotal = value;
     }
 
-    public UiManager _uiManager;
+    private InGameUi _inGameUi;
 
     private void Start()
     {
-        _uiManager = GetComponent<UiManager>();
+        _inGameUi = FindObjectOfType<InGameUi>();
         
         // all data set up
         
-        _uiManager.UpdateUi();
+        _inGameUi.UpdateUi();
     }
 
     public void ChangeCoinsAmount(int amount)
     {
         coins -= amount;
-        _uiManager.UpdateUi();
+        _inGameUi.UpdateUi();
     }
 
     public void ChangeLives(int amount)
     {
         lives -= amount;
-        _uiManager.UpdateUi();
+        _inGameUi.UpdateUi();
     }
 
     public void ChangeCurrentWave(int number)
     {
         currentWave = number;
-        _uiManager.UpdateUi();
+        _inGameUi.UpdateUi();
     }
 
     public void GetBounty(int amount)
     {
         coins += amount;
-        _uiManager.UpdateUi();
+        _inGameUi.UpdateUi();
     }
 }

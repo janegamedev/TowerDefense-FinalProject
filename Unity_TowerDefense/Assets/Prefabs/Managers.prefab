@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2530429849931423143}
   - component: {fileID: 2530429849931423136}
-  - component: {fileID: 2530429849931423142}
+  - component: {fileID: 675338220}
+  - component: {fileID: 6404356775932702053}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -44,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40799f5b61b74e64e9b2528546aa9608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uiManager: {fileID: 2530429849931423142}
---- !u!114 &2530429849931423142
+  inGameUi: {fileID: 0}
+--- !u!114 &675338220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,10 +55,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 2530429849931423137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d2f965a38648ee9f378f49cea0fba6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d6ca2ae25955f14590fa277625fe52b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsTmp: {fileID: 0}
-  livesTmp: {fileID: 0}
-  wavesTotalTmp: {fileID: 0}
-  currentWaveTmp: {fileID: 0}
+  damage: 20
+  range: 10
+  skillButton: {fileID: 0}
+  meteor: {fileID: 2393121027971344933, guid: bf97df6e8aa4e4840927e345f3eed499, type: 3}
+  resetTime: 5
+--- !u!114 &6404356775932702053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2530429849931423137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd4b1b92a8bdc24aa567a92b3390d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveButton: {fileID: 0}
+  waves:
+  - enemySets:
+    - enemyCount: 10
+      enemyData: {fileID: 11400000, guid: 3707d7bd98a0e724ca85652abf3718b5, type: 2}
+    timeBetweenSpawns: 0.5
+    timeBetweenSets: 2
+  spawnTiles: []
+  currentWave:
+    enemySets: []
+    timeBetweenSpawns: 0
+    timeBetweenSets: 0
+  currentEnemySet:
+    enemyCount: 0
+    enemyData: {fileID: 0}
+  currentWaveNumber: 0
+  currentSetNumber: 0
+  enemiesRemainingToSpawn: 0
+  enemiesRemainingAlive: 0
+  nextSpawnTime: 0
+  totalEnemyCount: 0
