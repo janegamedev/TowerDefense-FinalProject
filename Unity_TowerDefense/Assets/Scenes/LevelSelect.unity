@@ -2937,6 +2937,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 257216087}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &267856863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267856865}
+  - component: {fileID: 267856864}
+  m_Layer: 0
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &267856864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267856863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a4a18f464a4550ad39a2caa3f31361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stars: 0
+  level: 0
+--- !u!4 &267856865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267856863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &269648356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11016,11 +11061,11 @@ Transform:
   - {fileID: 1501794570}
   - {fileID: 526574749}
   - {fileID: 1002248154}
+  - {fileID: 9191129687089108338}
   - {fileID: 1004460758}
   - {fileID: 991132617}
   - {fileID: 1523294057}
   - {fileID: 929311210}
-  - {fileID: 9191129687089108338}
   m_Father: {fileID: 252316528}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 11.189, y: -107.713005, z: 31.29}
@@ -49975,7 +50020,7 @@ Transform:
   - {fileID: 9191229066064418512}
   - {fileID: 9192633767039823596}
   m_Father: {fileID: 946940601}
-  m_RootOrder: 18
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -74.48, z: 0}
 --- !u!4 &9191216915568917556
 Transform:

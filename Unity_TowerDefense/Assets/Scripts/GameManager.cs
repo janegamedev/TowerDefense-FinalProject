@@ -28,13 +28,20 @@ public class GameManager : Singleton<GameManager>
     {
         get => currentGameState;
     }
+
+    private string _path;
+    private ProgressSceneLoader _progressSceneLoader;
     
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
+        InstantiateSystemPrefabs();
+
+        _progressSceneLoader = FindObjectOfType<ProgressSceneLoader>();
+        _progressSceneLoader.OnSceneLoadedCompleted.AddListener(OnLoadCompleted);
+        
         DontDestroyOnLoad(gameObject);
         
-        InstantiateSystemPrefabs();
         UpdateState(currentGameState);
     }
     
@@ -122,5 +129,40 @@ public class GameManager : Singleton<GameManager>
     public void GameOver()
     {
         UpdateState(GameState.END);
+    }
+
+    public void LoadLevelSelection(string path)
+    {
+        _path = path;
+        _progressSceneLoader.LoadScene(levelSelectionSceneName);
+        UpdateState(GameState.SELECTION);
+    }
+
+    private void OnLoadCompleted()
+    {
+        switch (CurrentGameState)
+        {
+            case GameState.MENU:
+                break;
+            case GameState.SELECTION:
+                FindObjectOfType<Game>().SetPath(_path);
+                break;
+            
+            case GameState.RUNNING:
+                break;
+            case GameState.PAUSED:
+                break;
+            case GameState.END:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    [ContextMenu("Main menu")]
+    public void LoadMainMenu()
+    {
+        _progressSceneLoader.LoadScene(menuSceneName);
+        UpdateState(GameState.MENU);
     }
 }
