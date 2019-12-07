@@ -4,10 +4,12 @@ using UnityEngine;
 
 public static class SaveSystem
 {
+/*
     private static string _path1 = Application.persistentDataPath + "/slot1.txt";
     private static string _path2 = Application.persistentDataPath + "/slot2.txt";
     private static string _path3 = Application.persistentDataPath + "/slot3.txt";
-    
+    */
+
     public static void SaveGame(Game game)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -38,5 +40,10 @@ public static class SaveSystem
             Debug.LogWarning("Save file not found");
             return null;
         }
+    }
+
+    public static void DeleteSave(string path)
+    {
+        File.Delete(path);
     }
 }

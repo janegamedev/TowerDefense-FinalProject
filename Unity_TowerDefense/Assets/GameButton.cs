@@ -17,7 +17,11 @@ public class GameButton : MonoBehaviour
     private void Start()
     {
         _path = Application.persistentDataPath + "/slot" + buttonId + ".txt";
-        
+        CheckForSaves();
+    }
+
+    private void CheckForSaves()
+    {
         if (SaveSystem.LoadGame(_path) == null)
         {
             loadGame = false;
@@ -35,5 +39,11 @@ public class GameButton : MonoBehaviour
     public void OnClick()
     {
         GameManager.Instance.LoadLevelSelection(_path);
+    }
+
+    public void DeleteSave()
+    {
+        SaveSystem.DeleteSave(_path);
+        CheckForSaves();
     }
 }
