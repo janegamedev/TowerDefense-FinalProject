@@ -17,7 +17,8 @@ MonoBehaviour:
   buildCost: 70
   damage: 2
   attackRate: 10
-  range: 30
+  range: 28
+  speedMultiplayer: 0.8
   towerPrefab: {fileID: 6492792737427458144, guid: 9de1da05333eb6646b45c2889a6d303a,
     type: 3}
   projectiles: []

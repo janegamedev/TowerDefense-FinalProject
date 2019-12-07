@@ -20,11 +20,11 @@ MonoBehaviour:
   - serializedVersion: 2
     rgba: 4288214269
   - serializedVersion: 2
-    rgba: 4281759987
+    rgba: 4281759731
   - serializedVersion: 2
     rgba: 4291793411
   - serializedVersion: 2
-    rgba: 4281680622
+    rgba: 4281680110
   hexPrefabs:
   - {fileID: 1001236920876868, guid: b52e6fdb9179d4ef19097ea8727a4496, type: 3}
   - {fileID: 1266813705471474, guid: aa67ed5cc473046058070c067eb29ce0, type: 3}

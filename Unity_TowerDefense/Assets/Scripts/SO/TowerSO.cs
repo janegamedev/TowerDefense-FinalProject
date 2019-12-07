@@ -19,6 +19,7 @@ public class TowerSO : ScriptableObject
     public int damage;
     public float attackRate;
     public int range;
+    public float speedMultiplayer;
     public GameObject towerPrefab;
     
     public GameObject[] projectiles;

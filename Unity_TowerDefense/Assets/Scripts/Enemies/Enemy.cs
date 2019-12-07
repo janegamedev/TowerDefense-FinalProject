@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     private float _attackRate;
     private float _armour;
     private float _magicResistance;
-    private float _speed;
+    private float _speedMultiplayer;
     
     public float movementSpeed = 1f;
     private float _stopDistance;
@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
         
         _armour = characterData.armour;
         _magicResistance = characterData.magicResistance;
-
+        
         _navMeshAgent.speed = characterData.speed;
         
         _bounty = characterData.bounty;
@@ -121,6 +121,22 @@ public class Enemy : MonoBehaviour
     private protected void SetDestination()
     {
         _navMeshAgent.SetDestination(destination);
+        
+        Ray ray = new Ray(transform.position, Vector3.down);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 10, LayerMask.GetMask("Road")))
+        {
+            RoadTile road = hit.collider.GetComponent<RoadTile>();
+            if (road)
+            {
+                if (_speedMultiplayer != road.speedMultiplayer)
+                {
+                    _speedMultiplayer = road.speedMultiplayer;
+                    _navMeshAgent.speed = _navMeshAgent.speed * road.speedMultiplayer;
+                    Debug.Log(_navMeshAgent.speed);
+                }
+            }
+        }
     }
 
     private protected void UpdateAnimation()
@@ -155,8 +171,6 @@ public class Enemy : MonoBehaviour
 
         return false;
     }
-
-    
 
     protected virtual void Die()
     {

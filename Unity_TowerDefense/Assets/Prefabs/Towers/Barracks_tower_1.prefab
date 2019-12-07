@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 8425776505689716052}
   - component: {fileID: 5063982499295692335}
   - component: {fileID: 8164039172711515983}
-  - component: {fileID: -8357988751914585669}
+  - component: {fileID: 449786667560925177}
   m_Layer: 0
   m_Name: Barracks_tower_1
   m_TagString: Untagged
@@ -110,7 +110,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-8357988751914585669
+--- !u!114 &449786667560925177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,14 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6492792737427458144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1c4cabe4cc4671b51d7b9074e89b27, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a624d5ff5c84c24abbdd66da50ab563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rangeDome: {fileID: 0}
-  warriorPrefab: {fileID: 1820919466449660, guid: 00df519327294ce4da5a577098c3ed4f,
-    type: 3}
-  warriorAmount: 3
-  warriorRespawn: 5
-  spawnPosition: {fileID: 3005881202259339257}
-  restRadius: 10
-  tile: {fileID: 0}

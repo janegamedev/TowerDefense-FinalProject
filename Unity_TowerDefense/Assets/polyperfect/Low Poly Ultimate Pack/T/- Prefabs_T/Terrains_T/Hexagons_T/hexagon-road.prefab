@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64173965910194032}
   - component: {fileID: 3907747952455036722}
   m_Layer: 10
-  m_Name: hexagon-dirt
+  m_Name: hexagon-road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnd: 0
+  isStart: 0
   nextTile: {fileID: 0}
   isVisited: 0
   r: 28
+  speedMultiplayer: 1

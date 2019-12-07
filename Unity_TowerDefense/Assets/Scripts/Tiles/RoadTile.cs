@@ -8,6 +8,8 @@ public class RoadTile : Tile
     public bool isVisited;
     public float r;
 
+    public float speedMultiplayer;
+    
     public void PropagateRoad(RoadTile caller)
     {
         isVisited = true;
