@@ -13,7 +13,8 @@ public class Game : Singleton<Game>
     public LevelState[] levelStates;
     private int[] levelStatesInts;
     [HideInInspector] public int[] levelScore;
-    
+
+    private int _maxLevel = 10;
     private string path;
 
     public string Path
@@ -66,8 +67,12 @@ public class Game : Singleton<Game>
                 levelScore[levelIndex - 1] = score;
                 levelStates[levelIndex - 1] = LevelState.FINISHED;
                 levelStates[levelIndex] = LevelState.UNLOCKED;
-                currentLevelUnlocked++;
                 stars += score;
+
+                if (currentLevelUnlocked < _maxLevel)
+                {
+                    currentLevelUnlocked++;
+                }
             }
             else
             {
