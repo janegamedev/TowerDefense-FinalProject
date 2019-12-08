@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc327137ad9a1f749af5328dcc17cc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minAmount: -2
-  maxAmount: 2
+  minAmount: -1
+  maxAmount: 1
   rotate: 1
   rotationSpeed: 3
   direction: -1
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minAmount: 0
-  maxAmount: 5
+  maxAmount: 1
   rotate: 1
   rotationSpeed: 5
   direction: 1

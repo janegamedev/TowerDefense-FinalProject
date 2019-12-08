@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minAmount: 0
-  maxAmount: 7
+  maxAmount: 1
   rotate: 1
   rotationSpeed: 4
   direction: 1
