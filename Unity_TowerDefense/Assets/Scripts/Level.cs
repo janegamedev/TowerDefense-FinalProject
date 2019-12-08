@@ -53,12 +53,20 @@ public class Level : MonoBehaviour
             
             case LevelState.FINISHED:
                 lockedObject.SetActive(false);
-                unlockedObject.SetActive(true);
-                finishedObject.SetActive(false);
+                unlockedObject.SetActive(false);
+                finishedObject.SetActive(true);
 
-                for (int i = 0; i < score; i++)
+                int s = score;
+                for (int i = 0; i < starObjects.Length; i++)
                 {
-                    starObjects[i].SetActive(true);
+                    if (i < s)
+                    {
+                        starObjects[i].SetActive(true);
+                    }
+                    else
+                    {
+                        starObjects[i].SetActive(false);
+                    }
                 }
                 break;
             

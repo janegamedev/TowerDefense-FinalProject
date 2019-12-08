@@ -17,8 +17,8 @@ public class LevelSelectionManager : MonoBehaviour
     {
         for (int i = 0; i < levels.Length; i++)
         {
-            levels[i].UpdateState(_gameStats.levelStates[i]);
             levels[i].score = _gameStats.levelScore[i];
+            levels[i].UpdateState(_gameStats.levelStates[i]);
         }
     }
 

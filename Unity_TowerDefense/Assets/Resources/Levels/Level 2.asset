@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: Level 2
   m_EditorClassIdentifier: 
   levelName: Level 2
-  levelMap: {fileID: 21300000, guid: 3131ef5ed75744b46b71a760ef682c5d, type: 3}
+  level: 2
+  mapTexture: {fileID: 0}
+  colorsOnTheMap: []
+  hexPrefabs: []
+  generateTrees: 0
+  treesPrefabs: []
+  treesAmount: 0
+  generateGrass: 0
+  grassPrefabs: []
+  grassAmount: 0
+  generateProps: 0
+  propsPrefabs: []
+  propsAmount: 0
+  waves: []
   nextLevel: {fileID: 11400000, guid: 57c6c8c8508e43f41b3e465b09c9eee8, type: 2}

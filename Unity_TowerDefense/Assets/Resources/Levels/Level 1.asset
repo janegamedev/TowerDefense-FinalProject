@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   levelName: Level 1
+  level: 1
   mapTexture: {fileID: 2800000, guid: 3131ef5ed75744b46b71a760ef682c5d, type: 3}
   colorsOnTheMap:
   - serializedVersion: 2
@@ -59,11 +60,7 @@ MonoBehaviour:
   propsAmount: 10
   waves:
   - enemySets:
-    - enemyCount: 10
+    - enemyCount: 5
       enemyData: {fileID: 11400000, guid: fc4fb23508f21454a8cfe498de81af83, type: 2}
     timeBetweenSpawns: 1
-  - enemySets:
-    - enemyCount: 30
-      enemyData: {fileID: 11400000, guid: 3707d7bd98a0e724ca85652abf3718b5, type: 2}
-    timeBetweenSpawns: 4
   nextLevel: {fileID: 11400000, guid: 0530f9cd7e0a74e4baceb964c755bb22, type: 2}
