@@ -18,9 +18,7 @@ public class Enemy : MonoBehaviour
     private float maxHealth;
     private float health;
     public float Health => health;
-
-    private int _damage;
-    private float _attackRate;
+    
     private float _armour;
     private float _magicResistance;
     private float _speedMultiplayer;
@@ -40,13 +38,10 @@ public class Enemy : MonoBehaviour
     private HealthBar _healthBar;
     
     private Vector3 _destination;
-    private protected Enemy enemyToAttack;
-    
+
     private NavMeshAgent _navMeshAgent;
     private Animator _animator;
-
-    private float _nextAttackTime;
-
+    
     private void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -61,20 +56,19 @@ public class Enemy : MonoBehaviour
         _enemyName = characterData.enemyName;
         maxHealth = characterData.health;
         health = maxHealth;
-        _damage = characterData.damage;
-        _attackRate = characterData.attackRate;
         
         _armour = characterData.armour;
         _magicResistance = characterData.magicResistance;
-        
+
+        movementSpeed = characterData.speed;
         _navMeshAgent.speed = characterData.speed;
         
         _bounty = characterData.bounty;
         _currentTile = startTile;
 
-        Vector2 rp = Random.insideUnitCircle * 5;
+        Vector2 rp = Random.insideUnitCircle * (_stopDistance-1);
         _destination = startTile.transform.position + new Vector3(rp.x, startTile.transform.position.y , rp.y);
-        _stopDistance = 5;
+        _stopDistance = 3;
     }
 
     private void Update()
@@ -96,7 +90,6 @@ public class Enemy : MonoBehaviour
                         {
                             _destination = hit.position;
                         }
-                        
                     }
                     else
                     {
@@ -132,7 +125,7 @@ public class Enemy : MonoBehaviour
                 if (_speedMultiplayer != road.speedMultiplayer)
                 {
                     _speedMultiplayer = road.speedMultiplayer;
-                    _navMeshAgent.speed = _navMeshAgent.speed * road.speedMultiplayer;
+                    _navMeshAgent.speed *= road.speedMultiplayer;
                 }
             }
         }
