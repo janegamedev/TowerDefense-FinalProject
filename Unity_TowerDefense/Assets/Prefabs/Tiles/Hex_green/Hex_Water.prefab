@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fx: 1
-  fxPrefab: {fileID: 8439420799415217930}
+  fxPrefab: {fileID: 8636038244568818856}
   probability: 0.45
   move: 1
   minAmount: -1
@@ -184,17 +184,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198611347366761954, guid: 52cb8d66accce0d4ca8239d32cdabaac,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198066842498780766, guid: 52cb8d66accce0d4ca8239d32cdabaac,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52cb8d66accce0d4ca8239d32cdabaac, type: 3}
---- !u!1 &8439420799415217930 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1720117376441920, guid: 52cb8d66accce0d4ca8239d32cdabaac,
-    type: 3}
-  m_PrefabInstance: {fileID: 8437710440206577994}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8433127481311694002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4706132018150904, guid: 52cb8d66accce0d4ca8239d32cdabaac,
+    type: 3}
+  m_PrefabInstance: {fileID: 8437710440206577994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8636038244568818856 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198611347366761954, guid: 52cb8d66accce0d4ca8239d32cdabaac,
     type: 3}
   m_PrefabInstance: {fileID: 8437710440206577994}
   m_PrefabAsset: {fileID: 0}

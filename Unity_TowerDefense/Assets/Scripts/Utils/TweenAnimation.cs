@@ -7,7 +7,7 @@ public class TweenAnimation : MonoBehaviour
    private GameObject _objectToAnimate;
 
    public bool fx;
-   public GameObject fxPrefab;
+   public ParticleSystem fxPrefab;
    private float _delay;
    public float probability;
 
@@ -33,7 +33,7 @@ public class TweenAnimation : MonoBehaviour
          }
          else
          {
-            fxPrefab.SetActive(false);
+            fxPrefab.Stop();
          }
       }
 
@@ -52,6 +52,6 @@ public class TweenAnimation : MonoBehaviour
    IEnumerator Delay()
    {
       yield return new WaitForSeconds(_delay);
-      fxPrefab.SetActive(true);
+      fxPrefab.Play();
    }
 }
