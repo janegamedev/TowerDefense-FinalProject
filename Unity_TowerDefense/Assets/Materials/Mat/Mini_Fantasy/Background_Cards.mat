@@ -4,13 +4,15 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Background_Cards
   m_Shader: {fileID: 4800000, guid: 8663d1809decd0543af7f98a3c190261, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -171,7 +173,7 @@ Material:
     - _Distance: 5.53
     - _DstBlend: 0
     - _EdgeMultiplier: 1.395
-    - _Falloff: 0.634
+    - _Falloff: 0.001
     - _Float1: 0
     - _FogAmount: 1
     - _FogDistance: 63.31
@@ -226,9 +228,9 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 1, g: 0, b: 0, a: 0}
     - _Color1: {r: 0, g: 1, b: 0.7517242, a: 0}
-    - _ColorBack: {r: 0.86274517, g: 0.3137255, b: 0.30980393, a: 0}
+    - _ColorBack: {r: 0.6415094, g: 0.19589935, b: 0.099857606, a: 0}
     - _ColorBottom: {r: 0.8161765, g: 0.060012985, b: 0.060012985, a: 0}
-    - _ColorFront: {r: 0.25, g: 0.09558824, b: 0.20101424, a: 0}
+    - _ColorFront: {r: 0.6415094, g: 0.19589935, b: 0.099857606, a: 0}
     - _ColorTop: {r: 0, g: 1, b: 0.7517242, a: 0}
     - _EdgeColor: {r: 0.9411765, g: 0.9197947, b: 0.7474049, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
