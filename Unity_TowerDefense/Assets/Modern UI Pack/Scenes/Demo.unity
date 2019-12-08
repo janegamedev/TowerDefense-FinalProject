@@ -1190,8 +1190,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22425550
 MonoBehaviour:
@@ -1671,13 +1671,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 32961250}
-    characterCount: 0
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1829,13 +1829,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 35855552}
-    characterCount: 0
+    characterCount: 11
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2078,13 +2078,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 38433197}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2257,13 +2257,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 42208962}
-    characterCount: 0
+    characterCount: 19
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2404,8 +2404,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &47224554
 MonoBehaviour:
@@ -2542,8 +2542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &50622535
 MonoBehaviour:
@@ -3031,13 +3031,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 54813555}
-    characterCount: 0
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3125,8 +3125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64753343
 MonoBehaviour:
@@ -3323,8 +3323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &78701970
 MonoBehaviour:
@@ -4402,13 +4402,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 89791851}
-    characterCount: 0
+    characterCount: 16
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -5023,8 +5023,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &105666651
 MonoBehaviour:
@@ -5279,13 +5279,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 110240681}
-    characterCount: 0
+    characterCount: 24
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -5714,13 +5714,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 120513151}
-    characterCount: 0
+    characterCount: 21
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -7663,8 +7663,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1562258032}
   m_HandleRect: {fileID: 1562258031}
   m_Direction: 0
-  m_Value: 0.000011513753
-  m_Size: 0.7705704
+  m_Value: 0.000016926184
+  m_Size: 0.8315436
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8206,13 +8206,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 204248413}
-    characterCount: 0
+    characterCount: 15
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -8524,13 +8524,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 221244307}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -8808,13 +8808,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 233791547}
-    characterCount: 0
+    characterCount: 27
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -9583,13 +9583,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 257644618}
-    characterCount: 0
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -10098,13 +10098,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 279153246}
-    characterCount: 0
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -10382,13 +10382,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 282739767}
-    characterCount: 0
+    characterCount: 14
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -10676,13 +10676,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 284787476}
-    characterCount: 0
+    characterCount: 28
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -10886,8 +10886,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287112281
 MonoBehaviour:
@@ -11852,8 +11852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &296151753
 MonoBehaviour:
@@ -13259,13 +13259,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 361304426}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -14038,13 +14038,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 384101613}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -14160,8 +14160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386117784
 MonoBehaviour:
@@ -15096,13 +15096,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 419532537}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -15275,13 +15275,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 422990733}
-    characterCount: 0
+    characterCount: 30
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -15905,8 +15905,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429962113
 MonoBehaviour:
@@ -16282,13 +16282,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 438679767}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -16566,8 +16566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &447290828
 MonoBehaviour:
@@ -16727,8 +16727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454661870
 MonoBehaviour:
@@ -17223,13 +17223,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 478274149}
-    characterCount: 0
+    characterCount: 8
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -18014,13 +18014,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 490090362}
-    characterCount: 0
+    characterCount: 11
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -18247,13 +18247,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 495234494}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -19538,8 +19538,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535345518
 MonoBehaviour:
@@ -19816,13 +19816,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 543334947}
-    characterCount: 0
+    characterCount: 8
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -21704,8 +21704,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577778315
 MonoBehaviour:
@@ -23475,8 +23475,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608478832
 MonoBehaviour:
@@ -24009,13 +24009,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 626785529}
-    characterCount: 0
+    characterCount: 11
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -24761,8 +24761,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649186022
 MonoBehaviour:
@@ -25973,8 +25973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680889614
 MonoBehaviour:
@@ -26211,8 +26211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688547375
 MonoBehaviour:
@@ -26560,8 +26560,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696915581
 MonoBehaviour:
@@ -26707,8 +26707,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699636980
 MonoBehaviour:
@@ -26979,13 +26979,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 706403972}
-    characterCount: 0
+    characterCount: 26
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -27137,13 +27137,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 707518105}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -27351,8 +27351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &713950474
 CanvasRenderer:
@@ -28155,6 +28155,66 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_text
+      value: WITH TABS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_text
+      value: WITH TABS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114298238398380424, guid: 0f76314b72053c042855b723924fb1c8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -28184,66 +28244,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_text
-      value: WITH TABS
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969039683663426, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_text
-      value: WITH TABS
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114805082730362318, guid: 0f76314b72053c042855b723924fb1c8,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f76314b72053c042855b723924fb1c8, type: 3}
@@ -29443,13 +29443,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 761591802}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -29512,8 +29512,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761789484
 MonoBehaviour:
@@ -29689,13 +29689,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 764320173}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -30071,8 +30071,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781188519
 MonoBehaviour:
@@ -30956,8 +30956,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796649503
 MonoBehaviour:
@@ -31496,13 +31496,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 815083203}
-    characterCount: 0
+    characterCount: 27
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -32739,8 +32739,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &859171017
 MonoBehaviour:
@@ -33175,13 +33175,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 884921572}
-    characterCount: 0
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -33966,13 +33966,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 900559101}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -34368,13 +34368,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 911128287}
-    characterCount: 0
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -35230,8 +35230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &939477158
 MonoBehaviour:
@@ -35453,13 +35453,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 943155626}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -35529,8 +35529,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944222901
 MonoBehaviour:
@@ -35992,8 +35992,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963695702
 MonoBehaviour:
@@ -37550,7 +37550,7 @@ PrefabInstance:
     - target: {fileID: 224272822716085842, guid: 8cf74ef4b41c8274e9ea7b32b5f45d11,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 13.499985
+      value: 13.4999695
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114141035627079418, guid: 8cf74ef4b41c8274e9ea7b32b5f45d11, type: 3}
@@ -37721,7 +37721,7 @@ PrefabInstance:
     - target: {fileID: 224479070197194742, guid: 1825bc935af2c1f4dbb479e6322cd22d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 13.499985
+      value: 13.4999695
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1825bc935af2c1f4dbb479e6322cd22d, type: 3}
@@ -37975,13 +37975,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1022239658}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -38611,8 +38611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040259138
 MonoBehaviour:
@@ -38882,6 +38882,66 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_text
+      value: SLIDING STYLE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_text
+      value: SLIDING STYLE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114471821583418584, guid: 95b8b49354a93694c9bd50f492be3b24,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -38911,66 +38971,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_text
-      value: SLIDING STYLE
-      objectReference: {fileID: 0}
-    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114685878660096924, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_text
-      value: SLIDING STYLE
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697124029075490, guid: 95b8b49354a93694c9bd50f492be3b24,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95b8b49354a93694c9bd50f492be3b24, type: 3}
@@ -39216,13 +39216,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1054331200}
-    characterCount: 0
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -39288,8 +39288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054671028
 MonoBehaviour:
@@ -39590,13 +39590,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1060573950}
-    characterCount: 0
+    characterCount: 41
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 6
+    wordCount: 6
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -40219,8 +40219,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080091905
 MonoBehaviour:
@@ -41129,13 +41129,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1110018983}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -41205,8 +41205,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113135954
 MonoBehaviour:
@@ -41497,13 +41497,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1117848746}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -42070,8 +42070,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1136228060
 MonoBehaviour:
@@ -42820,7 +42820,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 822628083}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5561548
+  m_Size: 0.12772179
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -43182,8 +43182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1161338997
 MonoBehaviour:
@@ -43700,8 +43700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1186598596
 MonoBehaviour:
@@ -44019,13 +44019,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1191407309}
-    characterCount: 0
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -44342,8 +44342,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216392313
 MonoBehaviour:
@@ -45130,7 +45130,7 @@ PrefabInstance:
     - target: {fileID: 224413972544493284, guid: bdb8f55c79de3ce429e354b19dc74938,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960
+      value: 959.79724
       objectReference: {fileID: 0}
     - target: {fileID: 224413972544493284, guid: bdb8f55c79de3ce429e354b19dc74938,
         type: 3}
@@ -45490,13 +45490,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1234693065}
-    characterCount: 0
+    characterCount: 11
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -45872,6 +45872,66 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_text
+      value: WITH TABS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_text
+      value: WITH TABS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114068356456235682, guid: b92332d04cb21b244b96090db93b2ae5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -45901,66 +45961,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_text
-      value: WITH TABS
-      objectReference: {fileID: 0}
-    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114438997644334570, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_text
-      value: WITH TABS
-      objectReference: {fileID: 0}
-    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114658086615100504, guid: b92332d04cb21b244b96090db93b2ae5,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b92332d04cb21b244b96090db93b2ae5, type: 3}
@@ -47401,13 +47401,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1295724159}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -48516,14 +48516,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114839029211519642, guid: 61c756c874f5e6f40bc3573de6cb5656,
-        type: 3}
-      propertyPath: isOn
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114644008230777624, guid: 61c756c874f5e6f40bc3573de6cb5656,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114839029211519642, guid: 61c756c874f5e6f40bc3573de6cb5656,
+        type: 3}
+      propertyPath: isOn
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -48877,7 +48877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -87.5}
+  m_AnchoredPosition: {x: 0, y: -87.50003}
   m_SizeDelta: {x: 0, y: -175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1362974837
@@ -49245,13 +49245,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1366995507}
-    characterCount: 0
+    characterCount: 27
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -49658,8 +49658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381761643
 MonoBehaviour:
@@ -50957,8 +50957,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420848148
 MonoBehaviour:
@@ -51365,13 +51365,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1426537318}
-    characterCount: 0
+    characterCount: 28
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -51598,13 +51598,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1428615073}
-    characterCount: 0
+    characterCount: 19
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -53531,13 +53531,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1493471948}
-    characterCount: 0
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -54295,13 +54295,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1516969093}
-    characterCount: 0
+    characterCount: 36
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -54858,8 +54858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533252852
 MonoBehaviour:
@@ -55784,13 +55784,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1553606494}
-    characterCount: 0
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -55955,8 +55955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564715087
 MonoBehaviour:
@@ -56372,8 +56372,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570213375
 MonoBehaviour:
@@ -56883,13 +56883,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1585744227}
-    characterCount: 0
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -57498,7 +57498,7 @@ PrefabInstance:
     - target: {fileID: 224115440045988450, guid: f0c8072b353884d4b93bf35bcdeab4ec,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 13.499985
+      value: 13.4999695
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114421694109493000, guid: f0c8072b353884d4b93bf35bcdeab4ec, type: 3}
@@ -58666,13 +58666,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1633263213}
-    characterCount: 0
+    characterCount: 35
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 5
+    wordCount: 6
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -59155,13 +59155,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1647297314}
-    characterCount: 0
+    characterCount: 28
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -59773,13 +59773,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1686454681}
-    characterCount: 0
+    characterCount: 34
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -60086,8 +60086,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693527778
 MonoBehaviour:
@@ -60735,13 +60735,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1706511299}
-    characterCount: 0
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -61874,13 +61874,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1775172831}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -63145,13 +63145,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1810169918}
-    characterCount: 0
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -63918,8 +63918,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823852998
 MonoBehaviour:
@@ -64554,13 +64554,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1833846943}
-    characterCount: 0
+    characterCount: 2
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -64992,13 +64992,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1839259920}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -65171,13 +65171,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1842163483}
-    characterCount: 0
+    characterCount: 12
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -65825,13 +65825,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1860192041}
-    characterCount: 0
+    characterCount: 15
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -66527,13 +66527,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1875176680}
-    characterCount: 0
+    characterCount: 21
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -66794,13 +66794,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1885003359}
-    characterCount: 0
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -67038,8 +67038,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
-  m_SizeDelta: {x: 1850, y: 0}
+  m_AnchoredPosition: {x: 959.79724, y: 0}
+  m_SizeDelta: {x: 1849.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891995952
 MonoBehaviour:
@@ -67391,13 +67391,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1897255962}
-    characterCount: 0
+    characterCount: 33
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 7
+    wordCount: 7
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -68233,12 +68233,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114864989526014820, guid: 64325a7db649f3a42be36398b9d061bd,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a85e0ef996389864d90fc222ee456814,
-        type: 3}
     - target: {fileID: 114397371423741450, guid: 64325a7db649f3a42be36398b9d061bd,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -68249,6 +68243,12 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114864989526014820, guid: 64325a7db649f3a42be36398b9d061bd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a85e0ef996389864d90fc222ee456814,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64325a7db649f3a42be36398b9d061bd, type: 3}
 --- !u!224 &1927011897 stripped
@@ -69637,13 +69637,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1981393483}
-    characterCount: 0
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -70142,8 +70142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999482674
 MonoBehaviour:
@@ -70524,13 +70524,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2007609094}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -70593,8 +70593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008056118
 MonoBehaviour:
@@ -70893,13 +70893,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2015429295}
-    characterCount: 0
+    characterCount: 25
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -71072,13 +71072,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2015579075}
-    characterCount: 0
+    characterCount: 44
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 8
+    wordCount: 9
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -71265,8 +71265,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 925, y: 0}
-  m_SizeDelta: {x: 1780, y: 0}
+  m_AnchoredPosition: {x: 924.79724, y: 0}
+  m_SizeDelta: {x: 1779.5945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023038367
 MonoBehaviour:
@@ -72044,13 +72044,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2041959227}
-    characterCount: 0
+    characterCount: 20
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -72775,13 +72775,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2064922566}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -72933,13 +72933,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2066190122}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -73091,13 +73091,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2070608389}
-    characterCount: 0
+    characterCount: 20
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -74652,13 +74652,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2104421713}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -75537,13 +75537,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2125354330}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
