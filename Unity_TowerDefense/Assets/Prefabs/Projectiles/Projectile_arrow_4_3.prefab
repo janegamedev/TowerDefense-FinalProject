@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24eb2fcff6c64f3f97c2ecd5e572caa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 60
 --- !u!1 &4781374563954138990
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 5483476473776214820}
   - component: {fileID: 4610661457286873666}
   - component: {fileID: 5627364844819886067}
+  - component: {fileID: 590088817749493695}
   m_Layer: 0
   m_Name: arrow_6
   m_TagString: Untagged
@@ -123,3 +124,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &590088817749493695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4781374563954138990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.567125, y: 42.121784, z: 9.567127}
+  m_Center: {x: 0, y: 0, z: 0}

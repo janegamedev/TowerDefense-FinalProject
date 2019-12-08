@@ -18,7 +18,6 @@ public class Game : MonoBehaviour
         levelStates = new LevelState[levelsAmount-1];
         for (int i = 0; i < levelStates.Length; i++)
         {
-            Debug.Log(i);
             levelStates[i] = LevelState.LOCKED;
         }
 

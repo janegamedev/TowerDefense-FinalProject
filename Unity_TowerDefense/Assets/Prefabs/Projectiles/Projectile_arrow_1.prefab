@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414571856582851010}
   - component: {fileID: -6769444777721719503}
+  - component: {fileID: -829030388202807971}
   m_Layer: 0
   m_Name: Projectile_arrow_1
   m_TagString: Untagged
@@ -44,7 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24eb2fcff6c64f3f97c2ecd5e572caa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 50
+--- !u!65 &-829030388202807971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414571856582851009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5569286340206258799
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,6 +70,7 @@ GameObject:
   - component: {fileID: 2461970807511908595}
   - component: {fileID: 4853535776067013735}
   - component: {fileID: 7849879585958133525}
+  - component: {fileID: 2289239916624393624}
   m_Layer: 0
   m_Name: arrow
   m_TagString: Untagged
@@ -123,3 +138,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2289239916624393624
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569286340206258799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21.88386, y: 105.89114, z: 21.883863}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class LocalProjectile : Projectile
@@ -24,11 +25,13 @@ public class LocalProjectile : Projectile
         transform.Translate(direction.normalized * distance, Space.World);
         transform.LookAt(targetPos);
     }
-
-    private protected override void HitEnemy()
+    
+    private void OnTriggerEnter(Collider other)
     {
-        target.GetComponentInParent<Enemy>().TakeHit(damage, type);
-        
-        base.HitEnemy();
+        if (other.GetComponent<Enemy>())
+        {
+            other.GetComponent<Enemy>().TakeHit(damage, type);
+            base.HitEnemy();
+        }
     }
 }

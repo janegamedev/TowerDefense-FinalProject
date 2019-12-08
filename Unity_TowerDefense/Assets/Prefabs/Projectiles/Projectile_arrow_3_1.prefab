@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5647599157287404468}
   - component: {fileID: 1747534709088740213}
   - component: {fileID: 5038993797283455022}
+  - component: {fileID: 3576389327911135151}
   m_Layer: 0
   m_Name: arrow_3
   m_TagString: Untagged
@@ -78,6 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3576389327911135151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841593206169853023}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.902563, y: 105.89114, z: 19.902567}
+  m_Center: {x: 0, y: 0.00012207031, z: 0}
 --- !u!1 &6570023029226174787
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,4 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24eb2fcff6c64f3f97c2ecd5e572caa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 50
