@@ -14,17 +14,20 @@ public class LevelSelector: MonoBehaviour
 
     private void Update()
     {
-        RaycastHit hit;
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, cellLayerMask))
+        if (Input.GetMouseButtonDown(0))
         {
-            Level level = hit.collider.GetComponent<Level>();
-
-            if (level.levelState == LevelState.UNLOCKED)
+            RaycastHit hit;
+            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, cellLayerMask))
             {
-                _currentLevelSelected = level;
-                GameManager.Instance.LoadLevel(_currentLevelSelected.levelData);
+                Level level = hit.collider.GetComponent<Level>();
+
+                if (level.levelState == LevelState.UNLOCKED)
+                {
+                    _currentLevelSelected = level;
+                    GameManager.Instance.LoadLevel(_currentLevelSelected.levelData);
+                }
             }
         }
     }
