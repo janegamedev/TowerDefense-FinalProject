@@ -10,16 +10,12 @@ public class MainMenu : MonoBehaviour
     public GameObject creditsPanel;
     public GameObject quitPanel;
     public GameObject newGameBtns;
-
-    public void startGame()
-    {
-        SceneManager.LoadScene("LevelSelect");
-    }
-    public void newGame()
+    
+    public void PlayButtonClick()
     {   
             newGameBtns.SetActive(!newGameBtns.activeSelf);
     }
-    public void mainMenuToggle()
+    public void MinMenuToggle()
     {
         menuPanel.SetActive(!menuPanel.activeSelf);
         settingsPanel.SetActive(!settingsPanel.activeSelf);
@@ -27,7 +23,7 @@ public class MainMenu : MonoBehaviour
         newGameBtns.SetActive(!newGameBtns.activeSelf);
     }
 
-    public void settingsMenuToggle()
+    public void SettingsMenuToggle()
     {
 
         settingsPanel.SetActive(!settingsPanel.activeSelf);

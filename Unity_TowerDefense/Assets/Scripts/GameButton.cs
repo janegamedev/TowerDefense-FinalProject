@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 public class GameButton : MonoBehaviour
 {
-    [SerializeField] private GameObject newGameImage;
-    [SerializeField] private GameObject loadGameImage;
+    [SerializeField] private Button newGame_btn;
+    [SerializeField] private Button loadGame_btn;
+    [SerializeField] private Button deleteSave_btn;
     [SerializeField] private int buttonId;
 
     [SerializeField] private bool loadGame;
@@ -25,14 +26,17 @@ public class GameButton : MonoBehaviour
         if (SaveSystem.LoadGame(_path) == null)
         {
             loadGame = false;
-            newGameImage.SetActive(true);
-            loadGameImage.SetActive(false);
+            newGame_btn.gameObject.SetActive(true);
+            newGame_btn.onClick.AddListener(OnClick);
+            loadGame_btn.gameObject.SetActive(false);
         }
         else
         {
             loadGame = true;
-            newGameImage.SetActive(false);
-            loadGameImage.SetActive(true);
+            newGame_btn.gameObject.SetActive(false);
+            loadGame_btn.gameObject.SetActive(true);
+            loadGame_btn.onClick.AddListener(OnClick);
+            deleteSave_btn.onClick.AddListener(DeleteSave);
         }
     }
 
