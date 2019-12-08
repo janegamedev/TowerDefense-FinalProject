@@ -10,7 +10,6 @@ public class Wave
 {
     public EnemySet[] enemySets;
     public float timeBetweenSpawns;
-    public float timeBetweenSets;
 }
 
 [Serializable]
@@ -23,9 +22,8 @@ public class EnemySet
 public class WavesManager : MonoBehaviour
 {
     [SerializeField] private Button waveButton;
-    public Wave[] waves;
-
-    public RoadTile[] spawnTiles;
+    private Wave[] waves;
+    private RoadTile[] spawnTiles;
 
     public Wave currentWave;
     public EnemySet currentEnemySet;
@@ -40,9 +38,12 @@ public class WavesManager : MonoBehaviour
     
     private bool _canSpawn;
     private bool _isFinished;
+    private bool _isInit;
     
-    public void Init()
+    public void Init(LevelSO levelData)
     {
+        waves = levelData.waves;
+        _isInit = true;
         spawnTiles = FindObjectsOfType<RoadTile>().Where(x => x.isStart).ToArray();
         
         PlayerStats.Instance.WavesTotal = waves.Length;
@@ -51,26 +52,29 @@ public class WavesManager : MonoBehaviour
     
     private void Update()
     {
-        if (_canSpawn)
+        if (_isInit)
         {
-            _canSpawn = false;
-            if (enemiesRemainingToSpawn > 0)
+            if (_canSpawn)
             {
-                StartCoroutine(EnemySpawn());
+                _canSpawn = false;
+                if (enemiesRemainingToSpawn > 0)
+                {
+                    StartCoroutine(EnemySpawn());
+                }
+                else
+                {
+                    NextSet();
+                }
             }
-            else
-            {
-                NextSet();
-            }
-        }
 
-        if (enemiesRemainingAlive <= 0)
-        {
-            waveButton.interactable = true;
-
-            if (currentWaveNumber >= waves.Length)
+            if (enemiesRemainingAlive <= 0)
             {
-                EndLevel();
+                waveButton.interactable = true;
+
+                if (currentWaveNumber >= waves.Length)
+                {
+                    EndLevel();
+                }
             }
         }
     }

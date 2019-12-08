@@ -5,8 +5,7 @@ public class TowerTile : Tile
 {
     public bool isAvailable;
     public Tower tower;
-    public bool isEnd;
-    
+
     public void SellTower()
     {
         Destroy(tower.gameObject);

@@ -29,7 +29,8 @@ public class GameManager : Singleton<GameManager>
         get => currentGameState;
     }
 
-    private string _path;
+    private string _currentPath;
+    private LevelSO currentLevelSo;
     private ProgressSceneLoader _progressSceneLoader;
     
     private void Start()
@@ -133,7 +134,7 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadLevelSelection(string path)
     {
-        _path = path;
+        _currentPath = path;
         _progressSceneLoader.LoadScene(levelSelectionSceneName);
         UpdateState(GameState.SELECTION);
     }
@@ -144,17 +145,21 @@ public class GameManager : Singleton<GameManager>
         {
             case GameState.MENU:
                 break;
+            
             case GameState.SELECTION:
-                FindObjectOfType<Game>().SetPath(_path);
+                FindObjectOfType<Game>().SetPath(_currentPath);
                 break;
             
             case GameState.RUNNING:
-                
+                FindObjectOfType<GridGenerator>().Init(currentLevelSo);
                 break;
+            
             case GameState.PAUSED:
                 break;
+            
             case GameState.END:
                 break;
+            
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -169,9 +174,9 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadLevel(LevelSO levelData)
     {
+        currentLevelSo = levelData;
         Debug.Log("Loading level " + levelData.levelName);
-        /*_progressSceneLoader.LoadScene(levelSceneName);
-        //level data
-        UpdateState(GameState.RUNNING);*/
+        _progressSceneLoader.LoadScene(levelSceneName);
+        UpdateState(GameState.RUNNING);
     }
 }

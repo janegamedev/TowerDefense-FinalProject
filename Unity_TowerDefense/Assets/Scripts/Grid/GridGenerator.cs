@@ -33,13 +33,9 @@ public class GridGenerator : MonoBehaviour
     private GameObject[] _propsPrefabs;
     private int _propsAmount;
 
-    private void Start()
-    {
-        Init(levelSo);
-    }
-
     public void Init(LevelSO data)
     {
+        levelSo = data;
         mapTexture = data.mapTexture;
         colors = data.colorsOnTheMap;
         hexPrefabs = data.hexPrefabs;
@@ -79,6 +75,8 @@ public class GridGenerator : MonoBehaviour
         GenerateEnv();
         
         Invoke("BuildRoads", 0.1f );
+        Invoke("GenerateWaves", 0.2f );
+        
     }
     
     void CreateGrid()
@@ -173,6 +171,11 @@ public class GridGenerator : MonoBehaviour
         _endTile = tileRoots[1].GetComponentsInChildren<RoadTile>().First(x => x.isEnd == true);
         GetComponent<NavMeshSurface>().BuildNavMesh();
         _endTile.PropagateRoad(null);
+    }
+
+    private void GenerateWaves()
+    {
+        FindObjectOfType<WavesManager>().Init(levelSo);
     }
     
     int GetTileFromImage(int x, int y)

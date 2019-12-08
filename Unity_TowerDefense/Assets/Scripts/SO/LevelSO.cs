@@ -24,5 +24,9 @@ public class LevelSO : ScriptableObject
     public GameObject[] propsPrefabs;
     public int propsAmount;
 
+    public Wave[] waves;
+    
     public LevelSO nextLevel;
+    
+    
 }

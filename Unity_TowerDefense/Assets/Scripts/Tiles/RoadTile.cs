@@ -37,12 +37,6 @@ public class RoadTile : Tile
         if (!isPropagated)
         {
             isStart = true;
-            Invoke("CallWave", 0.1f);
         }
-    }
-
-    public void CallWave()
-    {
-        FindObjectOfType<WavesManager>().Init();
     }
 }
