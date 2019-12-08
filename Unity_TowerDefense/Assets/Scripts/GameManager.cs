@@ -149,6 +149,7 @@ public class GameManager : Singleton<GameManager>
                 break;
             
             case GameState.RUNNING:
+                
                 break;
             case GameState.PAUSED:
                 break;
@@ -164,5 +165,13 @@ public class GameManager : Singleton<GameManager>
     {
         _progressSceneLoader.LoadScene(menuSceneName);
         UpdateState(GameState.MENU);
+    }
+
+    public void LoadLevel(LevelSO levelData)
+    {
+        Debug.Log("Loading level " + levelData.levelName);
+        /*_progressSceneLoader.LoadScene(levelSceneName);
+        //level data
+        UpdateState(GameState.RUNNING);*/
     }
 }

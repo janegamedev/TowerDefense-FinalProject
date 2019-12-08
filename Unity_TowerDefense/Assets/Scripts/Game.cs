@@ -1,27 +1,50 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Game : MonoBehaviour
 {
+    public Events.GameSaveCompleted OnGameSaveCompleted;
+    
     public int stars = 3;
     public int level = 0;
-
-    public string path;
     
-    public void UnlockNextLevel()
+    private int levelsAmount = 11;
+    
+    [HideInInspector] public LevelState[] levelStates;
+    [HideInInspector] public int[] levelScore;
+    
+    [HideInInspector] public string path;
+    private void Start()
     {
+        levelStates = new LevelState[levelsAmount-1];
+        for (int i = 0; i < levelStates.Length; i++)
+        {
+            Debug.Log(i);
+            levelStates[i] = LevelState.LOCKED;
+        }
+
+        levelStates[0] = LevelState.UNLOCKED;
         
+        levelScore = new int[levelsAmount-1];
+        for (int i = 0; i < levelScore.Length; i++)
+        {
+            levelScore[i] = 0;
+        }
     }
 
-    public void GetStars()
+    public void UnlockNextLevel()
     {
+        level++;
+    }
 
+    public void GetStars(int amount)
+    {
+        stars += amount;
     }
 
     private void SaveGame()
     {
         SaveSystem.SaveGame(this);
+        OnGameSaveCompleted.Invoke();
     }
 
     private void LoadGame()
