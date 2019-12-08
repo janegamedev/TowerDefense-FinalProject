@@ -60,7 +60,7 @@ MonoBehaviour:
   waves:
   - enemySets:
     - enemyCount: 10
-      enemyData: {fileID: 11400000, guid: 3707d7bd98a0e724ca85652abf3718b5, type: 2}
+      enemyData: {fileID: 11400000, guid: fc4fb23508f21454a8cfe498de81af83, type: 2}
     timeBetweenSpawns: 1
   - enemySets:
     - enemyCount: 30

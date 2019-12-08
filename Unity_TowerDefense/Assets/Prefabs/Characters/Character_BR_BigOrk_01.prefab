@@ -867,9 +867,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4958464907473990}
   - component: {fileID: 95824196730489130}
-  - component: {fileID: 1117763193231467942}
-  - component: {fileID: -8328155129437456995}
-  - component: {fileID: 1808576985893146809}
+  - component: {fileID: -2793979171635423590}
+  - component: {fileID: -7220720240014721685}
+  - component: {fileID: -5976159311226413929}
+  - component: {fileID: -7446784358507907737}
   m_Layer: 9
   m_Name: Character_BR_BigOrk_01
   m_TagString: Untagged
@@ -886,7 +887,7 @@ Transform:
   m_GameObject: {fileID: 1293356793197548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4583351618751506}
   - {fileID: 4184543053477360}
@@ -913,16 +914,68 @@ Animator:
   m_GameObject: {fileID: 1293356793197548}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a50cd06a0668d1a418d586a2944e3ed5, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af28e7418574ed545b7893421b2082d5, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1117763193231467942
+--- !u!136 &-2793979171635423590
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293356793197548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &-7220720240014721685
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293356793197548}
+  serializedVersion: 2
+  m_Mass: 2
+  m_Drag: 0
+  m_AngularDrag: 0.005
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!195 &-5976159311226413929
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293356793197548}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &-7446784358507907737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -931,49 +984,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1293356793197548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5abdd586e2b0b5444b509b96e0615771, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cd2ecd2dcac4d5ca39a9595f44bb170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: 
-  health: 0
-  damage: 0
-  attackRate: 0
-  armour: 0
-  magicResistance: 0
-  speed: 0
-  bounty: 0
-  startingHp: 0
-  dead: 0
---- !u!114 &-8328155129437456995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293356793197548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3917611ab5c112d4d905ed4ba220b92b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWaypoint: {fileID: 0}
---- !u!114 &1808576985893146809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293356793197548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992d24300f14214419cea39b7446261c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 0
-  rotationSpeed: 0
-  stopDistance: 0
-  destination: {x: 0, y: 0, z: 0}
-  reachedDestination: 0
+  characterState: 0
+  movementSpeed: 1
 --- !u!1 &1315224913767900
 GameObject:
   m_ObjectHideFlags: 0
