@@ -6,10 +6,12 @@ public class LevelSelector: MonoBehaviour
     private Camera _camera;
     
     private Level _currentLevelSelected;
+    private LevelSelectionUi _levelSelectionUi;
 
     private void Awake()
     {
         _camera = Camera.main;
+        _levelSelectionUi = FindObjectOfType<LevelSelectionUi>();
     }
 
     private void Update()
@@ -23,10 +25,10 @@ public class LevelSelector: MonoBehaviour
             {
                 Level level = hit.collider.GetComponent<Level>();
 
-                if (level.levelState == LevelState.UNLOCKED)
+                if (level.levelState == LevelState.UNLOCKED || level.levelState == LevelState.FINISHED)
                 {
                     _currentLevelSelected = level;
-                    GameManager.Instance.LoadLevel(_currentLevelSelected.levelData);
+                    _levelSelectionUi.ToggleLevel(_currentLevelSelected.levelData);
                 }
             }
         }

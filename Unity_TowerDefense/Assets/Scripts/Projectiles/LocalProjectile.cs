@@ -10,28 +10,24 @@ public class LocalProjectile : Projectile
             Destroy(gameObject);
             return;
         }
-        
-        Vector3 targetPos = new Vector3(target.position.x, target.GetComponentInChildren<Renderer>().bounds.size.y/2 , target.position.z);
+
+        Vector3 targetPos = new Vector3(target.position.x, target.GetComponentInChildren<Renderer>().bounds.size.y / 2,
+            target.position.z);
 
         Vector3 direction = targetPos - transform.position;
         float distance = speed * Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, targetPos)<= 1)
+        RaycastHit[] hits = Physics.RaycastAll(new Ray(transform.position, direction.normalized), distance,
+            LayerMask.GetMask("Enemy"));
+
+        foreach (var hit in hits)
         {
+            hit.collider.GetComponent<Enemy>().TakeHit(damage, type);
             HitEnemy();
-            return;
+            break;
         }
-        
+
         transform.Translate(direction.normalized * distance, Space.World);
         transform.LookAt(targetPos);
-    }
-    
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<Enemy>())
-        {
-            other.GetComponent<Enemy>().TakeHit(damage, type);
-            base.HitEnemy();
-        }
     }
 }

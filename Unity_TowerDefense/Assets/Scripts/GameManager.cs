@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,8 +30,9 @@ public class GameManager : Singleton<GameManager>
         get => currentGameState;
     }
 
-    private string _currentPath;
-    private LevelSO currentLevelSo;
+    [HideInInspector] public string currentPath;
+    [HideInInspector] public Game currentGame;
+        [HideInInspector] public LevelSO currentLevelSo;
     private ProgressSceneLoader _progressSceneLoader;
     
     private void Start()
@@ -75,6 +77,11 @@ public class GameManager : Singleton<GameManager>
         {
             case GameState.MENU:
                 Time.timeScale = 1f;
+                if (currentGame)
+                {
+                    currentGame.SaveGame();
+                }
+                
                 break;
                 
             case GameState.SELECTION:
@@ -91,6 +98,9 @@ public class GameManager : Singleton<GameManager>
             
             case GameState.END:
                 Time.timeScale = 0.0f;
+                int stars = FindObjectOfType<PlayerStats>().EndGame();
+                FindObjectOfType<Game>().FinishLevel(currentLevelSo.level, stars);
+                
                 break;
             
             default:
@@ -134,7 +144,7 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadLevelSelection(string path)
     {
-        _currentPath = path;
+        currentPath = path;
         _progressSceneLoader.LoadScene(levelSelectionSceneName);
         UpdateState(GameState.SELECTION);
     }
@@ -143,21 +153,38 @@ public class GameManager : Singleton<GameManager>
     {
         switch (CurrentGameState)
         {
-            case GameState.MENU:
+            case GameState.MENU :
+                Destroy(currentGame.gameObject);
+                currentGame = null;
+                currentPath = null;
+                currentLevelSo = null;
+                
                 break;
             
             case GameState.SELECTION:
-                FindObjectOfType<Game>().SetPath(_currentPath);
+                
+                if (currentGame == null)
+                {
+                    currentGame = FindObjectOfType<Game>();
+                    currentGame.SetPath(currentPath);
+                }
+                else
+                {
+                    currentGame.LoadGame();
+                }
+
                 break;
             
             case GameState.RUNNING:
                 FindObjectOfType<GridGenerator>().Init(currentLevelSo);
+                
                 break;
             
             case GameState.PAUSED:
                 break;
             
             case GameState.END:
+
                 break;
             
             default:
@@ -175,7 +202,6 @@ public class GameManager : Singleton<GameManager>
     public void LoadLevel(LevelSO levelData)
     {
         currentLevelSo = levelData;
-        Debug.Log("Loading level " + levelData.levelName);
         _progressSceneLoader.LoadScene(levelSceneName);
         UpdateState(GameState.RUNNING);
     }

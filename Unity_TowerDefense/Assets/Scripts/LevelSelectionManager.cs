@@ -10,7 +10,7 @@ public class LevelSelectionManager : MonoBehaviour
     private void Start()
     {
         _gameStats = FindObjectOfType<Game>();
-        _gameStats.OnGameSaveCompleted.AddListener(Init);
+        _gameStats.OnGameUpdateCompleted.AddListener(Init);
     }
 
     private void Init()
@@ -24,6 +24,6 @@ public class LevelSelectionManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        _gameStats.OnGameSaveCompleted.RemoveListener(Init);
+        _gameStats.OnGameUpdateCompleted.RemoveListener(Init);
     }
 }

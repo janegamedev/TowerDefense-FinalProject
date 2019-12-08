@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class LevelSO : ScriptableObject
 {
     public string levelName;
+    public int level;
     public Texture2D mapTexture;
     public Color32[] colorsOnTheMap;
     

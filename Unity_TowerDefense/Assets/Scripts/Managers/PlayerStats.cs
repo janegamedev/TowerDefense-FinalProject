@@ -59,4 +59,24 @@ public class PlayerStats : Singleton<PlayerStats>
         coins += amount;
         _inGameUi.UpdateUi();
     }
+
+    public int EndGame()
+    {
+        if (lives >= 16 && lives <= 20)
+        {
+            return 3;
+        }
+        else if(lives >= 8 && lives <= 15)
+        {
+            return 2;
+        }
+        else if(lives >= 1 && lives <= 7)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }

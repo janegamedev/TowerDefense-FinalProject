@@ -9,8 +9,6 @@ public class EnemySO : ScriptableObject
    public string enemyName;
    public GameObject enemyModel;
    public float health;
-   public int damage;
-   public float attackRate;
    public float armour;
    public float magicResistance;
    public float speed;

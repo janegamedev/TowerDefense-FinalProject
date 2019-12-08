@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SimpleSky
-  m_Shader: {fileID: 4800000, guid: 17a6bdb2d7a748643a8b77cdd55d81d3, type: 3}
+  m_Shader: {fileID: 4800000, guid: cab4c0e1cc2e66649bb7d184a5488188, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -23,12 +23,27 @@ Material:
         m_Texture: {fileID: 2800000, guid: 7bab9ac1487e10c40b9ed77d4c551e04, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0.1, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: eabba395643bb4e388d633c8d9a4f1e8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Distance: 48.12
+    - _Distance: 103.7
     - _Falloff: 1
-    - _Offset: 38.78
+    - _FogAmount: 0.75
+    - _FogDistance: 0
+    - _FogFalloff: 0.06
+    - _FogOffset: 0.5303507
+    - _Offset: 52.54
+    - _Specular: 0
+    - _SpecularSmoothness: 0.66
     - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0.4198113, g: 0.88968223, b: 1, a: 0}
-    - _ColorBottom: {r: 0, g: 0.4514842, b: 0.5568628, a: 0}
+    - _Color0: {r: 0.33664113, g: 0.71342444, b: 0.8018868, a: 0}
+    - _ColorBottom: {r: 1, g: 0.3117892, b: 0, a: 0}
+    - _FogColor: {r: 0.7075472, g: 0.20255274, b: 0, a: 0}

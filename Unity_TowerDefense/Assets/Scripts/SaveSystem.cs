@@ -3,24 +3,27 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public static class SaveSystem
-{
-/*
-    private static string _path1 = Application.persistentDataPath + "/slot1.txt";
-    private static string _path2 = Application.persistentDataPath + "/slot2.txt";
-    private static string _path3 = Application.persistentDataPath + "/slot3.txt";
-    */
-
+{ 
     public static void SaveGame(Game game)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = game.path;
-        FileStream stream = new FileStream(path, FileMode.Create);
+        string path = game.Path;
+        /*Debug.Log(path);*/
+        FileStream stream;
+        
+        if (File.Exists(path))
+        {
+            stream = File.Open(path, FileMode.Open);
+        }
+        else
+        {
+            stream = new FileStream(path, FileMode.Create);
+        }
         
         GameData data = new GameData(game);
         
         formatter.Serialize(stream, data);
         stream.Close();
-        Debug.Log("Game saved");
     }
 
     public static GameData LoadGame(string path)

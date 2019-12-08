@@ -9,13 +9,16 @@ public class GameData
 
     public LevelState[] levelStates;
     public int[] levelScore;
-    
+
+    private string _path;
     public GameData(Game game)
     {
         stars = game.stars;
-        level = game.level;
+        level = game.currentLevelUnlocked;
 
         levelStates = game.levelStates;
         levelScore = game.levelScore;
+
+        _path = game.Path;
     }
 }

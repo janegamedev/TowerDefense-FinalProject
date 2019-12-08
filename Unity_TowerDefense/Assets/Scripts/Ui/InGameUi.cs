@@ -36,4 +36,14 @@ public class InGameUi : MonoBehaviour
     {
         GameManager.Instance.TogglePause();
     }
+    
+    public void RestartGame()
+    {
+        GameManager.Instance.LoadLevel(GameManager.Instance.currentLevelSo);
+    }
+
+    public void QuitToSelectionMenu()
+    {
+        GameManager.Instance.LoadLevelSelection(Game.Instance.Path);
+    }
 }
