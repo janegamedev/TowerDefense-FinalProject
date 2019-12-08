@@ -467,7 +467,7 @@ Transform:
   m_GameObject: {fileID: 8161575880885104807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4760537523963318623}
   m_Father: {fileID: 0}
@@ -531,9 +531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 512
   rangeDome: {fileID: 0}
   weaponBody: {fileID: 1461375281110005079}
   firePoints:

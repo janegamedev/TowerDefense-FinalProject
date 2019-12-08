@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2090154971577625979}
   - component: {fileID: 3586279758720937635}
   - component: {fileID: 2025412541263939269}
-  - component: {fileID: 4685887315350258767}
+  - component: {fileID: 2105215890198077418}
   m_Layer: 0
   m_Name: Barracks_tower_3
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5724407448328903163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4685887315350258767
+--- !u!114 &2105215890198077418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,21 +88,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5724407448328903163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1c4cabe4cc4671b51d7b9074e89b27, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a624d5ff5c84c24abbdd66da50ab563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 512
-  level: 0
-  buildCost: 0
-  range: 0
-  rangeObject: {fileID: 0}
-  nextUpgrade: {fileID: 0}
-  enemyToAttack: {fileID: 0}
-  nextAttackTime: 0
-  warriorPrefab: {fileID: 1820919466449660, guid: 00df519327294ce4da5a577098c3ed4f,
-    type: 3}
-  warriorAmount: 3
-  spawnPosition: {fileID: 0}
+  rangeDome: {fileID: 0}
