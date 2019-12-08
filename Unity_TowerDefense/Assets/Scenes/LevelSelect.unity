@@ -5683,8 +5683,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f65aca722d376524dbffaaa0c52c6c6d, type: 3}
 --- !u!4 &559691684 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4203866961909890, guid: f65aca722d376524dbffaaa0c52c6c6d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 559691683}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &560515439
@@ -24336,8 +24335,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 7.35
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -24361,7 +24360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056757938}
   m_LocalRotation: {x: 0.022697061, y: 0.9556745, z: -0.2834253, w: 0.07642737}
-  m_LocalPosition: {x: -3.18, y: 6.8, z: 16.31}
+  m_LocalPosition: {x: -4.6, y: 6.8, z: 15.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
