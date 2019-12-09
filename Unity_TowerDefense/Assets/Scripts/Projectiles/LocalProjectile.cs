@@ -3,18 +3,33 @@ using UnityEngine;
 
 public class LocalProjectile : Projectile
 {
+    private Vector3 _previousTargetPos;
+    
     private void Update()
     {
+        Vector3 targetPos;
+        Vector3 direction;
+
         if (target == null)
         {
-            Destroy(gameObject);
-            return;
+            targetPos = _previousTargetPos;
+            direction = targetPos - transform.position;
+
+            if (direction.magnitude <= 1)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            targetPos = new Vector3(target.position.x, target.GetComponentInChildren<Renderer>().bounds.size.y / 2,
+                target.position.z);
+            _previousTargetPos = targetPos;
+            direction = targetPos - transform.position;
         }
 
-        Vector3 targetPos = new Vector3(target.position.x, target.GetComponentInChildren<Renderer>().bounds.size.y / 2,
-            target.position.z);
-
-        Vector3 direction = targetPos - transform.position;
+        
+        
         float distance = speed * Time.deltaTime;
 
         RaycastHit[] hits = Physics.RaycastAll(new Ray(transform.position, direction.normalized), distance,

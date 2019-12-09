@@ -1,19 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+
 public class MainMenuUi : MonoBehaviour
 {
-    public GameObject menuPanel;
-    public GameObject settingsPanel;
-    public GameObject creditsPanel;
-    public GameObject quitPanel;
-    public GameObject newGameBtns;
+    [SerializeField] private GameObject menuPanel;
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject creditsPanel;
+    [SerializeField] private GameObject quitPanel;
+    [SerializeField] private GameObject newGameBtns;
     
     public void PlayButtonClick()
-    {   
-            newGameBtns.SetActive(!newGameBtns.activeSelf);
+    {
+        newGameBtns.SetActive(!newGameBtns.activeSelf);
     }
     
     public void SettingsMenuToggle()
