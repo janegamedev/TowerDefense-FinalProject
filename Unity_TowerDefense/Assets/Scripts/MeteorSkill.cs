@@ -16,6 +16,7 @@ public class MeteorSkill : MonoBehaviour
     private bool _isSelected;
     private bool _canFire;
     private Camera _camera;
+    
     void Start()
     {
         _camera = Camera.main;
@@ -55,6 +56,7 @@ public class MeteorSkill : MonoBehaviour
 
     private void Select()
     {
+        Debug.Log("Skill selected");
         _isSelected = true;
         skillButton.interactable = false;
     }
