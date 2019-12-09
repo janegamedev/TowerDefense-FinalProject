@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class LevelSelectionManager : MonoBehaviour
 {
-    public Level[] levels;
+    [SerializeField] private Level[] levels;
+    [SerializeField] private TweenAnimation pin;
 
     private Game _gameStats;
 
@@ -20,6 +21,9 @@ public class LevelSelectionManager : MonoBehaviour
             levels[i].score = _gameStats.levelScore[i];
             levels[i].UpdateState(_gameStats.levelStates[i]);
         }
+
+        pin.transform.position = levels[_gameStats.currentLevelUnlocked - 1].transform.position + Vector3.up;
+        pin.enabled = true;
     }
 
     private void OnDestroy()
