@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 public class LevelSelectionUi : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class LevelSelectionUi : MonoBehaviour
     [SerializeField] private GameObject levelPanel;
     [SerializeField] private GameObject upgradePanel;
     [SerializeField] private GameObject encyclopediaPanel;
+
+    [SerializeField] private TextMeshProUGUI starsTmp;
 
     private LevelSO _currentLevelSelected;
 
@@ -23,11 +26,11 @@ public class LevelSelectionUi : MonoBehaviour
 
     public void ToggleUpgrades()
     {
-        upgradePanel.SetActive(!settingsPanel.activeSelf);
+        upgradePanel.SetActive(!upgradePanel.activeSelf);
     }
     public void ToggleEncyclopedia()
     {
-        encyclopediaPanel.SetActive(!settingsPanel.activeSelf);
+        encyclopediaPanel.SetActive(!encyclopediaPanel.activeSelf);
     }
 
     public void ToggleLevel(LevelSO levelSo)
@@ -45,5 +48,10 @@ public class LevelSelectionUi : MonoBehaviour
     public void StartLevel()
     {
         GameManager.Instance.LoadLevel(_currentLevelSelected);
+    }
+
+    public void UpdateStars()
+    {
+        starsTmp.text = Game.Instance.stars.ToString();
     }
 }

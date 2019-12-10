@@ -76,7 +76,7 @@ public class Game : Singleton<Game>
 
         levelStates[0] = LevelState.UNLOCKED;
         levelStatesInts[0] = 1;
-        
+        stars = 3;
         currentLevelUnlocked ++;
         
         levelScore = new int[levelsAmount-1];
