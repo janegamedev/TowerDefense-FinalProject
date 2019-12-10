@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
-  m_Name: Footman Baracks
+  m_Name: Static Bubble
   m_EditorClassIdentifier: 
   type: 1
-  level: 2
-  buildCost: 110
-  damage: 4
+  level: 1
+  buildCost: 70
+  damage: 2
   attackRate: 10
-  range: 300
-  towerPrefab: {fileID: 8252402654480920299, guid: 23a5bf36f3c89cf41994231a532af75b,
+  range: 28
+  speedMultiplayer: 0.8
+  towerPrefab: {fileID: 6492792737427458144, guid: 9de1da05333eb6646b45c2889a6d303a,
     type: 3}
-  nextUpgrade: {fileID: 11400000, guid: 118463592dc4a6540b1755cde1923f4a, type: 2}
+  projectiles: []
+  nextUpgrade: {fileID: 11400000, guid: 5c776f98fc6b2cc49a39a047a5fb13b3, type: 2}
