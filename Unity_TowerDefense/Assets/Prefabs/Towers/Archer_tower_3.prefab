@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 5651322861696308240}
   - component: {fileID: 659064965833754882}
   - component: {fileID: 8489628056779279287}
-  - component: {fileID: -7304451088829467513}
+  - component: {fileID: 2716706571359354442}
   m_Layer: 0
   m_Name: Archer_tower_3
   m_TagString: Untagged
@@ -348,7 +348,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-7304451088829467513
+--- !u!114 &2716706571359354442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7156037321494057243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
+  m_Script: {fileID: 11500000, guid: b2ff37e38dc5489ba986fa426aaa866b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rangeDome: {fileID: 0}

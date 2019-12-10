@@ -8,8 +8,14 @@ public enum DamageType
 public class Projectile : MonoBehaviour
 {
     private protected DamageType type;
-    private protected int damage;
-    public int Damage { get=> damage; set=> damage=value; }
+    private protected float damage;
+
+    public float Damage
+    {
+        get=> damage; 
+        set=> damage = value;
+    }
+    
     [SerializeField] private protected float speed; 
     private protected Transform target;
 

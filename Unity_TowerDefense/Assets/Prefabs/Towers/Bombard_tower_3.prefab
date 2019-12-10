@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 1591806347439664592}
   - component: {fileID: 8594117304736196976}
   - component: {fileID: 8949123884503169906}
-  - component: {fileID: -8528661672040747564}
+  - component: {fileID: 215011869934552436}
   m_Layer: 0
   m_Name: Bombard_tower_3
   m_TagString: Untagged
@@ -378,7 +378,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-8528661672040747564
+--- !u!114 &215011869934552436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -387,14 +387,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7003396083645850863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
+  m_Script: {fileID: 11500000, guid: acaf3dd729654f629c4ede9e0f795146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rangeDome: {fileID: 0}
   weaponBody: {fileID: 3108580766417380160}
   firePoints:
   - {fileID: 3313409244338656139}
-  _enemyToAttack: {fileID: 0}
 --- !u!1 &7927350855879486378
 GameObject:
   m_ObjectHideFlags: 0

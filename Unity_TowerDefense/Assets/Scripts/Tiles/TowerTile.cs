@@ -27,7 +27,15 @@ public class TowerTile : Tile
     public void PlaceTower(TowerSO towerData)
     {
         tower = Instantiate(towerData.towerPrefab, transform).GetComponent<Tower>();
-        PlayerStats.Instance.ChangeCoinsAmount(towerData.buildCost);
+
+        if (towerData.type == TowerType.ARTILLERY)
+        {
+            PlayerStats.Instance.ChangeCoinsAmount(towerData.buildCost * (int)(1 - Game.Instance._bombCostDecrease));
+        }
+        else
+        {
+            PlayerStats.Instance.ChangeCoinsAmount(towerData.buildCost);
+        }
         tower.Init(towerData);
 
         tower.transform.position = transform.position;

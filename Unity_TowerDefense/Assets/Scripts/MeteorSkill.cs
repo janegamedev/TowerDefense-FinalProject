@@ -21,6 +21,7 @@ public class MeteorSkill : MonoBehaviour
     {
         _camera = Camera.main;
         skillButton.onClick.AddListener(Select);
+        resetTime -= Game.Instance._meteorCountDownDecrease;
     }
 
     // Update is called once per frame
@@ -67,14 +68,13 @@ public class MeteorSkill : MonoBehaviour
         {
             skillButton.interactable = false;
             
-            Debug.Log("Fire!");
             _isSelected = false;
             _canFire = false;
             StartCoroutine(Restart());
 
             Meteor m = Instantiate(meteor, _destination + Vector3.up * 150, Quaternion.identity).GetComponent<Meteor>();
-            m.damage = damage;
-            m.range = range;
+            m.damage = damage * (1 + Game.Instance._meteorDamageIncrease);
+            m.range = range * (1 + Game.Instance._meteorRangeIncrease);
             
             _destination = Vector3.zero;
         }

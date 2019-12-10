@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 2349784130730766422}
   - component: {fileID: 8735750560062060535}
   - component: {fileID: 7176651114831302865}
-  - component: {fileID: -4271433134308663889}
+  - component: {fileID: 9172256389874141683}
   m_Layer: 0
   m_Name: Mage_tower_1
   m_TagString: Untagged
@@ -110,7 +110,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-4271433134308663889
+--- !u!114 &9172256389874141683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,14 +119,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1444635650403054005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
+  m_Script: {fileID: 11500000, guid: aecafb54ceb24d82af2c83b561aff0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rangeDome: {fileID: 0}
   weaponBody: {fileID: 0}
   firePoints:
   - {fileID: 6977244792021001554}
-  _enemyToAttack: {fileID: 0}
 --- !u!1 &6677727108437853930
 GameObject:
   m_ObjectHideFlags: 0

@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 2980221457649796476}
   - component: {fileID: 1736141656537807458}
   - component: {fileID: 3350216327150920879}
-  - component: {fileID: -8786634727949901359}
+  - component: {fileID: 2267524411494101052}
   m_Layer: 0
   m_Name: Archer_tower_1
   m_TagString: Untagged
@@ -347,7 +347,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-8786634727949901359
+--- !u!114 &2267524411494101052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,10 +356,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7108070730447705105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2ac57eb7314dd785d7ff68e2e0f6c2, type: 3}
+  m_Script: {fileID: 11500000, guid: b2ff37e38dc5489ba986fa426aaa866b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeDome: {fileID: 254072934663046831}
+  rangeDome: {fileID: 0}
   weaponBody: {fileID: 6257266329469994319}
   firePoints:
   - {fileID: 4390162940510606031}

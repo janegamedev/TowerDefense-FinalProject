@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UpgradeDescription : MonoBehaviour
@@ -16,6 +12,8 @@ public class UpgradeDescription : MonoBehaviour
     private Vector3 startPosition;
     public Vector3 toPosition;
 
+    private int moveInId;
+    private int moveOutId;
     private void Start()
     {
         startPosition = transform.localPosition;
@@ -33,11 +31,13 @@ public class UpgradeDescription : MonoBehaviour
 
     private void ToggleAnimationIn()
     {
-        LeanTween.moveLocal(gameObject, toPosition, 0.25f).setEase(LeanTweenType.easeInQuad);
+        LeanTween.reset();
+        moveInId = LeanTween.moveLocal(gameObject, toPosition, 0.25f).setEase(LeanTweenType.easeInQuad).id;
     }
 
     public void ToggleAnimationOut()
     {
-        LeanTween.moveLocal(gameObject, startPosition, 0.25f).setEase(LeanTweenType.easeInQuad);
+        LeanTween.reset();
+        moveOutId = LeanTween.moveLocal(gameObject, startPosition, 1f).setEase(LeanTweenType.easeInQuad).id;
     }
 }
