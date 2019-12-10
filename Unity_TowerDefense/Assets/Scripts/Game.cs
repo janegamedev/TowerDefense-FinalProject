@@ -13,7 +13,35 @@ public class Game : Singleton<Game>
     public LevelState[] levelStates;
     private int[] levelStatesInts;
     [HideInInspector] public int[] levelScore;
-
+    
+    public UpgradeState[] archerUpgradeStates = new UpgradeState[3];
+    public UpgradeState[] mageUpgradeStates = new UpgradeState[3];
+    public UpgradeState[] slowdownUpgradeStates = new UpgradeState[3];
+    public UpgradeState[] bombUpgradeStates = new UpgradeState[3];
+    public UpgradeState[] meteorUpgradeStates = new UpgradeState[3];
+    
+    //archer modifiers
+    public float _archerRangeIncrease;
+    public float _archerDamageIncrease;
+    
+    //mage modifiers
+    public float _mageRangeIncrease;
+    public float _mageDamageIncrease;
+    
+    //slowdown modifiers
+    public float _slowdownRangeIncrease;
+    public float _slowdownIncrease;
+    
+    //bomb modifiers
+    public float _bombDamageIncrease;
+    public float _bombRangeIncrease;
+    public float _bombCostDecrease;
+    
+    //meteor modifiers
+    public float _meteorDamageIncrease;
+    public float _meteorRangeIncrease;
+    public float _meteorCountDownDecrease;
+    
     private int _maxLevel = 10;
     private string path;
 
@@ -55,6 +83,57 @@ public class Game : Singleton<Game>
         for (int i = 0; i < levelScore.Length; i++)
         {
             levelScore[i] = 0;
+        }
+        
+        //Init upgrades
+        for (int i = 0; i < archerUpgradeStates.Length; i++)
+        {
+            archerUpgradeStates[i] = UpgradeState.LOCKED;
+
+            if (i == 0)
+            {
+                archerUpgradeStates[i] = UpgradeState.UNLOCKED;
+            }
+        }
+        
+        for (int i = 0; i < mageUpgradeStates.Length; i++)
+        {
+            mageUpgradeStates[i] = UpgradeState.LOCKED;
+
+            if (i == 0)
+            {
+                mageUpgradeStates[i] = UpgradeState.UNLOCKED;
+            }
+        }
+        
+        for (int i = 0; i < bombUpgradeStates.Length; i++)
+        {
+            bombUpgradeStates[i] = UpgradeState.LOCKED;
+
+            if (i == 0)
+            {
+                bombUpgradeStates[i] = UpgradeState.UNLOCKED;
+            }
+        }
+        
+        for (int i = 0; i < slowdownUpgradeStates.Length; i++)
+        {
+            slowdownUpgradeStates[i] = UpgradeState.LOCKED;
+
+            if (i == 0)
+            {
+                slowdownUpgradeStates[i] = UpgradeState.UNLOCKED;
+            }
+        }
+        
+        for (int i = 0; i < meteorUpgradeStates.Length; i++)
+        {
+            meteorUpgradeStates[i] = UpgradeState.LOCKED;
+
+            if (i == 0)
+            {
+                meteorUpgradeStates[i] = UpgradeState.UNLOCKED;
+            }
         }
     }
 
@@ -105,6 +184,29 @@ public class Game : Singleton<Game>
             currentLevelUnlocked = data.level;
             levelStates = data.levelStates;
             levelScore = data.levelScore;
+       
+            archerUpgradeStates = data.archerUpgradeStates;
+            mageUpgradeStates = data.mageUpgradeStates;
+            bombUpgradeStates = data.bombUpgradeStates;
+            slowdownUpgradeStates = data.slowdownUpgradeStates;
+            meteorUpgradeStates = data.meteorUpgradeStates;
+        
+            _archerRangeIncrease = data._archerRangeIncrease;
+            _archerDamageIncrease = data._archerDamageIncrease;
+
+            _mageRangeIncrease = data._mageRangeIncrease;
+            _mageDamageIncrease = data._mageDamageIncrease;
+
+            _slowdownIncrease = data._slowdownIncrease;
+            _slowdownRangeIncrease = data._slowdownRangeIncrease;
+
+            _bombDamageIncrease = data._bombDamageIncrease;
+            _bombRangeIncrease = data._bombRangeIncrease;
+            _bombCostDecrease = data._bombCostDecrease;
+
+            _meteorDamageIncrease = data._meteorDamageIncrease;
+            _meteorRangeIncrease = data._meteorRangeIncrease;
+            _meteorCountDownDecrease = data._meteorCountDownDecrease;
             
             
             OnGameUpdateCompleted.Invoke();
