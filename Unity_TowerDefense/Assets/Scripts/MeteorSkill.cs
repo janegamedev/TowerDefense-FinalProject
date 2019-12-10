@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,9 +14,20 @@ public class MeteorSkill : MonoBehaviour
     private bool _isSelected;
     private bool _canFire;
     private Camera _camera;
+
+
+    private Texture2D _texture2D;
+    private Texture2D _progressTexture2D;
+    private Color _color;
+    private float _progress;
+    private float _oldProgress;
+    
+    
     
     void Start()
     {
+        _texture2D = skillButton.image.sprite.texture;
+        _progressTexture2D = _texture2D;
         _camera = Camera.main;
         skillButton.onClick.AddListener(Select);
         resetTime -= Game.Instance._meteorCountDownDecrease;
@@ -57,7 +66,6 @@ public class MeteorSkill : MonoBehaviour
 
     private void Select()
     {
-        Debug.Log("Skill selected");
         _isSelected = true;
         skillButton.interactable = false;
     }
@@ -90,4 +98,37 @@ public class MeteorSkill : MonoBehaviour
     {
         Gizmos.DrawSphere(_destination,range);
     }
+    
+    /*
+    private void ProgressUpdate( float progress,Color overlayColor)
+    {
+        var thisTex = new Texture2D(_texture2D.width, _texture2D.height);
+        Vector2 centre = new Vector2(Mathf.Ceil(thisTex.width/2), Mathf.Ceil(thisTex.height/2));
+
+
+        for (int y = 0; y < thisTex.height; y++)
+        {
+            for (int x = 0; x < thisTex.width; x++)
+            {
+                float angle = Mathf.Atan2(x-centre.x, y-centre.y)*Mathf.Rad2Deg;
+                if (angle < 0)
+                {
+                    angle += 360;
+                }
+
+                Color pixColor = _texture2D.GetPixel(x, y);
+
+                if (angle <= progress * 360)
+                {
+                    pixColor = new Color(pixColor.r, pixColor.g, pixColor.b, overlayColor.a);
+                }
+
+                thisTex.SetPixel(x, y, pixColor);
+            }            
+        }
+        
+        thisTex.Apply();
+    }
+    */
+
 }
