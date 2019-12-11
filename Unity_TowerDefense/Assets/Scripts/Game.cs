@@ -167,7 +167,6 @@ public class Game : Singleton<Game>
 
     public void SaveGame()
     {
-        Debug.Log("Save game " + path);
         SaveSystem.SaveGame(this);
         OnGameUpdateCompleted.Invoke();
     }
@@ -178,7 +177,6 @@ public class Game : Singleton<Game>
 
         if (data != null)
         {
-            Debug.Log("Game was loaded");
             stars = data.stars;
             currentLevelUnlocked = data.level;
             levelStates = data.levelStates;
@@ -212,7 +210,6 @@ public class Game : Singleton<Game>
         }
         else
         {
-            Debug.Log("Saving game form Load game method " + path);
             SaveGame();
         }
     }
@@ -221,5 +218,10 @@ public class Game : Singleton<Game>
     {
         Path = p;
         LoadGame();
+    }
+
+    public void ResetGame()
+    {
+        Start();
     }
 }

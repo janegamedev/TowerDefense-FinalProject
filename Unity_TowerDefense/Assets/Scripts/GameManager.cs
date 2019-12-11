@@ -145,8 +145,7 @@ public class GameManager : Singleton<GameManager>
         switch (CurrentGameState)
         {
             case GameState.MENU :
-                Destroy(currentGame.gameObject);
-                currentGame = null;
+                
                 currentPath = null;
                 currentLevelSo = null;
                 
@@ -161,6 +160,7 @@ public class GameManager : Singleton<GameManager>
                 }
                 else
                 {
+                    currentGame.ResetGame();
                     currentGame.LoadGame();
                 }
 

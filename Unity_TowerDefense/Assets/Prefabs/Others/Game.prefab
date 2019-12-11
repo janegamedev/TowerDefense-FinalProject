@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6859691374251247562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6859691374251247604}
+  - component: {fileID: 6859691374251247605}
+  m_Layer: 0
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6859691374251247604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6859691374251247562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6859691374251247605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6859691374251247562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a4a18f464a4550ad39a2caa3f31361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnGameUpdateCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+GameSaveCompleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  stars: 0
+  currentLevelUnlocked: 0
+  levelStates: 000000000000000000000000000000000000000000000000000000000000000000000000
+  levelScore: 000000000000000000000000000000000000000000000000000000000000000000000000
+  archerUpgradeStates: 000000000000000000000000
+  mageUpgradeStates: 000000000000000000000000
+  slowdownUpgradeStates: 000000000000000000000000
+  bombUpgradeStates: 000000000000000000000000
+  meteorUpgradeStates: 000000000000000000000000
+  _archerRangeIncrease: 0
+  _archerDamageIncrease: 0
+  _mageRangeIncrease: 0
+  _mageDamageIncrease: 0
+  _slowdownRangeIncrease: 0
+  _slowdownIncrease: 0
+  _bombDamageIncrease: 0
+  _bombRangeIncrease: 0
+  _bombCostDecrease: 0
+  _meteorDamageIncrease: 0
+  _meteorRangeIncrease: 0
+  _meteorCountDownDecrease: 0

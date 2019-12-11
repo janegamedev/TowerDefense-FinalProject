@@ -86,135 +86,138 @@ public class UpgradeTree : MonoBehaviour
 
     void Init()
     {
-        for (int i = 0; i < archerUpgradeStates.Length; i++)
+        if (GameManager.Instance.CurrentGameState == GameState.SELECTION)
         {
-            archerUpgradeStates[i].upgradeState = Game.Instance.archerUpgradeStates[i];
-        }
-        
-        for (int i = 0; i < mageUpgradeStates.Length; i++)
-        {
-            mageUpgradeStates[i].upgradeState = Game.Instance.mageUpgradeStates[i];
-        }
-        
-        for (int i = 0; i < bombUpgradeStates.Length; i++)
-        {
-            bombUpgradeStates[i].upgradeState = Game.Instance.bombUpgradeStates[i];
-        }
-        
-        for (int i = 0; i < slowdownUpgradeStates.Length; i++)
-        {
-            slowdownUpgradeStates[i].upgradeState = Game.Instance.slowdownUpgradeStates[i];
-        }
-        
-        for (int i = 0; i < meteorUpgradeStates.Length; i++)
-        {
-            meteorUpgradeStates[i].upgradeState = Game.Instance.meteorUpgradeStates[i];
-        }
-
-        for (int i = 0; i < _archerUpgrades.Length; i++)
-        {
-            if (archerUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+            for (int i = 0; i < archerUpgradeStates.Length; i++)
             {
-                _archerUpgrades[i].interactable = true;
+                archerUpgradeStates[i].upgradeState = Game.Instance.archerUpgradeStates[i];
+            }
+        
+            for (int i = 0; i < mageUpgradeStates.Length; i++)
+            {
+                mageUpgradeStates[i].upgradeState = Game.Instance.mageUpgradeStates[i];
+            }
+        
+            for (int i = 0; i < bombUpgradeStates.Length; i++)
+            {
+                bombUpgradeStates[i].upgradeState = Game.Instance.bombUpgradeStates[i];
+            }
+        
+            for (int i = 0; i < slowdownUpgradeStates.Length; i++)
+            {
+                slowdownUpgradeStates[i].upgradeState = Game.Instance.slowdownUpgradeStates[i];
+            }
+        
+            for (int i = 0; i < meteorUpgradeStates.Length; i++)
+            {
+                meteorUpgradeStates[i].upgradeState = Game.Instance.meteorUpgradeStates[i];
+            }
 
-                if (Game.Instance.stars < archerUpgradeStates[i].cost)
+            for (int i = 0; i < _archerUpgrades.Length; i++)
+            {
+                if (archerUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+                {
+                    _archerUpgrades[i].interactable = true;
+
+                    if (Game.Instance.stars < archerUpgradeStates[i].cost)
+                    {
+                        _archerUpgrades[i].interactable = false;
+                    }
+                }
+                else
                 {
                     _archerUpgrades[i].interactable = false;
                 }
             }
-            else
-            {
-                _archerUpgrades[i].interactable = false;
-            }
-        }
         
-        for (int i = 0; i < _mageUpgrades.Length; i++)
-        {
-            if (mageUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+            for (int i = 0; i < _mageUpgrades.Length; i++)
             {
-                _mageUpgrades[i].interactable = true;
+                if (mageUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+                {
+                    _mageUpgrades[i].interactable = true;
                 
-                if (Game.Instance.stars < mageUpgradeStates[i].cost)
+                    if (Game.Instance.stars < mageUpgradeStates[i].cost)
+                    {
+                        _mageUpgrades[i].interactable = false;
+                    }
+                }
+                else
                 {
                     _mageUpgrades[i].interactable = false;
                 }
             }
-            else
-            {
-                _mageUpgrades[i].interactable = false;
-            }
-        }
         
-        for (int i = 0; i < _bombUpgrades.Length; i++)
-        {
-            if (bombUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+            for (int i = 0; i < _bombUpgrades.Length; i++)
             {
-                _bombUpgrades[i].interactable = true;
+                if (bombUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+                {
+                    _bombUpgrades[i].interactable = true;
                 
-                if (Game.Instance.stars < bombUpgradeStates[i].cost)
+                    if (Game.Instance.stars < bombUpgradeStates[i].cost)
+                    {
+                        _bombUpgrades[i].interactable = false;
+                    }
+                }
+                else
                 {
                     _bombUpgrades[i].interactable = false;
                 }
             }
-            else
-            {
-                _bombUpgrades[i].interactable = false;
-            }
-        }
 
-        for (int i = 0; i < _slowdownUpgrades.Length; i++)
-        {
-            if (slowdownUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+            for (int i = 0; i < _slowdownUpgrades.Length; i++)
             {
-                _slowdownUpgrades[i].interactable = true;
+                if (slowdownUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+                {
+                    _slowdownUpgrades[i].interactable = true;
                 
-                if (Game.Instance.stars < slowdownUpgradeStates[i].cost)
+                    if (Game.Instance.stars < slowdownUpgradeStates[i].cost)
+                    {
+                        _slowdownUpgrades[i].interactable = false;
+                    }
+                }
+                else
                 {
                     _slowdownUpgrades[i].interactable = false;
                 }
             }
-            else
-            {
-                _slowdownUpgrades[i].interactable = false;
-            }
-        }
 
-        for (int i = 0; i < _meteorUpgrades.Length; i++)
-        {
-            if (meteorUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+            for (int i = 0; i < _meteorUpgrades.Length; i++)
             {
-                _meteorUpgrades[i].interactable = true;
+                if (meteorUpgradeStates[i].upgradeState == UpgradeState.UNLOCKED)
+                {
+                    _meteorUpgrades[i].interactable = true;
                 
-                if (Game.Instance.stars < meteorUpgradeStates[i].cost)
+                    if (Game.Instance.stars < meteorUpgradeStates[i].cost)
+                    {
+                        _meteorUpgrades[i].interactable = false;
+                    }
+                }
+                else
                 {
                     _meteorUpgrades[i].interactable = false;
                 }
             }
-            else
-            {
-                _meteorUpgrades[i].interactable = false;
-            }
+
+
+            _archerRangeIncrease = Game.Instance._archerRangeIncrease;
+            _archerDamageIncrease = Game.Instance._archerDamageIncrease;
+
+            _mageRangeIncrease = Game.Instance._mageRangeIncrease;
+            _mageDamageIncrease = Game.Instance._mageDamageIncrease;
+
+            _slowdownIncrease = Game.Instance._slowdownIncrease;
+            _slowdownRangeIncrease = Game.Instance._slowdownRangeIncrease;
+
+            _bombDamageIncrease = Game.Instance._bombDamageIncrease;
+            _bombRangeIncrease = Game.Instance._bombRangeIncrease;
+            _bombCostDecrease = Game.Instance._bombCostDecrease;
+
+            _meteorDamageIncrease = Game.Instance._meteorDamageIncrease;
+            _meteorRangeIncrease = Game.Instance._meteorRangeIncrease;
+            _meteorCountDownDecrease = Game.Instance._meteorCountDownDecrease;
+
+            FindObjectOfType<LevelSelectionUi>().UpdateStars();
         }
-
-
-        _archerRangeIncrease = Game.Instance._archerRangeIncrease;
-        _archerDamageIncrease = Game.Instance._archerDamageIncrease;
-
-        _mageRangeIncrease = Game.Instance._mageRangeIncrease;
-        _mageDamageIncrease = Game.Instance._mageDamageIncrease;
-
-        _slowdownIncrease = Game.Instance._slowdownIncrease;
-        _slowdownRangeIncrease = Game.Instance._slowdownRangeIncrease;
-
-        _bombDamageIncrease = Game.Instance._bombDamageIncrease;
-        _bombRangeIncrease = Game.Instance._bombRangeIncrease;
-        _bombCostDecrease = Game.Instance._bombCostDecrease;
-
-        _meteorDamageIncrease = Game.Instance._meteorDamageIncrease;
-        _meteorRangeIncrease = Game.Instance._meteorRangeIncrease;
-        _meteorCountDownDecrease = Game.Instance._meteorCountDownDecrease;
-        
-        FindObjectOfType<LevelSelectionUi>().UpdateStars();
     }
 
     private void ArcherUpgrade(int upgradeLevel)
@@ -436,10 +439,5 @@ public class UpgradeTree : MonoBehaviour
         Game.Instance._meteorCountDownDecrease = _meteorCountDownDecrease;
         
         FindObjectOfType<LevelSelectionUi>().UpdateStars();
-    }
-
-    private void OnDestroy()
-    {
-        Game.Instance.OnGameUpdateCompleted.RemoveListener(Init);
     }
 }

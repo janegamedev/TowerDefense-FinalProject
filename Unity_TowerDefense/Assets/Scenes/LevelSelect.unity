@@ -5048,53 +5048,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 267856865}
-  - component: {fileID: 267856864}
   - component: {fileID: 267856866}
   m_Layer: 0
-  m_Name: Game
+  m_Name: UpgradeTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &267856864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267856863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85a4a18f464a4550ad39a2caa3f31361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnGameUpdateCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Events+GameSaveCompleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  stars: 0
-  currentLevelUnlocked: 0
-  levelStates: 000000000000000000000000000000000000000000000000000000000000000000000000
-  levelScore: 000000000000000000000000000000000000000000000000000000000000000000000000
-  archerUpgradeStates: 000000000000000000000000
-  mageUpgradeStates: 000000000000000000000000
-  slowdownUpgradeStates: 000000000000000000000000
-  bombUpgradeStates: 000000000000000000000000
-  meteorUpgradeStates: 000000000000000000000000
-  _archerRangeIncrease: 0
-  _archerDamageIncrease: 0
-  _mageRangeIncrease: 0
-  _mageDamageIncrease: 0
-  _slowdownRangeIncrease: 0
-  _slowdownIncrease: 0
-  _bombDamageIncrease: 0
-  _bombRangeIncrease: 0
-  _bombCostDecrease: 0
-  _meteorDamageIncrease: 0
-  _meteorRangeIncrease: 0
-  _meteorCountDownDecrease: 0
 --- !u!4 &267856865
 Transform:
   m_ObjectHideFlags: 0

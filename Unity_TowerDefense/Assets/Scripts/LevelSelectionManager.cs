@@ -6,28 +6,28 @@ public class LevelSelectionManager : MonoBehaviour
     [SerializeField] private Level[] levels;
     [SerializeField] private TweenAnimation pin;
 
-    private Game _gameStats;
+    private Game _game;
 
     private void Start()
     {
-        _gameStats = FindObjectOfType<Game>();
-        _gameStats.OnGameUpdateCompleted.AddListener(Init);
+        _game = FindObjectOfType<Game>();
+        _game.OnGameUpdateCompleted.AddListener(Init);
     }
 
     private void Init()
     {
         for (int i = 0; i < levels.Length; i++)
         {
-            levels[i].score = _gameStats.levelScore[i];
-            levels[i].UpdateState(_gameStats.levelStates[i]);
+            levels[i].score = _game.levelScore[i];
+            levels[i].UpdateState(_game.levelStates[i]);
         }
 
-        pin.transform.position = levels[_gameStats.currentLevelUnlocked - 1].transform.position + Vector3.up;
+        pin.transform.position = levels[_game.currentLevelUnlocked - 1].transform.position + Vector3.up;
         pin.enabled = true;
     }
 
     private void OnDestroy()
     {
-        _gameStats.OnGameUpdateCompleted.RemoveListener(Init);
+        _game.OnGameUpdateCompleted.RemoveListener(Init);
     }
 }

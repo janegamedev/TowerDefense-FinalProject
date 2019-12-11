@@ -2487,6 +2487,7 @@ MonoBehaviour:
   levelSceneName: Level
   systemPrefabs:
   - {fileID: 3038444180060394567, guid: 2b1e8b68814ad6f4e8b0b712dc2ff66c, type: 3}
+  - {fileID: 6859691374251247562, guid: 84613305c6fcd1846b1f798bb9e8f5aa, type: 3}
   currentGameState: 0
   currentPath: 
   currentGame: {fileID: 0}
