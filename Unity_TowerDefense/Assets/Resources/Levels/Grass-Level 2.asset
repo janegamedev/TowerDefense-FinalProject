@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0255437d5dfba4b8ea94da8daf33e4, type: 3}
+  m_Name: Grass-Level 2
+  m_EditorClassIdentifier: 
+  levelName: Level 2
+  level: 2
+  mapTexture: {fileID: 2800000, guid: 3131ef5ed75744b46b71a760ef682c5d, type: 3}
+  colorsOnTheMap: []
+  hexPrefabs: []
+  generateTrees: 1
+  treesPrefabs:
+  - {fileID: 1000013593877540, guid: 413c0ee9c5b281a42aaccccc0d5d55b6, type: 3}
+  - {fileID: 1000013591111464, guid: 43950543e35749041bc8c5b2ad6f8e69, type: 3}
+  - {fileID: 1000011619202780, guid: c9f9dd50ef67bab4e92a81ea235a0fc7, type: 3}
+  - {fileID: 1000010757296548, guid: 82bd0e3eef3cc854eae31c6f4cd718bf, type: 3}
+  - {fileID: 1000012061500174, guid: 09aab8a904970484d99ec36c27b8bb13, type: 3}
+  - {fileID: 1000013125167130, guid: 53973fa484c6ade4891afd59f3e33e3a, type: 3}
+  - {fileID: 1000010452107046, guid: d4b8045cf1d6b46ff9f25dc29b2d7c33, type: 3}
+  - {fileID: 1000012079547874, guid: 44bec5580e93cb74cadbf007df511a3d, type: 3}
+  treesAmount: 25
+  generateGrass: 1
+  grassPrefabs:
+  - {fileID: 1000012002960424, guid: 44f06f083d27f4a75bdf4b52d745f453, type: 3}
+  - {fileID: 1000011497609644, guid: 86c8aa56418d04c11b5a28c96bc80f96, type: 3}
+  - {fileID: 1000011669407258, guid: 03b67f53c002a4af881d7049bc3e950b, type: 3}
+  - {fileID: 1000010651977466, guid: 1689020eaa3b542b1ae54fbdb838f290, type: 3}
+  grassAmount: 15
+  generateProps: 1
+  propsPrefabs:
+  - {fileID: 1000012383013900, guid: be44107002abe0046a8a7f08bbf0eef1, type: 3}
+  - {fileID: 1000012625864402, guid: d9f771127f198ea40869d419a85f3b89, type: 3}
+  - {fileID: 1000011605502392, guid: 4f15b107783d8d24d815cfb400cbd125, type: 3}
+  - {fileID: 0}
+  propsAmount: 10
+  waves: []
+  nextLevel: {fileID: 11400000, guid: e71a89483aa525543a45b68efd06d57c, type: 2}

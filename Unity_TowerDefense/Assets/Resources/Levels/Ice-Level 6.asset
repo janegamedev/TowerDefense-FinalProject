@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc0255437d5dfba4b8ea94da8daf33e4, type: 3}
-  m_Name: Level 2
+  m_Name: Ice-Level 6
   m_EditorClassIdentifier: 
-  levelName: Level 2
-  level: 2
-  mapTexture: {fileID: 0}
+  levelName: Level 5
+  level: 0
+  mapTexture: {fileID: 2800000, guid: ca2dd4a3be4b2fa408696e3cd86e93ea, type: 3}
   colorsOnTheMap: []
   hexPrefabs: []
-  generateTrees: 0
-  treesPrefabs: []
+  generateTrees: 1
+  treesPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   treesAmount: 0
   generateGrass: 0
   grassPrefabs: []
@@ -27,4 +30,4 @@ MonoBehaviour:
   propsPrefabs: []
   propsAmount: 0
   waves: []
-  nextLevel: {fileID: 11400000, guid: 57c6c8c8508e43f41b3e465b09c9eee8, type: 2}
+  nextLevel: {fileID: 11400000, guid: 37a7b5b90bdb0fd47b119af953552620, type: 2}
