@@ -4965,7 +4965,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2193436472934000944}
-        m_MethodName: QuitToSelectionMenu
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5965,7 +5965,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2193436472934000944}
-        m_MethodName: RestartGame
+        m_MethodName: QuitToSelectionMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7769,7 +7769,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2193436472934000944}
-        m_MethodName: QuitToSelectionMenu
+        m_MethodName: FinishGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
