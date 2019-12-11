@@ -13,8 +13,11 @@ public class InGameUi : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentWaveTmp;
     
     [SerializeField] private GameObject settingsPanel;
-    [SerializeField] private GameObject gameOverPanel;
-
+    
+    [SerializeField] private GameObject victoryPanel;
+    [SerializeField] private GameObject[] victoryStars;
+    [SerializeField] private GameObject defeatPanel;
+    
     [SerializeField] private GameObject enemyPanel;
     [SerializeField] private Image enemyImage;
     [SerializeField] private Image shadeEnemyImage;
@@ -24,15 +27,11 @@ public class InGameUi : MonoBehaviour
     [SerializeField] private Image towerImage;
     [SerializeField] private Image shadeTowerImage;
     [SerializeField] private TextMeshProUGUI towerDescription;
-    
-    [SerializeField] private GameObject selectionPanel;
-    [SerializeField] private Image selectionImage;
-    [SerializeField] private Image shadeSelectionImage;
-    [SerializeField] private TextMeshProUGUI selectionDescription;
-    
+
+    private int _starsAmount;
     private Enemy _selectedEnemy;
     private Tower _selectedTower;
-    
+
     private Camera _camera;
     
     public void UpdateUi()
@@ -52,7 +51,34 @@ public class InGameUi : MonoBehaviour
     private void HandleGameStateChanged(GameState previousState, GameState currentState)
     {
         settingsPanel.gameObject.SetActive(currentState == GameState.PAUSED);
-        gameOverPanel.gameObject.SetActive(currentState == GameState.END);
+
+        if (currentState == GameState.END)
+        {
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        if (PlayerStats.Instance.Lives <= 0)
+        {
+            defeatPanel.SetActive(true);
+        }
+        else
+        {
+            victoryPanel.SetActive(true);
+            _starsAmount = FindObjectOfType<PlayerStats>().EndGame();
+
+            for (int i = 0; i < _starsAmount; i++)
+            {
+                victoryStars[i].SetActive(true);
+            }
+        }
+    }
+
+    public void FinishGame()
+    {
+        GameManager.Instance.FinishGame();  
     }
 
     public void OnSettingsClick()

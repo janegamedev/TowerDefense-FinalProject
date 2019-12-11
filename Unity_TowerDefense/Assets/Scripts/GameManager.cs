@@ -98,9 +98,7 @@ public class GameManager : Singleton<GameManager>
             
             case GameState.END:
                 Time.timeScale = 0.0f;
-                int stars = FindObjectOfType<PlayerStats>().EndGame();
-                FindObjectOfType<Game>().FinishLevel(currentLevelSo.level, stars);
-                
+
                 break;
             
             default:
@@ -140,13 +138,6 @@ public class GameManager : Singleton<GameManager>
     public void GameOver()
     {
         UpdateState(GameState.END);
-    }
-
-    public void LoadLevelSelection(string path)
-    {
-        currentPath = path;
-        _progressSceneLoader.LoadScene(levelSelectionSceneName);
-        UpdateState(GameState.SELECTION);
     }
 
     private void OnLoadCompleted()
@@ -199,10 +190,24 @@ public class GameManager : Singleton<GameManager>
         UpdateState(GameState.MENU);
     }
 
+    public void LoadLevelSelection(string path)
+    {
+        currentPath = path;
+        _progressSceneLoader.LoadScene(levelSelectionSceneName);
+        UpdateState(GameState.SELECTION);
+    }
+    
     public void LoadLevel(LevelSO levelData)
     {
         currentLevelSo = levelData;
         _progressSceneLoader.LoadScene(levelSceneName);
         UpdateState(GameState.RUNNING);
+    }
+
+    public void FinishGame()
+    {
+        int stars = FindObjectOfType<PlayerStats>().EndGame();
+        FindObjectOfType<Game>().FinishLevel(currentLevelSo.level, stars);
+        LoadLevelSelection(currentPath);
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -439,5 +436,10 @@ public class UpgradeTree : MonoBehaviour
         Game.Instance._meteorCountDownDecrease = _meteorCountDownDecrease;
         
         FindObjectOfType<LevelSelectionUi>().UpdateStars();
+    }
+
+    private void OnDestroy()
+    {
+        Game.Instance.OnGameUpdateCompleted.RemoveListener(Init);
     }
 }
