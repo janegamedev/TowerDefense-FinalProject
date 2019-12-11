@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -125,12 +124,7 @@ public class InGameUi : MonoBehaviour
         
         towerPanel.SetActive(true);
     }
-
-    public void ShowSelection()
-    {
-        
-    }
-
+    
     public void CloseTowerPanel()
     {
         _selectedTower = null;
@@ -167,7 +161,6 @@ public class InGameUi : MonoBehaviour
             }
             else
             {
-                Debug.Log("here");
                 if (_selectedTower == null || _selectedTower != hit.collider.GetComponent<Tower>())
                 {
                     _selectedTower = hit.collider.GetComponent<Tower>();

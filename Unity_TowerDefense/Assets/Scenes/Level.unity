@@ -4636,16 +4636,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954106765}
-  m_LocalRotation: {x: -0, y: -0, z: -0.092009656, w: 0.9957581}
+  m_LocalRotation: {x: -0, y: -0, z: -0.050868064, w: 0.99870545}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1544887425}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.558001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.8320003}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: 243}
+  m_AnchoredPosition: {x: 16.439074, y: 242.67885}
   m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954106767
@@ -4668,7 +4668,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7b56cc0ff3c639148970cb7ada31746a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75b957aef9d70b341b2a04fa523a993f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7283,16 +7283,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641136393}
-  m_LocalRotation: {x: -0, y: -0, z: -0.092009656, w: 0.9957581}
+  m_LocalRotation: {x: -0, y: -0, z: -0.050868064, w: 0.99870545}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1544887425}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.558001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.8320003}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 248}
+  m_AnchoredPosition: {x: 24, y: 248.32112}
   m_SizeDelta: {x: 450, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1641136395
@@ -7315,7 +7315,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7b56cc0ff3c639148970cb7ada31746a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75b957aef9d70b341b2a04fa523a993f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
