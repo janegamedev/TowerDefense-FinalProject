@@ -121,7 +121,8 @@ GameObject:
   - component: {fileID: 3646522930953992137}
   - component: {fileID: 7070067475269921262}
   - component: {fileID: 110735619358503541}
-  m_Layer: 0
+  - component: {fileID: -669677286336000886}
+  m_Layer: 13
   m_Name: Archer_tower_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,11 +202,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ff37e38dc5489ba986fa426aaa866b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTower: {fileID: 0}
+  _nextUpgrade: {fileID: 0}
   rangeDome: {fileID: 0}
   weaponBody: {fileID: 46171505124431856}
   firePoints:
   - {fileID: 6461142336402444196}
-  _enemyToAttack: {fileID: 0}
+--- !u!65 &-669677286336000886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5723487686058528013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 266.578, y: 344.63583, z: 266.578}
+  m_Center: {x: 0, y: 172.31789, z: -0.000038146973}
 --- !u!1 &7070755071071661229
 GameObject:
   m_ObjectHideFlags: 0

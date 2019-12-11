@@ -8,25 +8,24 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private TowerSO[] towers;
     [SerializeField] private LayerMask layerMask;
     
-    [SerializeField] private GameObject towerSelectionPanel;
-    [SerializeField] private GameObject towerUpgradePanel;
+    [SerializeField] private SelectionPanel towerSelectionPanel;
+    [SerializeField] private SelectionPanel towerUpgradePanel;
     
-    private GameObject _currentPanel = null;
     private TowerTile _selectedTile = null;
-    
-    private Transform _canvas;
+
+    private bool _isSelected;
     private Camera _camera;
 
     private void Start()
     {
-        _canvas = FindObjectOfType<InGameUi>().transform;
         _camera = Camera.main;
+        
         GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChanged);
     }
 
     private void HandleGameStateChanged(GameState previousState, GameState currentState)
     {
-        if (currentState == GameState.PAUSED && _currentPanel!= null)
+        if (currentState == GameState.PAUSED && _isSelected)
         {
             ClosePanel();
         }
@@ -36,7 +35,7 @@ public class BuildingSystem : MonoBehaviour
     {
         if (GameManager.Instance.CurrentGameState == GameState.RUNNING)
         {
-            if (Input.GetMouseButtonDown(0) && _currentPanel == null)
+            if (Input.GetMouseButtonDown(0) && !_isSelected)
             {
                 RaycastHit hit;
                 Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
@@ -53,9 +52,11 @@ public class BuildingSystem : MonoBehaviour
                     {
                         ShowUpgradePanel();
                     }
+
+                    _isSelected = true;
                 }
             }
-            else if (Input.GetMouseButtonDown(1) && _currentPanel != null)
+            else if (Input.GetMouseButtonDown(1) && _isSelected)
             {
                 ClosePanel();
             }
@@ -64,48 +65,37 @@ public class BuildingSystem : MonoBehaviour
 
     private void ShowSelectionPanel()
     {
-        _currentPanel = Instantiate(towerSelectionPanel, _canvas);
-        SelectionPanel selectionPanel = _currentPanel.GetComponent<SelectionPanel>();
-        selectionPanel.tile = _selectedTile;
-                        
-        for (int i = 0; i < selectionPanel.buttons.Length; i++)
+        towerSelectionPanel.gameObject.SetActive(true);
+        towerSelectionPanel.Init(_selectedTile);
+        
+        for (int i = 0; i < towerSelectionPanel.buttons.Length; i++)
         {
             int index = i;
-            selectionPanel.buttons[i].onClick.AddListener(() => SpawnTower(index));
-            selectionPanel.costs[i].text = towers[i].buildCost.ToString();
+            towerSelectionPanel.buttons[i].onClick.AddListener(() => SpawnTower(index));
+            towerSelectionPanel.costs[i].text = towers[i].buildCost.ToString();
         }
     }
 
     private void ShowUpgradePanel()
     {
-        _currentPanel = Instantiate(towerUpgradePanel, _canvas);
-        SelectionPanel selectionPanel = _currentPanel.GetComponent<SelectionPanel>();
-        selectionPanel.tile = _selectedTile;
+        towerUpgradePanel.gameObject.SetActive(true);
+        towerUpgradePanel.Init(_selectedTile);
+        
         /*selectedTile.tower.EnableDome();*/
                         
-        selectionPanel.buttons[0].onClick.AddListener(UpgradeTower);
-        selectionPanel.costs[0].text = towers[0].nextUpgrade.buildCost.ToString();
+        towerUpgradePanel.buttons[0].onClick.AddListener(UpgradeTower);
+        towerUpgradePanel.costs[0].text = _selectedTile.tower.GetNextUpdate().buildCost.ToString();
         
-        selectionPanel.buttons[1].onClick.AddListener(SellTower);
+        towerUpgradePanel.buttons[1].onClick.AddListener(SellTower);
     }
 
     private void ClosePanel()
     {
-/*        if (selectedTile.tower != null)
-        {
-            selectedTile.tower.DisableDome();
-        }*/
+        _isSelected = false;
         _selectedTile = null;
 
-        SelectionPanel selectionPanel = _currentPanel.GetComponent<SelectionPanel>();
-
-        foreach (var button in selectionPanel.buttons)
-        {
-            button.onClick.RemoveAllListeners();
-        }
-
-        Destroy(_currentPanel);
-        _currentPanel = null;
+        towerSelectionPanel.gameObject.SetActive(false);
+        towerUpgradePanel.gameObject.SetActive(false);
     }
 
     private void SellTower()

@@ -28,8 +28,9 @@ public class UpgradeDescription : MonoBehaviour
         
         ToggleAnimationIn();
     }
+    
 
-    private void ToggleAnimationIn()
+    public void ToggleAnimationIn()
     {
         LeanTween.reset();
         moveInId = LeanTween.moveLocal(gameObject, toPosition, 0.25f).setEase(LeanTweenType.easeInQuad).id;

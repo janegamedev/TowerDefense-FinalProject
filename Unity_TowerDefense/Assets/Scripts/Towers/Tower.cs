@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
-public class Tower : MonoBehaviour
+public class Tower : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private protected LayerMask enemyLayerMask;
     private TowerType _type;
@@ -13,12 +16,21 @@ public class Tower : MonoBehaviour
     public int BuildCost => _buildCost;
 
     private protected float range;
-    private TowerSO _nextUpgrade;
+    public TowerSO currentTower;
+    public TowerSO _nextUpgrade;
 
     [SerializeField] public GameObject rangeDome;
-    
+
+    private InGameUi _inGameUi;
+
+    private void Start()
+    {
+        _inGameUi = FindObjectOfType<InGameUi>();
+    }
+
     public virtual void Init(TowerSO towerData)
     {
+        currentTower = towerData;
         enemyLayerMask = LayerMask.GetMask("Enemy");
         _type = towerData.type;
         _level = towerData.level;
@@ -41,6 +53,17 @@ public class Tower : MonoBehaviour
     public TowerSO GetNextUpdate()
     {
         return _nextUpgrade;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("Here");
+        _inGameUi.ShowTowerDescription(currentTower);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        _inGameUi.CloseTowerPanel();
     }
 }
 

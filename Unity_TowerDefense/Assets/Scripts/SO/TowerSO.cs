@@ -14,6 +14,9 @@ public class TowerSO : ScriptableObject
 {
     public TowerType type;
 
+    public Sprite towerImage;
+    public string towerDescription;
+
     public int level;
     public int buildCost;
     public int damage;
@@ -26,7 +29,5 @@ public class TowerSO : ScriptableObject
 
     public TowerSO nextUpgrade;
     
-    
-
 
 }

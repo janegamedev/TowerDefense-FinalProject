@@ -7,6 +7,8 @@ using UnityEngine;
 public class EnemySO : ScriptableObject
 {
    public string enemyName;
+   public Sprite enemyIcon;
+   public string enemyDescription;
    public GameObject enemyModel;
    public float health;
    public float armour;

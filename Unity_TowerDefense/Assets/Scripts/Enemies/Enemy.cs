@@ -11,7 +11,10 @@ public enum CharacterState
 
 public class Enemy : MonoBehaviour
 {
+    public ParticleSystem selectionParticles;
+    
     private string _enemyName;
+    public EnemySO enemySo;
     public CharacterState characterState;
     private DamageType damageType;
     
@@ -49,21 +52,22 @@ public class Enemy : MonoBehaviour
         _healthBar = GetComponentInChildren<HealthBar>();
     }
     
-    public void Init(EnemySO characterData, RoadTile startTile)
+    public void Init(EnemySO enemyData, RoadTile startTile)
     {
+        enemySo = enemyData;
         characterState = CharacterState.ALIVE;
         
-        _enemyName = characterData.enemyName;
-        maxHealth = characterData.health;
+        _enemyName = enemyData.enemyName;
+        maxHealth = enemyData.health;
         health = maxHealth;
         
-        _armour = characterData.armour;
-        _magicResistance = characterData.magicResistance;
+        _armour = enemyData.armour;
+        _magicResistance = enemyData.magicResistance;
 
-        movementSpeed = characterData.speed;
-        _navMeshAgent.speed = characterData.speed;
+        movementSpeed = enemyData.speed;
+        _navMeshAgent.speed = enemyData.speed;
         
-        _bounty = characterData.bounty;
+        _bounty = enemyData.bounty;
         _currentTile = startTile;
 
         Vector2 rp = Random.insideUnitCircle * (_stopDistance-1);
@@ -189,5 +193,15 @@ public class Enemy : MonoBehaviour
         {
             characterState = CharacterState.DEAD;
         }
+    }
+
+    public void SelectEnemy()
+    {
+        selectionParticles.Play();
+    }
+
+    public void UnselectEnemy()
+    {
+        selectionParticles.Stop();
     }
 }

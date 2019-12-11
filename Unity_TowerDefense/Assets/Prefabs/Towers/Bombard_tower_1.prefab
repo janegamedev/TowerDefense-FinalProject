@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1143637617452771480}
   - component: {fileID: 2506070199530093932}
   - component: {fileID: 8890557619048820648}
-  m_Layer: 0
+  - component: {fileID: 8312779288383345061}
+  m_Layer: 13
   m_Name: Bombard_tower_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,10 +93,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaf3dd729654f629c4ede9e0f795146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTower: {fileID: 0}
+  _nextUpgrade: {fileID: 0}
   rangeDome: {fileID: 0}
   weaponBody: {fileID: 373196364120770948}
   firePoints:
   - {fileID: 1150614117468408147}
+--- !u!65 &8312779288383345061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561644869390575744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 234.87006, y: 186.9987, z: 234.87009}
+  m_Center: {x: 0, y: 93.499275, z: 0.0000038146973}
 --- !u!1 &3331454380754540176
 GameObject:
   m_ObjectHideFlags: 0

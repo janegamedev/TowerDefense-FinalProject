@@ -7,8 +7,8 @@ public class SelectionPanel : MonoBehaviour
 {
     public Button[] buttons;
     public TextMeshProUGUI[] costs;
-    public TowerTile tile;
-
+    
+    private TowerTile _tile;
     private Camera _camera;
 
     private void Start()
@@ -18,9 +18,6 @@ public class SelectionPanel : MonoBehaviour
 
     private void Update()
     {
-        if(tile!=null)
-            transform.position = _camera.WorldToScreenPoint(tile.transform.position);
-        
         for (int i = 0; i < costs.Length; i++)
         {
             int.TryParse(costs[i].text, out int result);
@@ -36,4 +33,17 @@ public class SelectionPanel : MonoBehaviour
         }
     }
 
+    public void Init(TowerTile tile)
+    {
+        _tile = tile;
+        transform.position = Camera.main.WorldToScreenPoint(_tile.transform.position);
+    }
+
+    private void OnDisable()
+    {
+        foreach (var button in buttons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
+    }
 }
