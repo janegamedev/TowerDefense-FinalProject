@@ -65,12 +65,14 @@ public class AudioManager : Singleton<AudioManager>
     
     public void SetMusicVolume(float sliderValue)
     {
-        musicMixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
+        musicAudioSource.volume = sliderValue;
+        /*musicMixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);*/
     }
     
     public void SetSxfVolume(float sliderValue)
     {
-        musicMixer.SetFloat("SfxVol", Mathf.Log10(sliderValue) * 20);
+        sfxAudioSource.volume = sliderValue;
+        /*musicMixer.SetFloat("SfxVol", Mathf.Log10(sliderValue) * 20);*/
     }
 
     public void PlayerSfx(AudioClip sfx)
