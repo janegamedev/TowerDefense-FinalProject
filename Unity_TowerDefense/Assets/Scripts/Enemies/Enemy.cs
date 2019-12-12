@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     private float maxHealth;
     private float health;
     public float Health => health;
+    public float MAxHealth => maxHealth;
     
     private float _armour;
     private float _magicResistance;

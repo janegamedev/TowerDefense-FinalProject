@@ -102,8 +102,8 @@ public class BuildingSystem : MonoBehaviour
 
     private void SellTower()
     {
-        _selectedTile.SellTower();
         ClosePanel();
+        _selectedTile.SellTower();
     }
 
     private void UpgradeTower()
