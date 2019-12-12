@@ -20,7 +20,7 @@ MonoBehaviour:
   generateTrees: 1
   treesPrefabs:
   - {fileID: 1000011409013810, guid: 6b664b526df62ee41be7b9d307dedd81, type: 3}
-  - {fileID: 1000013591111464, guid: 43950543e35749041bc8c5b2ad6f8e69, type: 3}
+  - {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
   - {fileID: 1000011619202780, guid: c9f9dd50ef67bab4e92a81ea235a0fc7, type: 3}
   - {fileID: 1000010757296548, guid: 82bd0e3eef3cc854eae31c6f4cd718bf, type: 3}
   - {fileID: 1000012061500174, guid: 09aab8a904970484d99ec36c27b8bb13, type: 3}
