@@ -11,9 +11,11 @@ public class Encyclodepia : MonoBehaviour
 
     [SerializeField] private Button[] enemyButtons;
     private EnemySO _currentEnemyDisplayed;
+    private LevelSelectionUi _levelSelectionUi;
     
     private void Start()
     {
+        _levelSelectionUi = FindObjectOfType<LevelSelectionUi>();
         enemyImage.enabled = false;
         enemyImageShade.enabled = false;
         enemyDescription.text = null;
@@ -27,6 +29,8 @@ public class Encyclodepia : MonoBehaviour
 
     private void ShowDescription(EnemySO enemyData)
     {
+        _levelSelectionUi.PlayClickSfx();
+        
         enemyImage.enabled = true;
         enemyImageShade.enabled = true;
         

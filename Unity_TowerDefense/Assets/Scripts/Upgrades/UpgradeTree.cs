@@ -44,8 +44,11 @@ public class UpgradeTree : MonoBehaviour
     private Button[] _slowdownUpgrades = new Button[3];
     private Button[] _meteorUpgrades = new Button[3];
 
+    private LevelSelectionUi _levelSelectionUi;
+
     private void Start()
     {
+        _levelSelectionUi = FindObjectOfType<LevelSelectionUi>();
         Game.Instance.OnGameUpdateCompleted.AddListener(Init);
         
         for (int i = 0; i < _archerUpgrades.Length; i++)
@@ -86,6 +89,7 @@ public class UpgradeTree : MonoBehaviour
 
     void Init()
     {
+
         if (GameManager.Instance.CurrentGameState == GameState.SELECTION)
         {
             for (int i = 0; i < archerUpgradeStates.Length; i++)
@@ -222,6 +226,7 @@ public class UpgradeTree : MonoBehaviour
 
     private void ArcherUpgrade(int upgradeLevel)
     {
+        _levelSelectionUi.PlayUpgrade();
         Game.Instance.stars -= archerUpgradeStates[upgradeLevel - 1].cost;
         
         if (upgradeLevel < 3)
@@ -258,6 +263,7 @@ public class UpgradeTree : MonoBehaviour
     
     private void MageUpgrade(int upgradeLevel)
     {
+        _levelSelectionUi.PlayUpgrade();
         Game.Instance.stars -= mageUpgradeStates[upgradeLevel - 1].cost;
         
         if (upgradeLevel < 3)
@@ -294,6 +300,7 @@ public class UpgradeTree : MonoBehaviour
     
     private void BombUpgrade(int upgradeLevel)
     {
+        _levelSelectionUi.PlayUpgrade();
         Game.Instance.stars -= bombUpgradeStates[upgradeLevel - 1].cost;
         
         if (upgradeLevel < 3)
@@ -330,6 +337,7 @@ public class UpgradeTree : MonoBehaviour
     
     private void SlowdownUpgrade(int upgradeLevel)
     {
+        _levelSelectionUi.PlayUpgrade();
         Game.Instance.stars -= slowdownUpgradeStates[upgradeLevel - 1].cost;
         
         if (upgradeLevel < 3)
@@ -366,6 +374,7 @@ public class UpgradeTree : MonoBehaviour
     
     private void MeteorUpgrade(int upgradeLevel)
     {
+        _levelSelectionUi.PlayUpgrade();
         Game.Instance.stars -= meteorUpgradeStates[upgradeLevel - 1].cost;
         
         if (upgradeLevel < 3)
