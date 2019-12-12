@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Ancient Queen
   m_EditorClassIdentifier: 
   enemyName: Ancient Queen
+  enemyIcon: {fileID: 21300000, guid: 99cdec527f0c4d141bb9c240ab216f5f, type: 3}
+  enemyDescription: 'Ancient Queens. Queens of an ancient forgotten civilization.
+    These decendents of ancient royalty have moderately high health, extremely high
+    armour and no magic resistance. They move at elegantly slow speeds, dropping the
+    unbecoming amount of 25 bounty upon defeat. '
   enemyModel: {fileID: 1666678542618180, guid: 02ac59dea0bf44d4d87bba04f0a6ca33, type: 3}
   health: 300
-  damage: 20
-  attackRate: 1
   armour: 80
   magicResistance: 0
   speed: 1
