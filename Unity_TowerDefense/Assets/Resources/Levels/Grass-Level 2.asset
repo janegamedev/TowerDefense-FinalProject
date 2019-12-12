@@ -19,7 +19,7 @@ MonoBehaviour:
   hexPrefabs: []
   generateTrees: 1
   treesPrefabs:
-  - {fileID: 1000013593877540, guid: 413c0ee9c5b281a42aaccccc0d5d55b6, type: 3}
+  - {fileID: 1000011409013810, guid: 6b664b526df62ee41be7b9d307dedd81, type: 3}
   - {fileID: 1000013591111464, guid: 43950543e35749041bc8c5b2ad6f8e69, type: 3}
   - {fileID: 1000011619202780, guid: c9f9dd50ef67bab4e92a81ea235a0fc7, type: 3}
   - {fileID: 1000010757296548, guid: 82bd0e3eef3cc854eae31c6f4cd718bf, type: 3}
@@ -42,5 +42,9 @@ MonoBehaviour:
   - {fileID: 1000011605502392, guid: 4f15b107783d8d24d815cfb400cbd125, type: 3}
   - {fileID: 0}
   propsAmount: 10
-  waves: []
+  waves:
+  - enemySets: []
+    timeBetweenSpawns: 0
+  - enemySets: []
+    timeBetweenSpawns: 0
   nextLevel: {fileID: 11400000, guid: e71a89483aa525543a45b68efd06d57c, type: 2}

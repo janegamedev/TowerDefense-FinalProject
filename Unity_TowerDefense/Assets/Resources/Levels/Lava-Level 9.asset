@@ -19,15 +19,34 @@ MonoBehaviour:
   hexPrefabs: []
   generateTrees: 1
   treesPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1000013593877540, guid: 413c0ee9c5b281a42aaccccc0d5d55b6, type: 3}
+  - {fileID: 1000011293490030, guid: cb0dba13ded5e57449e9eb590a4638b7, type: 3}
+  - {fileID: 1000011132149452, guid: 9d7f29b770d624f689e53cccd7e83eb6, type: 3}
   treesAmount: 0
   generateGrass: 0
   grassPrefabs: []
   grassAmount: 0
   generateProps: 0
-  propsPrefabs: []
-  propsAmount: 0
-  waves: []
+  propsPrefabs:
+  - {fileID: 1000010961514128, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
+  - {fileID: 1000011505633412, guid: 5e74835ce4619c94e9996cc209b92921, type: 3}
+  - {fileID: 1000010050705002, guid: abe740c479c745546851d15a0ffe6cef, type: 3}
+  propsAmount: 10
+  waves:
+  - enemySets: []
+    timeBetweenSpawns: 0
+  - enemySets: []
+    timeBetweenSpawns: 0
+  - enemySets: []
+    timeBetweenSpawns: 0
+  - enemySets: []
+    timeBetweenSpawns: 0
+  - enemySets: []
+    timeBetweenSpawns: 0
+  - enemySets: []
+    timeBetweenSpawns: 0
+  - enemySets: []
+    timeBetweenSpawns: 0
+  - enemySets: []
+    timeBetweenSpawns: 0
   nextLevel: {fileID: 11400000, guid: b85e21f1360227240942a7d2867c1b9b, type: 2}
