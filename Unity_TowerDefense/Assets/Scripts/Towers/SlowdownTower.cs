@@ -26,7 +26,7 @@ public class SlowdownTower : Tower
 
         foreach (Collider neighbour in n)
         {
-            RoadTile road = neighbour.GetComponentInChildren<RoadTile>();
+            RoadTile road = neighbour.GetComponentInParent<RoadTile>();
             road.speedMultiplier = speedMultiplayer;
             road.ActivateSlowdownParticle();
             roadTiles.Add(road);

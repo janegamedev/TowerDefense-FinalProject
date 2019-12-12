@@ -34,12 +34,18 @@ public class Tower : MonoBehaviour
     
     public void EnableDome()
     {
-        rangeDome.SetActive(true);
+        if (rangeDome != null)
+        {
+            rangeDome.SetActive(true);
+        }
     }
 
     public void DisableDome()
     {
-        rangeDome.SetActive(false);
+        if (rangeDome != null)
+        {
+            rangeDome.SetActive(false);
+        }
     }
 
     public TowerSO GetNextUpdate()

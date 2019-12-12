@@ -92,7 +92,10 @@ public class BuildingSystem : MonoBehaviour
 
     private void ClosePanel()
     {
-        _selectedTile.tower.DisableDome();
+        if (_selectedTile.tower != null)
+        {
+            _selectedTile.tower.DisableDome();
+        }
         _isSelected = false;
         _selectedTile = null;
 

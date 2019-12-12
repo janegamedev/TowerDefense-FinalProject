@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Static Bubble
   m_EditorClassIdentifier: 
   type: 1
+  towerImage: {fileID: 0}
+  towerDescription: 
   level: 1
   buildCost: 70
   damage: 2
   attackRate: 10
-  range: 28
+  range: 5
   speedMultiplayer: 0.8
   towerPrefab: {fileID: 6492792737427458144, guid: 9de1da05333eb6646b45c2889a6d303a,
     type: 3}
