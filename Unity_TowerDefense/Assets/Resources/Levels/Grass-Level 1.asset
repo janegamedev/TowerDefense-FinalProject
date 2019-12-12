@@ -34,7 +34,7 @@ MonoBehaviour:
   - {fileID: 8424888964113779772, guid: 8cfbc302d4bf5214fae91269af3e2e9c, type: 3}
   generateTrees: 0
   treesPrefabs:
-  - {fileID: 1000013593877540, guid: 413c0ee9c5b281a42aaccccc0d5d55b6, type: 3}
+  - {fileID: 1000010483647360, guid: 0c6f9643e5cf22446b0b326dad2d3a0b, type: 3}
   - {fileID: 1000013591111464, guid: 43950543e35749041bc8c5b2ad6f8e69, type: 3}
   - {fileID: 1000012458660936, guid: 909b472e39d3ad34c955a4c2eca9c1c9, type: 3}
   - {fileID: 1000010757296548, guid: 82bd0e3eef3cc854eae31c6f4cd718bf, type: 3}
