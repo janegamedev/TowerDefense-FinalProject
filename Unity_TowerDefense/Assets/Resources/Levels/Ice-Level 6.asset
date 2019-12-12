@@ -15,8 +15,23 @@ MonoBehaviour:
   levelName: Level 6
   level: 6
   mapTexture: {fileID: 2800000, guid: ca2dd4a3be4b2fa408696e3cd86e93ea, type: 3}
-  colorsOnTheMap: []
-  hexPrefabs: []
+  colorsOnTheMap:
+  - serializedVersion: 2
+    rgba: 4282630267
+  - serializedVersion: 2
+    rgba: 4288214269
+  - serializedVersion: 2
+    rgba: 4281759731
+  - serializedVersion: 2
+    rgba: 4291793411
+  - serializedVersion: 2
+    rgba: 4281680110
+  hexPrefabs:
+  - {fileID: 7964574990969819995, guid: c7bdc06bde1d53f4684f8d028c1ad90e, type: 3}
+  - {fileID: 8424888964113779772, guid: 5088c2f909d9d0d42bd0511cf0f984fa, type: 3}
+  - {fileID: 964846686215295832, guid: 9e464e00beb396f48bb0eed31d25de30, type: 3}
+  - {fileID: 9052206117752635279, guid: 94945e891b25ac646b1327381f9a972f, type: 3}
+  - {fileID: 8424888964113779772, guid: 213d58a63e645fd45bf75af725cede41, type: 3}
   generateTrees: 1
   treesPrefabs:
   - {fileID: 1000012412838570, guid: 028304a7dc5a9664c95f4e6a8ca7e642, type: 3}
