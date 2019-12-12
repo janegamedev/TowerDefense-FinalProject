@@ -7,6 +7,7 @@ public class Encyclodepia : MonoBehaviour
     [SerializeField] private Image enemyImage;
     [SerializeField] private Image enemyImageShade;
     [SerializeField] private TextMeshProUGUI enemyDescription;
+    [SerializeField] private TextMeshProUGUI enemyName;
 
     [SerializeField] private Button[] enemyButtons;
     private EnemySO _currentEnemyDisplayed;
@@ -16,6 +17,7 @@ public class Encyclodepia : MonoBehaviour
         enemyImage.enabled = false;
         enemyImageShade.enabled = false;
         enemyDescription.text = null;
+        enemyName.text = null;
 
         foreach (var button in enemyButtons)
         {
@@ -31,5 +33,6 @@ public class Encyclodepia : MonoBehaviour
         enemyImage.sprite = enemyData.enemyIcon;
         enemyImageShade.sprite = enemyData.enemyIcon;
         enemyDescription.text = enemyData.enemyDescription;
+        enemyName.text = enemyData.enemyName;
     }
 }
