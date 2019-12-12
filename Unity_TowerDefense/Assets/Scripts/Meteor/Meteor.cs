@@ -20,7 +20,7 @@ public class Meteor : MonoBehaviour
     //Check for trigger enter with tile road
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<RoadTile>())
+        if (other.GetComponentInParent<RoadTile>())
         {
             Explode();
         }

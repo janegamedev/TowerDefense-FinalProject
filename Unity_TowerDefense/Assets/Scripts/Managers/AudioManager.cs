@@ -9,12 +9,13 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField] private AudioMixer musicMixer;
     [SerializeField] private AudioMixer sfxMixer;
     
-    private AudioSource _audioSource;
+    private AudioSource _musicAudioSource;
+    private AudioSource _sfxAudioSource;
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
-        _audioSource = GetComponent<AudioSource>();
+        _musicAudioSource = GetComponent<AudioSource>();
         HandleGameStateChanged(GameState.MENU, GameState.MENU);
         GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChanged);
     }
@@ -33,22 +34,29 @@ public class AudioManager : Singleton<AudioManager>
         {
             ChangeMusic(levelMusic);
         }
+        else if(currentState == GameState.END)
+        {
+            _musicAudioSource.Stop();
+            _sfxAudioSource.Stop();
+        }
 
         if (currentState == GameState.PAUSED)
         {
-            _audioSource.Pause();
+            _musicAudioSource.Pause();
+            _sfxAudioSource.Pause();
         }
         else if(previousState == GameState.PAUSED)
         {
-            _audioSource.Play();
+            _musicAudioSource.Play();
+            _sfxAudioSource.Play();
         }
     }
 
     private void ChangeMusic(AudioClip clip)
     {
-        _audioSource.Stop();
-        _audioSource.clip = clip;
-        _audioSource.Play();
+        _musicAudioSource.Stop();
+        _musicAudioSource.clip = clip;
+        _musicAudioSource.Play();
     }
     
     public void SetMusicVolume(float sliderValue)
