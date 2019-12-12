@@ -85,13 +85,18 @@ public class WavesManager : MonoBehaviour
         
         if (enemy.Health > 0)
         {
-            PlayerStats.Instance.GetBounty(enemy.Bounty);
+            AudioManager.Instance.PlayerSfx(AudioManager.Instance.liveDecreaseSfx);
             PlayerStats.Instance.ChangeLives(1);
 
             if (PlayerStats.Instance.Lives <= 0)
             {
                 EndLevel();
             }
+        }
+        else
+        {
+            AudioManager.Instance.PlayerSfx(AudioManager.Instance.bountySfx);
+            PlayerStats.Instance.GetBounty(enemy.Bounty);
         }
         
         Destroy(enemy.gameObject);
@@ -134,6 +139,7 @@ public class WavesManager : MonoBehaviour
 
     private void StartWave()
     {
+        AudioManager.Instance.PlayerSfx(AudioManager.Instance.waveStartSfx);
         currentWaveNumber++;
         waveButton.interactable = false;
 

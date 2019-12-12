@@ -8,7 +8,7 @@ public class PlayerStats : Singleton<PlayerStats>
     private int coins = 550;
     public int Coins => coins;
 
-    private int lives = 5;
+    private int lives = 20;
     public int Lives => lives;
 
     private int currentWave;

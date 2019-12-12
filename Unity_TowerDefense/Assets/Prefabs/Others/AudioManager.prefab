@@ -306,3 +306,8 @@ MonoBehaviour:
   levelMusic: {fileID: 8300000, guid: 704735b5c26afb3419b156f8a0d7cd32, type: 3}
   musicMixer: {fileID: 24100000, guid: c474206e920205741ba12f43deafc5e4, type: 2}
   sfxMixer: {fileID: 24100000, guid: e8a9d3380c65f634eaeee218431085cb, type: 2}
+  musicAudioSource: {fileID: 2596172967574226510}
+  sfxAudioSource: {fileID: 5652216196918944270}
+  waveStartSfx: {fileID: 8300000, guid: 8e3d18ef51945d74d8cb464a5f466906, type: 3}
+  liveDecreaseSfx: {fileID: 8300000, guid: a83569b88f8b0084e8e7d5718bf71c03, type: 3}
+  bountySfx: {fileID: 8300000, guid: 71974a8041f3e0a4c826078c711954dd, type: 3}

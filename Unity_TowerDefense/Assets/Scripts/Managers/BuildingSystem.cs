@@ -15,11 +15,17 @@ public class BuildingSystem : MonoBehaviour
 
     private bool _isSelected;
     private Camera _camera;
+    private AudioSource _audioSource;
+
+    [SerializeField] private AudioClip placeTowerSfx;
+    [SerializeField] private AudioClip sellTowerSfx;
+    [SerializeField] private AudioClip upgradeTowerSfx;
+    [SerializeField] private AudioClip towerSelectionSfx;
 
     private void Start()
     {
         _camera = Camera.main;
-        
+        _audioSource = GetComponent<AudioSource>();
         GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChanged);
     }
 
@@ -43,6 +49,7 @@ public class BuildingSystem : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
+                    PlaySfx(sellTowerSfx);
                     _selectedTile = hit.collider.GetComponentInParent<TowerTile>();
 
                     if (_selectedTile.isAvailable)
@@ -60,6 +67,7 @@ public class BuildingSystem : MonoBehaviour
             else if (Input.GetMouseButtonDown(1) && _isSelected)
             {
                 ClosePanel();
+                PlaySfx(towerSelectionSfx);
             }
         }
     }
@@ -105,19 +113,29 @@ public class BuildingSystem : MonoBehaviour
 
     private void SellTower()
     {
-        ClosePanel();
+        PlaySfx(sellTowerSfx);
         _selectedTile.SellTower();
+        ClosePanel();
     }
 
     private void UpgradeTower()
     {
+        PlaySfx(upgradeTowerSfx);
         _selectedTile.UpgradeTower();
         ClosePanel();
     }
 
     private void SpawnTower(int id)
     {
+        PlaySfx(placeTowerSfx);
         _selectedTile.PlaceTower(towers[id]);
         ClosePanel();
+    }
+
+    private void PlaySfx(AudioClip clip)
+    {
+        _audioSource.Stop();
+        _audioSource.clip = clip;
+        _audioSource.Play();
     }
 }
