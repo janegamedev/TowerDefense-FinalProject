@@ -58,6 +58,52 @@ MonoBehaviour:
   waves:
   - enemySets:
     - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 5
       enemyData: {fileID: 11400000, guid: fc4fb23508f21454a8cfe498de81af83, type: 2}
     timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 3707d7bd98a0e724ca85652abf3718b5, type: 2}
+    timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 10
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    - enemyCount: 3
+      enemyData: {fileID: 11400000, guid: fc4fb23508f21454a8cfe498de81af83, type: 2}
+    timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 945b3be0906cd5c4c918e9d313e16c6d, type: 2}
+    timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: fc4fb23508f21454a8cfe498de81af83, type: 2}
+    timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 10
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 945b3be0906cd5c4c918e9d313e16c6d, type: 2}
+    timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 3
+      enemyData: {fileID: 11400000, guid: 476980310e3e0bc4db4df4740129c072, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    timeBetweenSpawns: 1
+  - enemySets:
+    - enemyCount: 15
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    - enemyCount: 10
+      enemyData: {fileID: 11400000, guid: fc4fb23508f21454a8cfe498de81af83, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 476980310e3e0bc4db4df4740129c072, type: 2}
+    timeBetweenSpawns: 2
   nextLevel: {fileID: 11400000, guid: 0530f9cd7e0a74e4baceb964c755bb22, type: 2}
