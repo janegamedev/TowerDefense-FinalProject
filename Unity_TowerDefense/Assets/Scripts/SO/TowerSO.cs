@@ -14,14 +14,15 @@ public enum TowerType
 public class TowerSO : ScriptableObject
 {
     public TowerType type;
+    public int level;
+    public string towerName;
     public Sprite towerImage;
     public string towerDescription;
-    public int level;
     public int buildCost;
     public int damage;
     public float attackRate;
     public int range;
-    public float speedMultiplayer;
+    public float speedMultiplier;
     public GameObject towerPrefab;
     public GameObject[] projectiles;
     public TowerSO nextUpgrade;

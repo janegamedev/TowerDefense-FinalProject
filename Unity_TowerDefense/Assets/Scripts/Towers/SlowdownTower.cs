@@ -14,7 +14,7 @@ public class SlowdownTower : Tower
         base.Init(towerData);
         
         //Update stats with player upgrades
-        speedMultiplayer = towerData.speedMultiplayer * (1 + Game.Instance._slowdownIncrease);
+        speedMultiplayer = towerData.speedMultiplier * (1 + Game.Instance._slowdownIncrease);
         range *= (1 + Game.Instance._slowdownRangeIncrease);
     }
 

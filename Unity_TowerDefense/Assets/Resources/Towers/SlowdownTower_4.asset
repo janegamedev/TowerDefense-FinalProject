@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
-  m_Name: 500mm Big Bertha
+  m_Name: SlowdownTower_4
   m_EditorClassIdentifier: 
-  type: 3
+  type: 1
   level: 4
-  buildCost: 400
-  damage: 80
-  attackRate: 3.5
-  range: 360
-  towerPrefab: {fileID: 1403982929551796730, guid: 295cb3204419604458f8282f2aeb0f2a,
+  towerName: Reality Distruptor
+  towerImage: {fileID: 21300000, guid: 8fc306fd54de2ac45b2bb28c8cd7cb5e, type: 3}
+  towerDescription: 
+  buildCost: 230
+  damage: 0
+  attackRate: 0
+  range: 11
+  speedMultiplier: 0.6
+  towerPrefab: {fileID: 668596105789147324, guid: 7348caed25a418a478baf89bec8dc454,
     type: 3}
-  projectiles:
-  - {fileID: 2393121027971344933, guid: 6888b9ad2cf0bc841b9c230fb06c9488, type: 3}
+  projectiles: []
   nextUpgrade: {fileID: 0}

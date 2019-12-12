@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
-  m_Name: Dwarven Howitzer
+  m_Name: BombTower_1
   m_EditorClassIdentifier: 
   type: 3
-  level: 3
-  buildCost: 320
-  damage: 50
+  level: 1
+  towerName: Dwarven Bombard
+  towerImage: {fileID: 21300000, guid: 9496f7d2f6acae64f8eca1faf56ed64f, type: 3}
+  towerDescription: 
+  buildCost: 125
+  damage: 13
   attackRate: 3
-  range: 360
-  towerPrefab: {fileID: 7003396083645850863, guid: 7d0b6235542e65342bbcd4bd0715fe59,
+  range: 5
+  speedMultiplier: 0
+  towerPrefab: {fileID: 2561644869390575744, guid: d0c1c872a3332a14191b3a690d2fa9e9,
     type: 3}
   projectiles:
   - {fileID: 2393121027971344933, guid: 6888b9ad2cf0bc841b9c230fb06c9488, type: 3}
-  nextUpgrade: {fileID: 11400000, guid: 577ab096b9b71bd4fbe5d37d750efc1c, type: 2}
+  nextUpgrade: {fileID: 11400000, guid: b37dce3bfdc6a9d419a560f5ad650bbf, type: 2}

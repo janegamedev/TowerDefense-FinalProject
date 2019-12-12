@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
-  m_Name: Electric Field
+  m_Name: SlowdownTower_3
   m_EditorClassIdentifier: 
   type: 1
-  level: 2
-  buildCost: 110
-  damage: 4
-  attackRate: 10
-  range: 300
-  speedMultiplayer: 0
-  towerPrefab: {fileID: 8252402654480920299, guid: 23a5bf36f3c89cf41994231a532af75b,
+  level: 3
+  towerName: Paralysis Field
+  towerImage: {fileID: 21300000, guid: 8fc306fd54de2ac45b2bb28c8cd7cb5e, type: 3}
+  towerDescription: 
+  buildCost: 160
+  damage: 0
+  attackRate: 0
+  range: 7
+  speedMultiplier: 0.4
+  towerPrefab: {fileID: 5724407448328903163, guid: 66143a801cf05464aa066b6c81d6f20b,
     type: 3}
   projectiles: []
-  nextUpgrade: {fileID: 11400000, guid: 118463592dc4a6540b1755cde1923f4a, type: 2}
+  nextUpgrade: {fileID: 11400000, guid: da903582541f9f640ad11088bdb08f95, type: 2}

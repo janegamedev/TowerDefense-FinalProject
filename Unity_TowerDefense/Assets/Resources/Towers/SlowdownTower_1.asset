@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
-  m_Name: Reality Distruptor
+  m_Name: SlowdownTower_1
   m_EditorClassIdentifier: 
   type: 1
-  level: 4
-  buildCost: 230
-  damage: 16
-  attackRate: 10
-  range: 300
-  speedMultiplayer: 0
-  towerPrefab: {fileID: 668596105789147324, guid: 7348caed25a418a478baf89bec8dc454,
+  level: 1
+  towerName: Static bubble
+  towerImage: {fileID: 21300000, guid: 8fc306fd54de2ac45b2bb28c8cd7cb5e, type: 3}
+  towerDescription: 
+  buildCost: 70
+  damage: 0
+  attackRate: 0
+  range: 5
+  speedMultiplier: 0.1
+  towerPrefab: {fileID: 6492792737427458144, guid: 9de1da05333eb6646b45c2889a6d303a,
     type: 3}
   projectiles: []
-  nextUpgrade: {fileID: 0}
+  nextUpgrade: {fileID: 11400000, guid: 5c776f98fc6b2cc49a39a047a5fb13b3, type: 2}

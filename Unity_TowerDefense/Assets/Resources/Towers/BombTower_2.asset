@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
-  m_Name: MageTower_1
+  m_Name: BombTower_2
   m_EditorClassIdentifier: 
-  type: 2
-  level: 1
-  towerName: Arcane User
-  towerImage: {fileID: 21300000, guid: 72f77ec67f82f7347865c178ce77e359, type: 3}
+  type: 3
+  level: 2
+  towerName: Dwarven Artillery
+  towerImage: {fileID: 21300000, guid: 9496f7d2f6acae64f8eca1faf56ed64f, type: 3}
   towerDescription: 
-  buildCost: 100
-  damage: 15
-  attackRate: 1.6
+  buildCost: 230
+  damage: 30
+  attackRate: 2.7
   range: 5
   speedMultiplier: 0
-  towerPrefab: {fileID: 1444635650403054005, guid: ada431c7b18fd87489dad5d1f3b72981,
+  towerPrefab: {fileID: 8266564134624833702, guid: 0954092aa3170ab4f9c9f2e7a2e6f249,
     type: 3}
   projectiles:
-  - {fileID: 3001018431736961524, guid: 1e9f898527016684f84cfee1fe5c4de6, type: 3}
-  nextUpgrade: {fileID: 11400000, guid: 489e99131af0edb4fa7be5d2b8f3e1a3, type: 2}
+  - {fileID: 2393121027971344933, guid: 6888b9ad2cf0bc841b9c230fb06c9488, type: 3}
+  nextUpgrade: {fileID: 11400000, guid: cb49a2d0202fd8a46b548147d2ace5f1, type: 2}
