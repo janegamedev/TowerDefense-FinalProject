@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Evil God
   enemyIcon: {fileID: 21300000, guid: f4293cb00d81e1047bba7d63091570f6, type: 3}
-  enemyDescription: Evil Gods, deities of pure sin. These underworld dwellers have
+  enemyDescription: Evil Gods, Deities of pure sin. These underworld dwellers have
     a moderately low health, no armour and low magic resistance. They move ungodly
     fast and only drop the stingy amount of 2 bounty upon defeat.
   enemyDescriptionShort: 'Evil Gods: 120 HP,  2 Bounty, Fast Speed'
