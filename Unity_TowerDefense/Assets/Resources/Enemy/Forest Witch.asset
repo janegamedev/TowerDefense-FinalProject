@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Forest Witch
   m_EditorClassIdentifier: 
   enemyName: Forest Witch
+  enemyIcon: {fileID: 21300000, guid: eddc672a157fcce40b975fc40ea6752b, type: 3}
+  enemyDescription: Forest Witches, woodland mystics with moderately low health and
+    no armour, but extremely high magic resistance. They can use thier mystical abilites
+    to slowly heal themselves over time and drop a bounty of 10 upon defeat.
+  enemyDescriptionShort: 'Forest Witches: 100 HP, 85% Magic Resistance 6 Bounty, Fast
+    Speed, Regeneration (5 HP/S)'
   enemyModel: {fileID: 1611041093240470, guid: c6817eb5530563147aad2cfd830512b9, type: 3}
   health: 10
-  damage: 4
-  attackRate: 1
   armour: 0
   magicResistance: 85
   speed: 3

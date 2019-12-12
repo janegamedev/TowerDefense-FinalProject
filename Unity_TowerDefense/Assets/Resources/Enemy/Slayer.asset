@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Slayer
   m_EditorClassIdentifier: 
   enemyName: Slayer
+  enemyIcon: {fileID: 21300000, guid: 5422e6027d771d14cbfa83072a526b61, type: 3}
+  enemyDescription: 'Conquerers of anything that can be slayed, these fearless conquesters
+    have high health, moderately low armour and no magic resistance. They dash at
+    lightning speeds and drop 25 bounty upon defeat. '
+  enemyDescriptionShort: 'Slayers: 450 HP, 30% armor, 25 Bounty, Fast Speed'
   enemyModel: {fileID: 1033247876357254, guid: b2739774a07ffdb459c1bd60e3ef4f10, type: 3}
   health: 450
-  damage: 30
-  attackRate: 1
   armour: 30
   magicResistance: 0
   speed: 5

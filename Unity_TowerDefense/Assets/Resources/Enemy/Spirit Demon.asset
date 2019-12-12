@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Spirit Demon
   m_EditorClassIdentifier: 
   enemyName: Spirit Demon
+  enemyIcon: {fileID: 21300000, guid: 9e55e1ae5058a104dbcb478da22a69b4, type: 3}
+  enemyDescription: Sprit Demons are demonic specters of underworld decent. They have
+    relatively high health, no armour and moderately high magic resistance.They drop
+    20 bounty upon defeat.
+  enemyDescriptionShort: 'Spriit Demons: 250 HP, 50% Magic Resistance, 20 Bounty,
+    Medium Speed'
   enemyModel: {fileID: 1997296248483302, guid: 9984be23625843a48a44d88aae5669f2, type: 3}
   health: 250
-  damage: 20
-  attackRate: 1
   armour: 0
   magicResistance: 50
   speed: 3

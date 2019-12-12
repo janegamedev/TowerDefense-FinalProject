@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Red Demon
   m_EditorClassIdentifier: 
   enemyName: Red Demon
+  enemyIcon: {fileID: 21300000, guid: 1d594cfe538b11249b9251a1c2ef931c, type: 3}
+  enemyDescription: ' The king of the demons. This demon lives up to its name as red
+    is all it sees, as it wrecks havoc everywhere it goes. With the highest health
+    out of all the existing speciess, this unholy monster has no armour and moderately
+    high magic resistance. it drops 60 bounty upon defeat.'
+  enemyDescriptionShort: 'Red Demon: 3000 HP, 60% Magic Resistance, 60 Bounty, Slow
+    Speed'
   enemyModel: {fileID: 1248874732774416, guid: 3c9c85e47d53d1f4aaa97330d98c0680, type: 3}
   health: 1000
-  damage: 50
-  attackRate: 1.4
   armour: 0
   magicResistance: 60
   speed: 1

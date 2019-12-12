@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Fort Golem
   m_EditorClassIdentifier: 
   enemyName: Fort Golem
+  enemyIcon: {fileID: 21300000, guid: 1e91ea514be52a944828e65c1c9f400a, type: 3}
+  enemyDescription: Fort Golem, the second in command for all golems. This rock solid
+    guardian of protecting has no armour or magic resistance. It moves as slow as
+    a rock and has an enormous amount of health. It drops 120 bounty upon defeat.
+  enemyDescriptionShort: 'Fort Golem: 2000 HP, 120 Bounty, Slow Speed'
   enemyModel: {fileID: 1691206179217438, guid: fe16b94572a04254e9757241e9e92235, type: 3}
   health: 2000
-  damage: 100
-  attackRate: 2.5
   armour: 0
   magicResistance: 0
   speed: 1

@@ -144,7 +144,7 @@ MonoBehaviour:
   nextTile: {fileID: 0}
   isVisited: 0
   r: 5
-  speedMultiplier: 0
+  speedMultiplier: 1
   slowDownParticle: {fileID: 0}
   startParticle: {fileID: 0}
 --- !u!1001 &1903953591216646768

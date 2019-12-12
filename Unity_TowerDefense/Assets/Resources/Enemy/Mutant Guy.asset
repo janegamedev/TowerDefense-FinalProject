@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Mutant Guy
   m_EditorClassIdentifier: 
   enemyName: Mutant Guy
+  enemyIcon: {fileID: 21300000, guid: ea5045af32d4ba64cb46a48d3419e71b, type: 3}
+  enemyDescription: Mutant Guy, just a guy who thought it was a good idea to a take
+    swim in a batch of toxic fecal matter at a toilet paper factory. This guy has
+    an enormous amount of health, to the point it's almost radiating off him. He has
+    moderately low armour and no magic resistance. For a mutant he moves sluggishly
+    slow and leaves a huge explosive surprise upon defeat. He drops 50 bounty when
+    defeated.
+  enemyDescriptionShort: 'Mutant Guy: 2500 HP, 30% Armour, 50 Bounty, Slow Speed'
   enemyModel: {fileID: 1544180832531774, guid: f9f6be802bd0fe3448c68a8b6f205bce, type: 3}
   health: 2500
-  damage: 40
-  attackRate: 2
   armour: 30
   magicResistance: 0
   speed: 1

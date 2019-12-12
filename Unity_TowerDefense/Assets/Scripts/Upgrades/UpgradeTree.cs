@@ -222,6 +222,8 @@ public class UpgradeTree : MonoBehaviour
 
     private void ArcherUpgrade(int upgradeLevel)
     {
+        Game.Instance.stars -= archerUpgradeStates[upgradeLevel - 1].cost;
+        
         if (upgradeLevel < 3)
         {
             archerUpgradeStates[upgradeLevel-1].upgradeState = UpgradeState.BOUGHT;
@@ -256,6 +258,8 @@ public class UpgradeTree : MonoBehaviour
     
     private void MageUpgrade(int upgradeLevel)
     {
+        Game.Instance.stars -= mageUpgradeStates[upgradeLevel - 1].cost;
+        
         if (upgradeLevel < 3)
         {
             mageUpgradeStates[upgradeLevel-1].upgradeState = UpgradeState.BOUGHT;
@@ -290,6 +294,8 @@ public class UpgradeTree : MonoBehaviour
     
     private void BombUpgrade(int upgradeLevel)
     {
+        Game.Instance.stars -= bombUpgradeStates[upgradeLevel - 1].cost;
+        
         if (upgradeLevel < 3)
         {
             bombUpgradeStates[upgradeLevel-1].upgradeState = UpgradeState.BOUGHT;
@@ -324,6 +330,8 @@ public class UpgradeTree : MonoBehaviour
     
     private void SlowdownUpgrade(int upgradeLevel)
     {
+        Game.Instance.stars -= slowdownUpgradeStates[upgradeLevel - 1].cost;
+        
         if (upgradeLevel < 3)
         {
             slowdownUpgradeStates[upgradeLevel-1].upgradeState = UpgradeState.BOUGHT;
@@ -358,6 +366,8 @@ public class UpgradeTree : MonoBehaviour
     
     private void MeteorUpgrade(int upgradeLevel)
     {
+        Game.Instance.stars -= meteorUpgradeStates[upgradeLevel - 1].cost;
+        
         if (upgradeLevel < 3)
         {
             meteorUpgradeStates[upgradeLevel-1].upgradeState = UpgradeState.BOUGHT;

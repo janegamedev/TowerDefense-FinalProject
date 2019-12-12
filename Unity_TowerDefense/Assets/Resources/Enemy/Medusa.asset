@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Medusa
   m_EditorClassIdentifier: 
   enemyName: Medusa
+  enemyIcon: {fileID: 21300000, guid: 5dbbe6bd3fffe97449eb8d335c8025ec, type: 3}
+  enemyDescription: 'Medusas, anicent snake like creatures believed to resemble women.
+    These mystical creatures of greek mythology have low health and no armour but
+    have moderately high magic resistance. They slither at rapid speeds and drop a
+    bounty of 6 upon defeat. '
+  enemyDescriptionShort: 'Medusas:  60 HP, 65% Magic Resistance 6 Bounty, Fast Speed'
   enemyModel: {fileID: 1891674185500050, guid: 333e5531d0814614f9738b8e0f3807cd, type: 3}
   health: 60
-  damage: 14
-  attackRate: 1
   armour: 0
   magicResistance: 65
   speed: 5

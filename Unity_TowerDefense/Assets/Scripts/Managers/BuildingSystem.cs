@@ -49,7 +49,7 @@ public class BuildingSystem : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
-                    PlaySfx(sellTowerSfx);
+                    PlaySfx(towerSelectionSfx);
                     _selectedTile = hit.collider.GetComponentInParent<TowerTile>();
 
                     if (_selectedTile.isAvailable)

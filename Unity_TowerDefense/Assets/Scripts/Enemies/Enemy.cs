@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     public float MAxHealth => maxHealth;
     private float _armour;
     private float _magicResistance;
-    private float _speedMultiplayer;
+    private float _speedMultiplier;
     public float movementSpeed = 1f;
     private float _stopDistance;
     private int _bounty;
@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         _healthBar = GetComponentInChildren<HealthBar>();
+        _speedMultiplier = 1; 
     }
     
     public void Init(EnemySO enemyData, RoadTile startTile)
@@ -58,7 +59,7 @@ public class Enemy : MonoBehaviour
         _magicResistance = enemyData.magicResistance;
 
         movementSpeed = enemyData.speed;
-        _navMeshAgent.speed = enemyData.speed;
+        _navMeshAgent.speed = movementSpeed * _speedMultiplier;
         
         _bounty = enemyData.bounty;
         _currentTile = startTile;
@@ -116,13 +117,13 @@ public class Enemy : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 10, LayerMask.GetMask("Road")))
         {
-            RoadTile road = hit.collider.GetComponent<RoadTile>();
+            RoadTile road = hit.collider.GetComponentInParent<RoadTile>();
             if (road)
             {
-                if (_speedMultiplayer != road.speedMultiplier)
+                if (_speedMultiplier != road.speedMultiplier)
                 {
-                    _speedMultiplayer = road.speedMultiplier;
-                    _navMeshAgent.speed *= road.speedMultiplier;
+                    _speedMultiplier = road.speedMultiplier;
+                    _navMeshAgent.speed = movementSpeed * _speedMultiplier;
                 }
             }
         }
