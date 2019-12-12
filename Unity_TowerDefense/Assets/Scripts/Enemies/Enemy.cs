@@ -181,8 +181,7 @@ public class Enemy : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
         }
-        /*_healthBar.UpdateHealth(health, maxHealth);*/
-        
+
         if (health <= 0)
         {
             characterState = CharacterState.DEAD;
