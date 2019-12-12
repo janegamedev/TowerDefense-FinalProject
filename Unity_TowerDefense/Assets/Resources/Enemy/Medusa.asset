@@ -23,5 +23,5 @@ MonoBehaviour:
   health: 60
   armour: 0
   magicResistance: 65
-  speed: 5
+  speed: 3
   bounty: 6

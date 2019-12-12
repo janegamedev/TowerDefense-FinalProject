@@ -28,10 +28,10 @@ MonoBehaviour:
     rgba: 4281680110
   hexPrefabs:
   - {fileID: 7964574990969819995, guid: 0d29c30c6e5c2864f93405b5012cb7b2, type: 3}
-  - {fileID: 8424888964113779772, guid: fd0af581c852ce8499e0aa0d85b11993, type: 3}
-  - {fileID: 964846686215295832, guid: 8292eb987e039304d930cd87d0a43f53, type: 3}
+  - {fileID: 8424888964113779772, guid: 199c00d4ac1487b45bf587f6e54c51ce, type: 3}
+  - {fileID: 964846686215295832, guid: 29c69106372c3174db17e33e9c14ed4b, type: 3}
   - {fileID: 9052206117752635279, guid: 6e9196ec7d2d38c478ee9f27ed45afa0, type: 3}
-  - {fileID: 8424888964113779772, guid: 537cd2127375d8049b05579c4c85b6da, type: 3}
+  - {fileID: 8424888964113779772, guid: 8cfbc302d4bf5214fae91269af3e2e9c, type: 3}
   generateTrees: 1
   treesPrefabs:
   - {fileID: 1000013593877540, guid: 413c0ee9c5b281a42aaccccc0d5d55b6, type: 3}
@@ -49,25 +49,5 @@ MonoBehaviour:
   - {fileID: 1000010418045386, guid: b3a2d7a4838ad404eacfdc0ccaf763e6, type: 3}
   - {fileID: 1000011838955668, guid: 10ba00bacc400d349ae0bc6a9bff5abc, type: 3}
   propsAmount: 10
-  waves:
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
-  - enemySets: []
-    timeBetweenSpawns: 0
+  waves: []
   nextLevel: {fileID: 11400000}

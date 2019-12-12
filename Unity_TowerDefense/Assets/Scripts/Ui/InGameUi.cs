@@ -27,11 +27,14 @@ public class InGameUi : MonoBehaviour
     [SerializeField] private Image shadeTowerImage;
     [SerializeField] private TextMeshProUGUI towerDescription;
 
+    [SerializeField] private AudioClip buttonClickSfx;
+    
     private int _starsAmount;
     private Enemy _selectedEnemy;
     private Tower _selectedTower;
 
     private Camera _camera;
+    private AudioSource _audioSource;
     
     public void UpdateUi()
     {
@@ -44,6 +47,7 @@ public class InGameUi : MonoBehaviour
     private void Start()
     {
         _camera = Camera.main;
+        _audioSource = GetComponent<AudioSource>();
         GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChanged);
     }
 
@@ -82,16 +86,19 @@ public class InGameUi : MonoBehaviour
 
     public void OnSettingsClick()
     {
+        PlayClickSfx();
         GameManager.Instance.TogglePause();
     }
     
     public void RestartGame()
     {
+        PlayClickSfx();
         GameManager.Instance.LoadLevel(GameManager.Instance.currentLevelSo);
     }
 
     public void QuitToSelectionMenu()
     {
+        PlayClickSfx();
         GameManager.Instance.LoadLevelSelection(Game.Instance.Path);
     }
 
@@ -177,5 +184,12 @@ public class InGameUi : MonoBehaviour
         {
             CloseEnemyPanel();
         }
+    }
+    
+    public void PlayClickSfx()
+    {
+        _audioSource.Stop();
+        _audioSource.clip = buttonClickSfx;
+        _audioSource.Play();
     }
 }
