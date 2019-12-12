@@ -136,7 +136,7 @@ public class GridGenerator : MonoBehaviour
                 int index = Random.Range(0, tileRoots[0].childCount);
                 Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
                     
-                Vector3 pos = tile.transform.position + Random.insideUnitSphere * 10;
+                Vector3 pos = tile.transform.position + Random.insideUnitSphere * 2;
                 pos.y = root.position.y;
                 Quaternion rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
                 GameObject gr = Instantiate(_grassPrefabs[Random.Range(0, _grassPrefabs.Length)], pos, rotation, root);

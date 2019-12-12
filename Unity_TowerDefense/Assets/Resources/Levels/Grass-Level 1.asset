@@ -41,8 +41,8 @@ MonoBehaviour:
   - {fileID: 1000012061500174, guid: 09aab8a904970484d99ec36c27b8bb13, type: 3}
   - {fileID: 1000013125167130, guid: 53973fa484c6ade4891afd59f3e33e3a, type: 3}
   - {fileID: 1000010452107046, guid: d4b8045cf1d6b46ff9f25dc29b2d7c33, type: 3}
-  treesAmount: 15
-  generateGrass: 0
+  treesAmount: 20
+  generateGrass: 1
   grassPrefabs:
   - {fileID: 1000012002960424, guid: 44f06f083d27f4a75bdf4b52d745f453, type: 3}
   - {fileID: 1000011460197470, guid: c3591d4a38d50e440931ebbe367ff068, type: 3}
@@ -50,13 +50,13 @@ MonoBehaviour:
   - {fileID: 1000011471527648, guid: aa2aba1c609347b46a000dcb4078c820, type: 3}
   - {fileID: 1000012435560724, guid: b9fd96550c6ef8c48ac42fffcad3eeb0, type: 3}
   - {fileID: 1000014289357120, guid: 5d43bd8198132492795c84a7a66997e0, type: 3}
-  grassAmount: 15
-  generateProps: 0
+  grassAmount: 20
+  generateProps: 1
   propsPrefabs:
   - {fileID: 1000012191212250, guid: 02b6852f899a15d44957b934349e7e9a, type: 3}
   - {fileID: 1000012383013900, guid: be44107002abe0046a8a7f08bbf0eef1, type: 3}
   - {fileID: 1000012625864402, guid: d9f771127f198ea40869d419a85f3b89, type: 3}
-  propsAmount: 10
+  propsAmount: 2
   waves:
   - enemySets:
     - enemyCount: 5
