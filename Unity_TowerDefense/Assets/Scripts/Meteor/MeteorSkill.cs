@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,15 +13,21 @@ public class MeteorSkill : MonoBehaviour
     [SerializeField] private GameObject possibleParticle;
 
     [SerializeField] private Button skillButton;
+    [SerializeField] private TextMeshProUGUI skillTimer;
+
+    [SerializeField] private AudioClip resetSfx;
+    [SerializeField] private AudioClip selectSfx;
     
     private Vector3 _destination;
     private bool _isSelected;
     private bool _canFire;
     private Camera _camera;
+    private AudioSource _audioSource;
 
     private void Start()
     {
         _camera = Camera.main;
+        _audioSource = GetComponent<AudioSource>();
         skillButton.onClick.AddListener(Select);
         
         resetTime -= Game.Instance._meteorCountDownDecrease;
@@ -79,7 +86,7 @@ public class MeteorSkill : MonoBehaviour
         _isSelected = true;
         skillButton.interactable = false;
         
-        //TODO: sound of selection skill
+        PlaySfx(selectSfx);
     }
 
     private void Fire()
@@ -92,6 +99,7 @@ public class MeteorSkill : MonoBehaviour
             _canFire = false;
 
             //Start cooldown for meteor skill
+            skillTimer.gameObject.SetActive(true);
             StartCoroutine(Cooldown());
 
             //Instantiate meteor prefab and set values to it
@@ -106,13 +114,25 @@ public class MeteorSkill : MonoBehaviour
     IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(resetTime);
-        skillButton.interactable = true;
+
+        /*
+        int timeLeft = (int)(resetTime - Time.deltaTime);
+*/
         
-        //TODO: sound of cooldown ends
+        skillButton.interactable = true;
+        skillTimer.gameObject.SetActive(false);
+        PlaySfx(resetSfx);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawSphere(_destination,range);
+    }
+
+    private void PlaySfx(AudioClip clip)
+    {
+        _audioSource.Stop();
+        _audioSource.clip = clip;
+        _audioSource.Play();
     }
 }

@@ -12,37 +12,29 @@ public enum CharacterState
 public class Enemy : MonoBehaviour
 {
     public ParticleSystem selectionParticles;
+    public ParticleSystem deathParticles;
     
     private string _enemyName;
-    public EnemySO enemySo;
+    [HideInInspector] public EnemySO enemySo;
     public CharacterState characterState;
     private DamageType damageType;
-    
     private float maxHealth;
     private float health;
     public float Health => health;
     public float MAxHealth => maxHealth;
-    
     private float _armour;
     private float _magicResistance;
     private float _speedMultiplayer;
-    
     public float movementSpeed = 1f;
     private float _stopDistance;
-    
     private int _bounty;
     public int Bounty => _bounty;
 
     private RoadTile _currentTile;
-    
     private bool _isDead;
-    
     public event System.Action<Enemy> OnDeath;
-    
     private HealthBar _healthBar;
-    
     private Vector3 _destination;
-
     private NavMeshAgent _navMeshAgent;
     private Animator _animator;
     
@@ -171,6 +163,7 @@ public class Enemy : MonoBehaviour
     public void OnEndDeathAnimation()
     {
         OnDeath?.Invoke(this);
+        Instantiate(deathParticles.gameObject, transform.position, Quaternion.identity);
     }
 
     public void TakeHit(float amount, DamageType type)
