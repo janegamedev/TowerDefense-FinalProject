@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Level 6
   level: 6
-  mapTexture: {fileID: 2800000, guid: ca2dd4a3be4b2fa408696e3cd86e93ea, type: 3}
+  mapTexture: {fileID: 2800000, guid: e384166ea3b89a54b85fdb59973f31e1, type: 3}
   colorsOnTheMap:
   - serializedVersion: 2
     rgba: 4282630267

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Ancient Warrior
   m_EditorClassIdentifier: 
   enemyName: Ancient Warrior
+  enemyIcon: {fileID: 21300000, guid: a5761d3974d13c54ea4d5c0d0703a160, type: 3}
+  enemyDescription: 
   enemyModel: {fileID: 1909744818002174, guid: c7cebe2178705794aa9a9911f182d8c1, type: 3}
   health: 70
-  damage: 25
-  attackRate: 1.3
   armour: 0
   magicResistance: 0
   speed: 7
