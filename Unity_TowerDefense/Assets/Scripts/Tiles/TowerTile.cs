@@ -1,10 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine;
 
 public class TowerTile : Tile
 {
-    public bool isAvailable;
-    public Tower tower;
+    [HideInInspector] public bool isAvailable;
+    [HideInInspector] public Tower tower;
+
+    private GameObject _particleSystem;
+
+    private void Start()
+    {
+        _particleSystem = GetComponentInChildren<ParticleSystem>().gameObject;
+        ActivateParticle();
+    }
 
     public void SellTower()
     {
@@ -12,6 +19,7 @@ public class TowerTile : Tile
         PlayerStats.Instance.ChangeCoinsAmount((int)(-tower.BuildCost * PlayerStats.Instance.SellPercentage));
         tower = null;
         isAvailable = true;
+        ActivateParticle();
     }
 
     public void UpgradeTower()
@@ -24,6 +32,7 @@ public class TowerTile : Tile
         PlaceTower(nextTower);
     }
 
+    //Placing a tower
     public void PlaceTower(TowerSO towerData)
     {
         tower = Instantiate(towerData.towerPrefab, transform).GetComponent<Tower>();
@@ -40,5 +49,16 @@ public class TowerTile : Tile
 
         tower.transform.position = transform.position;
         isAvailable = false;
+        DeactivateParticle();
+    }
+
+    private void ActivateParticle()
+    {
+        _particleSystem.SetActive(true);
+    }
+
+    private void DeactivateParticle()
+    {
+        _particleSystem.SetActive(false);
     }
 }

@@ -32,7 +32,7 @@ MonoBehaviour:
   - {fileID: 964846686215295832, guid: 49cb8bbe63c2bc5468cb28718a7e7eee, type: 3}
   - {fileID: 9052206117752635279, guid: 120139d7f5083a94fa7002c807e4aa48, type: 3}
   - {fileID: 8424888964113779772, guid: 8cfbc302d4bf5214fae91269af3e2e9c, type: 3}
-  generateTrees: 0
+  generateTrees: 1
   treesPrefabs:
   - {fileID: 1000010483647360, guid: 0c6f9643e5cf22446b0b326dad2d3a0b, type: 3}
   - {fileID: 1000012921351502, guid: edefb56f15ddbd94c8ca1cabbc111274, type: 3}
@@ -41,7 +41,7 @@ MonoBehaviour:
   - {fileID: 1000012061500174, guid: 09aab8a904970484d99ec36c27b8bb13, type: 3}
   - {fileID: 1000013125167130, guid: 53973fa484c6ade4891afd59f3e33e3a, type: 3}
   - {fileID: 1000010452107046, guid: d4b8045cf1d6b46ff9f25dc29b2d7c33, type: 3}
-  treesAmount: 25
+  treesAmount: 15
   generateGrass: 0
   grassPrefabs:
   - {fileID: 1000012002960424, guid: 44f06f083d27f4a75bdf4b52d745f453, type: 3}

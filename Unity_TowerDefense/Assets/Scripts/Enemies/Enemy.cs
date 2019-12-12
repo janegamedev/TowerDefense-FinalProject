@@ -126,10 +126,10 @@ public class Enemy : MonoBehaviour
             RoadTile road = hit.collider.GetComponent<RoadTile>();
             if (road)
             {
-                if (_speedMultiplayer != road.speedMultiplayer)
+                if (_speedMultiplayer != road.speedMultiplier)
                 {
-                    _speedMultiplayer = road.speedMultiplayer;
-                    _navMeshAgent.speed *= road.speedMultiplayer;
+                    _speedMultiplayer = road.speedMultiplier;
+                    _navMeshAgent.speed *= road.speedMultiplier;
                 }
             }
         }

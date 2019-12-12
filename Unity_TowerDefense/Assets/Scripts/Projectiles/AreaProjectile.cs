@@ -23,7 +23,8 @@ public class AreaProjectile : Projectile
 
         _rigidbody.velocity = Vo;
     }
-
+    
+    //Check for collision with enemy or road
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Tile>() || other.GetComponent<Enemy>())
@@ -45,6 +46,7 @@ public class AreaProjectile : Projectile
         base.HitEnemy();
     }
 
+    //Calculate trajectory for bomb 
     Vector3 CalculateVelocity(Vector3 target, Vector3 origin, float time)
     {
         Vector3 distance = target - origin;

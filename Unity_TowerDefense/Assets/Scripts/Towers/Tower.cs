@@ -1,29 +1,26 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Linq;
-using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
-public class Tower : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Tower : MonoBehaviour
 {
-    [SerializeField] public GameObject rangeDome;
+    [SerializeField] private GameObject rangeDome;
+    [HideInInspector] public TowerSO currentTower;
+    [HideInInspector] public TowerSO _nextUpgrade;
+    
     private protected LayerMask enemyLayerMask;
     private TowerType _type;
-
     private protected float range;
     private int _buildCost;
     public int BuildCost => _buildCost;
-
-    [HideInInspector] public TowerSO currentTower;
-    [HideInInspector] public TowerSO _nextUpgrade;
-
     private InGameUi _inGameUi;
-
+    
     private void Start()
     {
         _inGameUi = FindObjectOfType<InGameUi>();
     }
 
+    //Init tower from Tower scriptable object
     public virtual void Init(TowerSO towerData)
     {
         currentTower = towerData;
@@ -49,37 +46,16 @@ public class Tower : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         return _nextUpgrade;
     }
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        _inGameUi.ShowTowerDescription(currentTower);
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        _inGameUi.CloseTowerPanel();
-    }
 }
 
 public interface IDealRangedDamage
 {
     float Damage {get;set;}
     float AttackRate  {get;set;}
-    
     GameObject[] Projectiles { get; set; }
-
     void Attack(Transform enemy);
 }
 
-public interface IHaveWarrior
-{
-    int Damage {get;set;}
-    float AttackRate  {get;set;}
-    
-    List<GameObject> WarriorsAlive { get; set; }
-    
-    void SpawnWarrior();
-}
 
 public class RangedTower : Tower, IDealRangedDamage
 {
@@ -92,10 +68,10 @@ public class RangedTower : Tower, IDealRangedDamage
 
     private Transform _enemyToAttack;
     private float _nextAttackTime;
-    
-    
+
     private void Update()
     {
+        //Check for enemies in the range
         Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, range, enemyLayerMask);
 
         if (enemiesInRange.Length > 0)
@@ -134,11 +110,5 @@ public class RangedTower : Tower, IDealRangedDamage
                 spawnedProjectile.Damage = Damage;
             }
         }
-    }
-    
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, range);
     }
 }

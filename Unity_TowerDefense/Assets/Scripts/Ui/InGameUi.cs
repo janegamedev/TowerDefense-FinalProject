@@ -159,7 +159,7 @@ public class InGameUi : MonoBehaviour
                     ShowEnemyDescription(_selectedEnemy.enemySo);
                 }
             }
-            else
+            else if(hit.collider.GetComponent<Tower>())
             {
                 if (_selectedTower == null || _selectedTower != hit.collider.GetComponent<Tower>())
                 {

@@ -31,6 +31,7 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
+    //Input check and raycast for building system
     private void Update()
     {
         if (GameManager.Instance.CurrentGameState == GameState.RUNNING)
@@ -42,8 +43,8 @@ public class BuildingSystem : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
-                    _selectedTile = hit.collider.GetComponent<TowerTile>();
-                    
+                    _selectedTile = hit.collider.GetComponentInParent<TowerTile>();
+
                     if (_selectedTile.isAvailable)
                     {
                         ShowSelectionPanel();
@@ -62,7 +63,7 @@ public class BuildingSystem : MonoBehaviour
             }
         }
     }
-
+    
     private void ShowSelectionPanel()
     {
         towerSelectionPanel.gameObject.SetActive(true);
@@ -81,7 +82,7 @@ public class BuildingSystem : MonoBehaviour
         towerUpgradePanel.gameObject.SetActive(true);
         towerUpgradePanel.Init(_selectedTile);
         
-        /*selectedTile.tower.EnableDome();*/
+        _selectedTile.tower.EnableDome();
                         
         towerUpgradePanel.buttons[0].onClick.AddListener(UpgradeTower);
         towerUpgradePanel.costs[0].text = _selectedTile.tower.GetNextUpdate().buildCost.ToString();
@@ -91,6 +92,7 @@ public class BuildingSystem : MonoBehaviour
 
     private void ClosePanel()
     {
+        _selectedTile.tower.DisableDome();
         _isSelected = false;
         _selectedTile = null;
 

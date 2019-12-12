@@ -8,7 +8,9 @@ public class RoadTile : Tile
     public bool isVisited;
     public float r;
 
-    public float speedMultiplayer;
+    public float speedMultiplier;
+    [SerializeField] private GameObject slowDownParticle;
+    [SerializeField] private GameObject startParticle;
     
     public void PropagateRoad(RoadTile caller)
     {
@@ -25,7 +27,7 @@ public class RoadTile : Tile
         
         foreach (Collider neighbour in n)
         {
-            RoadTile road = neighbour.GetComponent<RoadTile>();
+            RoadTile road = neighbour.GetComponentInParent<RoadTile>();
             
             if (!road.isVisited)
             {
@@ -37,6 +39,17 @@ public class RoadTile : Tile
         if (!isPropagated)
         {
             isStart = true;
+            startParticle.SetActive(true);
         }
+    }
+
+    public void ActivateSlowdownParticle()
+    {
+        slowDownParticle.SetActive(true);
+    }
+
+    public void DeactivateSlowdownParticle()
+    {
+        slowDownParticle.SetActive(false);
     }
 }
