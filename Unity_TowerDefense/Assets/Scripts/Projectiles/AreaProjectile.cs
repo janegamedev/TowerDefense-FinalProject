@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AreaProjectile : Projectile
 {
-    public int areaRange;
-    public float timeToExplore;
-
+    [SerializeField] private int areaRange;
+    [SerializeField] private float timeToExplore;
+    [SerializeField] private GameObject explosionParticle;
+    
     private Rigidbody _rigidbody;
     
     private void Start()
@@ -21,15 +22,17 @@ public class AreaProjectile : Projectile
         transform.rotation = Quaternion.LookRotation(Vo);
 
         _rigidbody.velocity = Vo;
-        StartCoroutine(Timer());
     }
 
-    IEnumerator Timer()
+    private void OnTriggerEnter(Collider other)
     {
-        yield return new WaitForSeconds(timeToExplore);
-        HitEnemy();
+        if (other.GetComponent<Tile>() || other.GetComponent<Enemy>())
+        {
+            HitEnemy();
+            Instantiate(explosionParticle, transform.position, Quaternion.identity);
+        }
     }
-
+    
     private protected override void HitEnemy()
     {
         Collider[] enemyInArea = Physics.OverlapSphere(transform.position, areaRange, LayerMask.GetMask("Enemy"));

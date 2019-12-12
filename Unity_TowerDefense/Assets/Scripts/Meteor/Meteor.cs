@@ -5,10 +5,19 @@ using UnityEngine;
 
 public class Meteor : MonoBehaviour
 {
-    public float range;
-    public float damage;
-    public bool isExploded;
+    [SerializeField] public GameObject explosionPrefab;
+    
+    private float _range;
+    private float _damage;
+    private bool _isExploded;
 
+    public void SetValues(float range, float damage)
+    {
+        _range = range;
+        _damage = damage;
+    }
+
+    //Check for trigger enter with tile road
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<RoadTile>())
@@ -19,18 +28,23 @@ public class Meteor : MonoBehaviour
 
     private void Explode()
     {
-        Debug.Log("Here");
-        if (!isExploded)
+        if (!_isExploded)
         {
-            isExploded = true;
-            Collider[] enemies = Physics.OverlapSphere(transform.position, range , LayerMask.GetMask("Enemy"));
+            _isExploded = true;
+            
+            //Check for enemies in the range
+            Collider[] enemies = Physics.OverlapSphere(transform.position, _range , LayerMask.GetMask("Enemy"));
 
+            //Apply damage for collided enemies
             foreach (Collider enemy in enemies)
             {
                 Enemy e = enemy.GetComponent<Enemy>();
-                e.TakeHit(damage, DamageType.PHYSICAL);
+                e.TakeHit(_damage, DamageType.PHYSICAL);
             }
-        
+
+            //Instantiate particle explotion
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
         }
     }

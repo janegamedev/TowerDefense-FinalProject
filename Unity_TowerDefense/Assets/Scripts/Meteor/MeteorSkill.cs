@@ -4,38 +4,35 @@ using UnityEngine.UI;
 
 public class MeteorSkill : MonoBehaviour
 {
-    public int damage;
-    public int range;
+    [SerializeField] private float damage;
+    [SerializeField] private float range;
+    [SerializeField] private float resetTime;
+    
+    [SerializeField] private GameObject meteor;
+    [SerializeField] private GameObject possibleParticle;
 
-    public Button skillButton;
-    public GameObject meteor;
-    public float resetTime;
+    [SerializeField] private Button skillButton;
+    
     private Vector3 _destination;
     private bool _isSelected;
     private bool _canFire;
     private Camera _camera;
 
-
-    private Texture2D _texture2D;
-    private Texture2D _progressTexture2D;
-    private Color _color;
-    private float _progress;
-    private float _oldProgress;
-    
-    
-    
-    void Start()
+    private void Start()
     {
-        _texture2D = skillButton.image.sprite.texture;
-        _progressTexture2D = _texture2D;
         _camera = Camera.main;
         skillButton.onClick.AddListener(Select);
+        
         resetTime -= Game.Instance._meteorCountDownDecrease;
+        damage *= (1 + Game.Instance._meteorDamageIncrease);
+        range *= (1 + Game.Instance._meteorRangeIncrease);
+        
+        possibleParticle.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        //If skill is selected make a raycast to fire destination
         if (_isSelected)
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
@@ -49,6 +46,7 @@ public class MeteorSkill : MonoBehaviour
             else
             {
                 _canFire = false;
+                possibleParticle.SetActive(false);
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -60,6 +58,18 @@ public class MeteorSkill : MonoBehaviour
             {
                 _isSelected = false;
                 skillButton.interactable = true;
+                possibleParticle.SetActive(false);
+            }
+
+            //Activate particles
+            if (_canFire)
+            {
+                possibleParticle.SetActive(true);
+                possibleParticle.transform.position = _destination + Vector3.up * 0.3f;
+            }
+            else
+            {
+                possibleParticle.SetActive(false);
             }
         }
     }
@@ -68,6 +78,8 @@ public class MeteorSkill : MonoBehaviour
     {
         _isSelected = true;
         skillButton.interactable = false;
+        
+        //TODO: sound of selection skill
     }
 
     private void Fire()
@@ -78,57 +90,29 @@ public class MeteorSkill : MonoBehaviour
             
             _isSelected = false;
             _canFire = false;
-            StartCoroutine(Restart());
 
-            Meteor m = Instantiate(meteor, _destination + Vector3.up * 150, Quaternion.identity).GetComponent<Meteor>();
-            m.damage = damage * (1 + Game.Instance._meteorDamageIncrease);
-            m.range = range * (1 + Game.Instance._meteorRangeIncrease);
-            
+            //Start cooldown for meteor skill
+            StartCoroutine(Cooldown());
+
+            //Instantiate meteor prefab and set values to it
+            Meteor m = Instantiate(meteor, _destination + Vector3.up * 35, Quaternion.identity).GetComponent<Meteor>();
+            m.SetValues(range * (1 + Game.Instance._meteorRangeIncrease), damage * (1 + Game.Instance._meteorDamageIncrease));
+
             _destination = Vector3.zero;
+            possibleParticle.SetActive(false);
         }
     }
 
-    IEnumerator Restart()
+    IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(resetTime);
         skillButton.interactable = true;
+        
+        //TODO: sound of cooldown ends
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawSphere(_destination,range);
     }
-    
-    /*
-    private void ProgressUpdate( float progress,Color overlayColor)
-    {
-        var thisTex = new Texture2D(_texture2D.width, _texture2D.height);
-        Vector2 centre = new Vector2(Mathf.Ceil(thisTex.width/2), Mathf.Ceil(thisTex.height/2));
-
-
-        for (int y = 0; y < thisTex.height; y++)
-        {
-            for (int x = 0; x < thisTex.width; x++)
-            {
-                float angle = Mathf.Atan2(x-centre.x, y-centre.y)*Mathf.Rad2Deg;
-                if (angle < 0)
-                {
-                    angle += 360;
-                }
-
-                Color pixColor = _texture2D.GetPixel(x, y);
-
-                if (angle <= progress * 360)
-                {
-                    pixColor = new Color(pixColor.r, pixColor.g, pixColor.b, overlayColor.a);
-                }
-
-                thisTex.SetPixel(x, y, pixColor);
-            }            
-        }
-        
-        thisTex.Apply();
-    }
-    */
-
 }

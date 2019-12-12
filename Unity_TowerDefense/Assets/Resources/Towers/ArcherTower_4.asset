@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b037dc208094754a8dca393cbd6b8ff, type: 3}
+  m_Name: ArcherTower_4
+  m_EditorClassIdentifier: 
+  type: 0
+  towerImage: {fileID: 21300000, guid: 5208062f320baa748892314e46ee4258, type: 3}
+  towerDescription: 
+  level: 4
+  buildCost: 230
+  damage: 23
+  attackRate: 0.4
+  range: 400
+  speedMultiplayer: 0
+  towerPrefab: {fileID: 8161575880885104807, guid: fbbaa1e56cf930c40ade171cc1cb8a33,
+    type: 3}
+  projectiles:
+  - {fileID: 412038619246575730, guid: 7dbdca0fa287c7841878ffd4b4003bdd, type: 3}
+  - {fileID: 412038619246575730, guid: 270c8d2d84785724f8a6b06a7be55b10, type: 3}
+  - {fileID: 412038619246575730, guid: e81e5a46d79825b4395c743f7268c1bf, type: 3}
+  nextUpgrade: {fileID: 0}

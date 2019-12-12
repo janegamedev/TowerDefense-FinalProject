@@ -222,7 +222,6 @@ public class UpgradeTree : MonoBehaviour
 
     private void ArcherUpgrade(int upgradeLevel)
     {
-        Debug.Log(upgradeLevel);
         if (upgradeLevel < 3)
         {
             archerUpgradeStates[upgradeLevel-1].upgradeState = UpgradeState.BOUGHT;

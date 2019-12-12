@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4884365002741860}
   - component: {fileID: 82589376883831898}
   m_Layer: 0
-  m_Name: PolygonGrenadeMissileSND
+  m_Name: PolygonArrowMissileSND
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21cc5ebb35b190d4487e6d9b9d039520, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ad12fcfcb9b253b4abbe254fda6397a3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -51,7 +51,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 3
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
