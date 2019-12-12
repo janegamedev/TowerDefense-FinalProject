@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0255437d5dfba4b8ea94da8daf33e4, type: 3}
   m_Name: Lava-Level 9
   m_EditorClassIdentifier: 
-  levelName: Level 5
-  level: 0
+  levelName: Level 9
+  level: 9
   mapTexture: {fileID: 2800000, guid: d7423fadba12be941905819056a7bf26, type: 3}
   colorsOnTheMap: []
   hexPrefabs: []
@@ -26,7 +26,7 @@ MonoBehaviour:
   generateGrass: 0
   grassPrefabs: []
   grassAmount: 0
-  generateProps: 0
+  generateProps: 1
   propsPrefabs:
   - {fileID: 1000010961514128, guid: 6cc963073d7c6dc4a9b1e1487ffda630, type: 3}
   - {fileID: 1000011505633412, guid: 5e74835ce4619c94e9996cc209b92921, type: 3}

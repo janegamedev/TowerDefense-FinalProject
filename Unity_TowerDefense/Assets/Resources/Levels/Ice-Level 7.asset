@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0255437d5dfba4b8ea94da8daf33e4, type: 3}
   m_Name: Ice-Level 7
   m_EditorClassIdentifier: 
-  levelName: Level 5
-  level: 0
+  levelName: Level 7
+  level: 7
   mapTexture: {fileID: 2800000, guid: 25212306630fbf14f91119aafc5ab7ac, type: 3}
   colorsOnTheMap: []
   hexPrefabs: []

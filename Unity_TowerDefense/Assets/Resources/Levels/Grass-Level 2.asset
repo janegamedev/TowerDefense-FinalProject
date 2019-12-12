@@ -26,7 +26,6 @@ MonoBehaviour:
   - {fileID: 1000012061500174, guid: 09aab8a904970484d99ec36c27b8bb13, type: 3}
   - {fileID: 1000013125167130, guid: 53973fa484c6ade4891afd59f3e33e3a, type: 3}
   - {fileID: 1000010452107046, guid: d4b8045cf1d6b46ff9f25dc29b2d7c33, type: 3}
-  - {fileID: 1000012079547874, guid: 44bec5580e93cb74cadbf007df511a3d, type: 3}
   treesAmount: 25
   generateGrass: 1
   grassPrefabs:
@@ -39,8 +38,6 @@ MonoBehaviour:
   propsPrefabs:
   - {fileID: 1000012383013900, guid: be44107002abe0046a8a7f08bbf0eef1, type: 3}
   - {fileID: 1000012625864402, guid: d9f771127f198ea40869d419a85f3b89, type: 3}
-  - {fileID: 1000011605502392, guid: 4f15b107783d8d24d815cfb400cbd125, type: 3}
-  - {fileID: 0}
   propsAmount: 10
   waves:
   - enemySets: []

@@ -35,13 +35,12 @@ MonoBehaviour:
   generateTrees: 0
   treesPrefabs:
   - {fileID: 1000010483647360, guid: 0c6f9643e5cf22446b0b326dad2d3a0b, type: 3}
-  - {fileID: 1000013591111464, guid: 43950543e35749041bc8c5b2ad6f8e69, type: 3}
+  - {fileID: 1000012921351502, guid: edefb56f15ddbd94c8ca1cabbc111274, type: 3}
   - {fileID: 1000012458660936, guid: 909b472e39d3ad34c955a4c2eca9c1c9, type: 3}
   - {fileID: 1000010757296548, guid: 82bd0e3eef3cc854eae31c6f4cd718bf, type: 3}
   - {fileID: 1000012061500174, guid: 09aab8a904970484d99ec36c27b8bb13, type: 3}
   - {fileID: 1000013125167130, guid: 53973fa484c6ade4891afd59f3e33e3a, type: 3}
   - {fileID: 1000010452107046, guid: d4b8045cf1d6b46ff9f25dc29b2d7c33, type: 3}
-  - {fileID: 1000012079547874, guid: 44bec5580e93cb74cadbf007df511a3d, type: 3}
   treesAmount: 25
   generateGrass: 0
   grassPrefabs:

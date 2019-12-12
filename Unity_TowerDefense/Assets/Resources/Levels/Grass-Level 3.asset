@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0255437d5dfba4b8ea94da8daf33e4, type: 3}
   m_Name: Grass-Level 3
   m_EditorClassIdentifier: 
-  levelName: Level 2
-  level: 2
-  mapTexture: {fileID: 2800000, guid: 3131ef5ed75744b46b71a760ef682c5d, type: 3}
+  levelName: Level 3
+  level: 3
+  mapTexture: {fileID: 2800000, guid: aa3ed3e09b2168944bce5f4f8d655188, type: 3}
   colorsOnTheMap: []
   hexPrefabs: []
   generateTrees: 1
@@ -26,7 +26,6 @@ MonoBehaviour:
   - {fileID: 1000012061500174, guid: 09aab8a904970484d99ec36c27b8bb13, type: 3}
   - {fileID: 1000013125167130, guid: 53973fa484c6ade4891afd59f3e33e3a, type: 3}
   - {fileID: 1000010452107046, guid: d4b8045cf1d6b46ff9f25dc29b2d7c33, type: 3}
-  - {fileID: 1000012079547874, guid: 44bec5580e93cb74cadbf007df511a3d, type: 3}
   treesAmount: 25
   generateGrass: 1
   grassPrefabs:
