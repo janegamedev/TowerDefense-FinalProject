@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Level 10
   level: 10
-  mapTexture: {fileID: 2800000, guid: f4c1ace97532f2648886bebcf2d04629, type: 3}
+  mapTexture: {fileID: 2800000, guid: 4d4e9ba5e842dd542a7167cc5f9d762f, type: 3}
   colorsOnTheMap:
   - serializedVersion: 2
     rgba: 4282630267
@@ -37,7 +37,7 @@ MonoBehaviour:
   - {fileID: 1000013593877540, guid: 413c0ee9c5b281a42aaccccc0d5d55b6, type: 3}
   - {fileID: 1000011293490030, guid: cb0dba13ded5e57449e9eb590a4638b7, type: 3}
   - {fileID: 1000011132149452, guid: 9d7f29b770d624f689e53cccd7e83eb6, type: 3}
-  treesAmount: 0
+  treesAmount: 10
   generateGrass: 0
   grassPrefabs: []
   grassAmount: 0

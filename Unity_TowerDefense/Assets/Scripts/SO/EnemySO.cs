@@ -8,7 +8,10 @@ public class EnemySO : ScriptableObject
 {
    public string enemyName;
    public Sprite enemyIcon;
-   public string enemyDescription;
+
+    public string enemyDescription;
+    public string enemyDescriptionShort;
+
    public GameObject enemyModel;
    public float health;
    public float armour;

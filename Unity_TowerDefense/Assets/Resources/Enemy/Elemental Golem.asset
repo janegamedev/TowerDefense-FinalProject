@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Elemental Golem
   m_EditorClassIdentifier: 
   enemyName: Elemental Golem
+  enemyIcon: {fileID: 21300000, guid: 2bb908db8ff6e6f4c93b8e3a9359093b, type: 3}
+  enemyDescription: Elemental Golem, the head honcho of all golems. This seemingly
+    diverse golem incompasses the all the elements of the spectrum. It has a enormous
+    amount of health and no armour or magic resistance but moves as slowly as any
+    other golem. It drops 100 bounty upon defeat.
+  enemyDescriptionShort: 'Elemental Golem: 2500 HP, 100 Bounty, Slow Speed'
   enemyModel: {fileID: 1334977650429898, guid: 93c0dd75ddc1c9f4dabe9f061ef19748, type: 3}
   health: 2500
-  damage: 100
-  attackRate: 2.5
   armour: 0
   magicResistance: 0
   speed: 1

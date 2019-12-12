@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Big Orc
   m_EditorClassIdentifier: 
   enemyName: Big Ork
+  enemyIcon: {fileID: 21300000, guid: 3d1f0d61c5361db449f824960fc32c1b, type: 3}
+  enemyDescription: Big Orks, brave battle boars with relatively low health with little
+    to no armor, and no magic resistance. These gluttonous creatures move moderately
+    quickly for their size and drop a bounty of 9 upon defeat.
+  enemyDescriptionShort: 'Big Orks:  60 HP, 65% Magic Resistance 6 Bounty, Fast Speed'
   enemyModel: {fileID: 1293356793197548, guid: 0d42bc61d684259409d481c6f5dd5d5c, type: 3}
   health: 80
-  damage: 6
-  attackRate: 1
   armour: 30
   magicResistance: 0
   speed: 50

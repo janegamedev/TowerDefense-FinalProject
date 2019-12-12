@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Ancient Warrior
   enemyIcon: {fileID: 21300000, guid: a5761d3974d13c54ea4d5c0d0703a160, type: 3}
-  enemyDescription: 
+  enemyDescription: Ancient Warriors, ancestors of an ancient forgotten civilization.
+    These warriors have low health but no armor or magic resistance. They move at
+    a moderate speed and drop 8 bounty upon defeat.
+  enemyDescriptionShort: 'Ancient Warriors:  60 HP, 65% Magic Resistance 6 Bounty,
+    Fast Speed'
   enemyModel: {fileID: 1909744818002174, guid: c7cebe2178705794aa9a9911f182d8c1, type: 3}
   health: 70
   armour: 0

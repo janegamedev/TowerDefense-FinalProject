@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Barbarian Giant
   m_EditorClassIdentifier: 
   enemyName: Barbarian Giant
+  enemyIcon: {fileID: 21300000, guid: 68d4cd2b859e8a54d801756346fcb6bd, type: 3}
+  enemyDescription: Barbarian Giant, a collossal Sasquach of unrivaled herculean strength.
+    This creature has massive amounts of health but no armour or magic resistance.
+    He moves as slow as you would expect and drops 50 bounty upon defeat.
+  enemyDescriptionShort: 'Barbarian Giant: 1000 HP, 50 Bounty, Slow Speed'
   enemyModel: {fileID: 1652650793432430, guid: d9162a78a8deb714a9bddd8038021008, type: 3}
   health: 800
-  damage: 50
-  attackRate: 1
   armour: 0
   magicResistance: 0
   speed: 1
