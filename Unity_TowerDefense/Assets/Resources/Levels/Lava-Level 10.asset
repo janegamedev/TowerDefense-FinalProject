@@ -49,5 +49,41 @@ MonoBehaviour:
   - {fileID: 1000010418045386, guid: b3a2d7a4838ad404eacfdc0ccaf763e6, type: 3}
   - {fileID: 1000011838955668, guid: 10ba00bacc400d349ae0bc6a9bff5abc, type: 3}
   propsAmount: 10
-  waves: []
+  waves:
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 3707d7bd98a0e724ca85652abf3718b5, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 945b3be0906cd5c4c918e9d313e16c6d, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: dfef2e8ca54be494e8bc0a0cf0a4e289, type: 2}
+    - enemyCount: 1
+      enemyData: {fileID: 11400000, guid: 476980310e3e0bc4db4df4740129c072, type: 2}
+    timeBetweenSpawns: 5
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 3707d7bd98a0e724ca85652abf3718b5, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 945b3be0906cd5c4c918e9d313e16c6d, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: dfef2e8ca54be494e8bc0a0cf0a4e289, type: 2}
+    - enemyCount: 1
+      enemyData: {fileID: 11400000, guid: 07694bed1f43787489d8c73ec525473a, type: 2}
+    timeBetweenSpawns: 4
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 5348eb9cb436bf44383128e488c304f6, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 3707d7bd98a0e724ca85652abf3718b5, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 945b3be0906cd5c4c918e9d313e16c6d, type: 2}
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: dfef2e8ca54be494e8bc0a0cf0a4e289, type: 2}
+    - enemyCount: 1
+      enemyData: {fileID: 11400000, guid: a21e62063b96715498bbc2b974c30d55, type: 2}
+    timeBetweenSpawns: 5
   nextLevel: {fileID: 11400000}

@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 3
   towerName: Dwarven Howitzer
   towerImage: {fileID: 21300000, guid: 9496f7d2f6acae64f8eca1faf56ed64f, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 50, attack rate: 2.6 , range 7.'
   buildCost: 320
   damage: 50
   attackRate: 2.6

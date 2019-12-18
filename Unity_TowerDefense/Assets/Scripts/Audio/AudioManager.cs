@@ -6,11 +6,9 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField] private AudioClip menuMusic;
     [SerializeField] private AudioClip levelSelectionMusic;
     [SerializeField] private AudioClip levelMusic;
-    [SerializeField] private AudioMixer musicMixer;
-    [SerializeField] private AudioMixer sfxMixer;
-    
-    [SerializeField] private AudioSource musicAudioSource;
-    [SerializeField] private AudioSource sfxAudioSource;
+
+    [SerializeField] public AudioSource musicAudioSource;
+    [SerializeField] public AudioSource sfxAudioSource;
 
     public AudioClip waveStartSfx;
     public AudioClip liveDecreaseSfx;

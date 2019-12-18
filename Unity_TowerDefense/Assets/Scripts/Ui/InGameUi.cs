@@ -113,12 +113,13 @@ public class InGameUi : MonoBehaviour
         
         enemyImage.sprite = enemy.enemyIcon;
         shadeEnemyImage.sprite = enemy.enemyIcon;
-        enemyDescription.text = enemy.enemyDescription;
+        enemyDescription.text = enemy.enemyDescriptionShort;
         
         enemyPanel.SetActive(true);
     }
     
-    public void ShowTowerDescription(TowerSO tower)
+    //Show tower description after selecting it
+    private void ShowTowerDescription(TowerSO tower)
     {
         if (enemyPanel.activeSelf)
         {
@@ -127,12 +128,12 @@ public class InGameUi : MonoBehaviour
         
         towerImage.sprite = tower.towerImage;
         shadeTowerImage.sprite = tower.towerImage;
-        towerDescription.text = tower.towerDescription;
+        towerDescription.text = tower.towerName + ": " +tower.towerDescription;
         
         towerPanel.SetActive(true);
     }
     
-    public void CloseTowerPanel()
+    private void CloseTowerPanel()
     {
         _selectedTower = null;
         towerPanel.SetActive(false);
@@ -148,7 +149,6 @@ public class InGameUi : MonoBehaviour
         
         enemyPanel.SetActive(false);
     }
-    
 
     private void Update()
     {
@@ -159,12 +159,9 @@ public class InGameUi : MonoBehaviour
         {
             if (hit.collider.GetComponent<Enemy>())
             {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    _selectedEnemy = hit.collider.GetComponent<Enemy>();
-
-                    ShowEnemyDescription(_selectedEnemy.enemySo);
-                }
+                _selectedEnemy = hit.collider.GetComponent<Enemy>();
+                ShowEnemyDescription(_selectedEnemy.enemySo);
+                
             }
             else if(hit.collider.GetComponent<Tower>())
             {
@@ -178,15 +175,11 @@ public class InGameUi : MonoBehaviour
         else
         {
             CloseTowerPanel();
-        }
-
-        if (Input.GetMouseButtonDown(0) && _selectedEnemy != null)
-        {
             CloseEnemyPanel();
         }
     }
     
-    public void PlayClickSfx()
+    private void PlayClickSfx()
     {
         _audioSource.Stop();
         _audioSource.clip = buttonClickSfx;

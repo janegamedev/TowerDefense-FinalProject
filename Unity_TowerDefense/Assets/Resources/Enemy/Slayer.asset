@@ -20,7 +20,7 @@ MonoBehaviour:
   enemyDescriptionShort: 'Slayers: 450 HP, 30% armor, 25 Bounty, Fast Speed'
   enemyModel: {fileID: 1033247876357254, guid: b2739774a07ffdb459c1bd60e3ef4f10, type: 3}
   health: 450
-  armour: 30
+  armour: 0.3
   magicResistance: 0
   speed: 3
   bounty: 25

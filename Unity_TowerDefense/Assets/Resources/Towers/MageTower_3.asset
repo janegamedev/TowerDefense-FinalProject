@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 3
   towerName: Wizard Tower
   towerImage: {fileID: 21300000, guid: 72f77ec67f82f7347865c178ce77e359, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 67, attack rate: 1.5 , range 7.'
   buildCost: 240
   damage: 67
   attackRate: 1.5

@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 1
   towerName: Arcane User
   towerImage: {fileID: 21300000, guid: 72f77ec67f82f7347865c178ce77e359, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 15, attack rate: 1.6 , range 5.'
   buildCost: 100
   damage: 15
   attackRate: 1.6

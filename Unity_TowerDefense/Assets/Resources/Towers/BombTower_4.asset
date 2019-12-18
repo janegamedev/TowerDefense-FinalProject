@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 4
   towerName: 500mm Big Bertha
   towerImage: {fileID: 21300000, guid: 9496f7d2f6acae64f8eca1faf56ed64f, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 80, attack rate: 3.5 , range 11.'
   buildCost: 400
   damage: 80
   attackRate: 3.5

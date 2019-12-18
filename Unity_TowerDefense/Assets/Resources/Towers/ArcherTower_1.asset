@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 1
   towerName: Archer Tower
   towerImage: {fileID: 21300000, guid: 5208062f320baa748892314e46ee4258, type: 3}
-  towerDescription: This is archer tower
+  towerDescription: 'damage 5, attack rate: 1.2 , range 5.'
   buildCost: 70
   damage: 5
   attackRate: 1.2

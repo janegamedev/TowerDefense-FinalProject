@@ -20,7 +20,7 @@ MonoBehaviour:
   enemyDescriptionShort: 'Big Orks:  60 HP, 65% Magic Resistance 6 Bounty, Fast Speed'
   enemyModel: {fileID: 1293356793197548, guid: 0d42bc61d684259409d481c6f5dd5d5c, type: 3}
   health: 80
-  armour: 30
+  armour: 0.3
   magicResistance: 0
   speed: 3
   bounty: 9

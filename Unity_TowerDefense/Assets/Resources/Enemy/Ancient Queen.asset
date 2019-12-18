@@ -21,7 +21,7 @@ MonoBehaviour:
   enemyDescriptionShort: 'Ancient Queens: 300 HP, 80% Armour, 25 Bounty, Slow Speed'
   enemyModel: {fileID: 1666678542618180, guid: 02ac59dea0bf44d4d87bba04f0a6ca33, type: 3}
   health: 300
-  armour: 80
+  armour: 0.8
   magicResistance: 0
   speed: 3
   bounty: 25

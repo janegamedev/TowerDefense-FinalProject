@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 4
   towerName: Mages Guild
   towerImage: {fileID: 21300000, guid: 72f77ec67f82f7347865c178ce77e359, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 110, attack rate: 2 , range 11.'
   buildCost: 300
   damage: 110
   attackRate: 2

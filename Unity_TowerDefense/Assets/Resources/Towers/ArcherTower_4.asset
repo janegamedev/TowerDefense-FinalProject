@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 4
   towerName: Rangers Hideout
   towerImage: {fileID: 21300000, guid: 5208062f320baa748892314e46ee4258, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 23, attack rate: 0.6 , range 11.'
   buildCost: 230
   damage: 23
   attackRate: 0.6

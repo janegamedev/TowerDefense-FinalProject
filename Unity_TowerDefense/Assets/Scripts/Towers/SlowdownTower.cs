@@ -34,7 +34,7 @@ public class SlowdownTower : Tower
     }
 
     //Reset speed multiplier on roadTiles
-    private void OnDestroy()
+    private void OnDisable()
     {
         foreach (var roadTile in roadTiles)
         {

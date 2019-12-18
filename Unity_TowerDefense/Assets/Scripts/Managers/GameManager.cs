@@ -32,7 +32,7 @@ public class GameManager : Singleton<GameManager>
 
     [HideInInspector] public string currentPath;
     [HideInInspector] public Game currentGame;
-        [HideInInspector] public LevelSO currentLevelSo;
+    [HideInInspector] public LevelSO currentLevelSo;
     private ProgressSceneLoader _progressSceneLoader;
     
     private void Start()

@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 1
   towerName: Dwarven Bombard
   towerImage: {fileID: 21300000, guid: 9496f7d2f6acae64f8eca1faf56ed64f, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 13, attack rate: 3 , range 5.'
   buildCost: 125
   damage: 13
   attackRate: 3

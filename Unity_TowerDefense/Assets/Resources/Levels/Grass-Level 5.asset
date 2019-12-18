@@ -54,5 +54,17 @@ MonoBehaviour:
   - {fileID: 1000012383013900, guid: be44107002abe0046a8a7f08bbf0eef1, type: 3}
   - {fileID: 1000012191212250, guid: 02b6852f899a15d44957b934349e7e9a, type: 3}
   propsAmount: 5
-  waves: []
+  waves:
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: 945b3be0906cd5c4c918e9d313e16c6d, type: 2}
+    - enemyCount: 10
+      enemyData: {fileID: 11400000, guid: ae6965614fe99e7409d59a3fe7d074ec, type: 2}
+    timeBetweenSpawns: 2.5
+  - enemySets:
+    - enemyCount: 5
+      enemyData: {fileID: 11400000, guid: fc4fb23508f21454a8cfe498de81af83, type: 2}
+    - enemyCount: 1
+      enemyData: {fileID: 11400000, guid: 507776e611fe9c644a2652bc35035d2c, type: 2}
+    timeBetweenSpawns: 4
   nextLevel: {fileID: 11400000, guid: daf40ea8d53012a4397c0a05dac5f807, type: 2}

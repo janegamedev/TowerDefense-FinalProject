@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 2
   towerName: Marksmen Tower
   towerImage: {fileID: 21300000, guid: 5208062f320baa748892314e46ee4258, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 9, attack rate: 1.1 , range 5.'
   buildCost: 110
   damage: 9
   attackRate: 1.1

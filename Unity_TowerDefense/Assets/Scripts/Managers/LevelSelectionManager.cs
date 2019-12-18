@@ -16,6 +16,8 @@ public class LevelSelectionManager : MonoBehaviour
 
     private void Init()
     {
+        pin.enabled = false;
+        
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i].score = _game.levelScore[i];

@@ -6535,6 +6535,7 @@ GameObject:
   - component: {fileID: 3346523944284260188}
   - component: {fileID: 3346523944284260186}
   - component: {fileID: 3346523944284260187}
+  - component: {fileID: 3346523944284260190}
   m_Layer: 5
   m_Name: Setting_pnl
   m_TagString: Untagged
@@ -6542,6 +6543,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &3346523944284260190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346523944284260189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf6cbc73c214e34782d1cf082b12af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 7502612622677918488}
+  sfxSlider: {fileID: 7502612623407081856}
 --- !u!1001 &6993036081779011622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18268,7 +18283,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 13.5, y: 0}
-  m_SizeDelta: {x: 75, y: 50}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &7502612623778865611
 MonoBehaviour:
@@ -19185,7 +19200,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 13.5, y: 0}
-  m_SizeDelta: {x: 75, y: 50}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &7502612624244917817
 MonoBehaviour:

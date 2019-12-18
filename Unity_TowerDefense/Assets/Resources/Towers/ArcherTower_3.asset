@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 3
   towerName: Sharpshooter Tower
   towerImage: {fileID: 21300000, guid: 5208062f320baa748892314e46ee4258, type: 3}
-  towerDescription: 
+  towerDescription: 'damage 14, attack rate: 0.8 , range 7.'
   buildCost: 160
   damage: 14
   attackRate: 0.8

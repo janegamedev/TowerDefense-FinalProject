@@ -23,6 +23,6 @@ MonoBehaviour:
   enemyModel: {fileID: 1024577810811178, guid: a744caf4676601646ab2385371d1d140, type: 3}
   health: 2800
   armour: 0
-  magicResistance: 80
+  magicResistance: 0.8
   speed: 3
   bounty: 100
