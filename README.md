@@ -1,5 +1,5 @@
-# TowerDefense-FinalProject
 # Tower defense
+
 
 Towers and tiles is a simple tower defense game which could be released as a simple single player game. The goal of the game is to complete all the game levels by surviving waves of enemies. You will do this by managing your towers and killing incoming enemies. The tactical part of the game is to buy upgrades for your turrets and towers in different ways so all kinds of enemies can be killed. 
 
