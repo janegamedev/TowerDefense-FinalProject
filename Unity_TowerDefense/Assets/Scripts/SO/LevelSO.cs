@@ -28,6 +28,4 @@ public class LevelSO : ScriptableObject
     public Wave[] waves;
     
     public LevelSO nextLevel;
-    
-    
 }

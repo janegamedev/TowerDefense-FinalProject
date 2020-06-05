@@ -18,5 +18,4 @@ public class EnemySO : ScriptableObject
    public float magicResistance;
    public float speed;
    public int bounty;
-
 }
