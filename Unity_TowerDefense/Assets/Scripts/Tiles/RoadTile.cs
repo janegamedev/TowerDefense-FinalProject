@@ -22,7 +22,6 @@ public class RoadTile : Tile
         }
         
         Collider[] n = Physics.OverlapSphere(transform.position, r , LayerMask.GetMask("Road"));
-        Debug.Log(n.Length);
 
         bool isPropagated = false;
         

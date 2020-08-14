@@ -167,7 +167,7 @@ public class GameManager : Singleton<GameManager>
                 break;
             
             case GameState.RUNNING:
-                FindObjectOfType<GridGenerator>().Init(currentLevelSo);
+                FindObjectOfType<MapGenerator>().Init(currentLevelSo);
                 
                 break;
             

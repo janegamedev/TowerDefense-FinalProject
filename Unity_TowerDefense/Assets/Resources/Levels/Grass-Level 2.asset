@@ -12,26 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0255437d5dfba4b8ea94da8daf33e4, type: 3}
   m_Name: Grass-Level 2
   m_EditorClassIdentifier: 
-  levelName: Level 2
   level: 2
   mapTexture: {fileID: 2800000, guid: 3131ef5ed75744b46b71a760ef682c5d, type: 3}
-  colorsOnTheMap:
-  - serializedVersion: 2
-    rgba: 4282630267
-  - serializedVersion: 2
-    rgba: 4288214269
-  - serializedVersion: 2
-    rgba: 4281759731
-  - serializedVersion: 2
-    rgba: 4291793411
-  - serializedVersion: 2
-    rgba: 4281680110
-  hexPrefabs:
-  - {fileID: 7964574990969819995, guid: 900c1ea46e27e5e4986d95919f1d719b, type: 3}
-  - {fileID: 8424888964113779772, guid: 199c00d4ac1487b45bf587f6e54c51ce, type: 3}
-  - {fileID: 964846686215295832, guid: 49cb8bbe63c2bc5468cb28718a7e7eee, type: 3}
-  - {fileID: 9052206117752635279, guid: 120139d7f5083a94fa7002c807e4aa48, type: 3}
-  - {fileID: 8424888964113779772, guid: 8cfbc302d4bf5214fae91269af3e2e9c, type: 3}
+  configs:
+  - color:
+      serializedVersion: 2
+      rgba: 4282630267
+    hexPrefab: {fileID: 7964574990969819995, guid: 900c1ea46e27e5e4986d95919f1d719b,
+      type: 3}
+  - color:
+      serializedVersion: 2
+      rgba: 4288214269
+    hexPrefab: {fileID: 8424888964113779772, guid: 199c00d4ac1487b45bf587f6e54c51ce,
+      type: 3}
+  - color:
+      serializedVersion: 2
+      rgba: 4281759731
+    hexPrefab: {fileID: 964846686215295832, guid: 49cb8bbe63c2bc5468cb28718a7e7eee,
+      type: 3}
+  - color:
+      serializedVersion: 2
+      rgba: 4291793411
+    hexPrefab: {fileID: 9052206117752635279, guid: 120139d7f5083a94fa7002c807e4aa48,
+      type: 3}
+  - color:
+      serializedVersion: 2
+      rgba: 4281680110
+    hexPrefab: {fileID: 8424888964113779772, guid: 8cfbc302d4bf5214fae91269af3e2e9c,
+      type: 3}
   generateTrees: 1
   treesPrefabs:
   - {fileID: 1000011409013810, guid: 6b664b526df62ee41be7b9d307dedd81, type: 3}

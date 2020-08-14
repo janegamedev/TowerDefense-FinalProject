@@ -4,91 +4,50 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-public class GridGenerator : MonoBehaviour
+public class MapGenerator : MonoBehaviour
 {
-    public LevelSO levelSo;
     public Transform[] tileRoots;
     
-    private Texture2D mapTexture;
-    private Color32[] colors;
-    private GameObject[] hexPrefabs;
-
+    private LevelSO _levelData;
     private Tile[,] _grid;
-
-    private float _hexW;
-    private float _hexH;
+    private int _mapW, _mapH;
+    private float _hexW, _hexH;
     private Vector3 _startPosition = Vector3.zero;
-
     private RoadTile _endTile;
-
-    private bool _generateTrees = false;
-    private GameObject[] _treesPrefabs;
-    private int _treesAmount;
     
-    private bool _generateGrass = false;
-    private GameObject[] _grassPrefabs;
-    private int _grassAmount;
-
-    private bool _generateProps = false;
-    private GameObject[] _propsPrefabs;
-    private int _propsAmount;
-
     public void Init(LevelSO data)
     {
-        levelSo = data;
-        mapTexture = data.mapTexture;
-        colors = data.colorsOnTheMap;
-        hexPrefabs = data.hexPrefabs;
-        _generateTrees = data.generateTrees;
-
-        if (_generateTrees)
-        {
-            _treesPrefabs = data.treesPrefabs;
-            _treesAmount = data.treesAmount;
-        }
+        _levelData = data;
+        _mapW = _levelData.mapTexture.width;
+        _mapH = _levelData.mapTexture.height;
         
-        _generateGrass = data.generateGrass;
+        _grid = new Tile[_mapW, _mapH];
 
-        if (_generateGrass)
-        {
-            _grassPrefabs = data.grassPrefabs;
-            _grassAmount = data.grassAmount;
-        }
+        Vector3 size = _levelData.configs[0].hexPrefab.GetComponent<Renderer>().bounds.size;
         
-        _generateProps = data.generateProps;
+        _hexW = size.x / 2;
+        _hexH = size.z / 2;
 
-        if (_generateProps)
-        {
-            _propsPrefabs = data.propsPrefabs;
-            _propsAmount = data.propsAmount;
-        }
-        
-        _grid = new Tile[mapTexture.width, mapTexture.height];
-        
-        _hexW = hexPrefabs[0].GetComponent<Renderer>().bounds.size.x / 2;
-        _hexH = hexPrefabs[0].GetComponent<Renderer>().bounds.size.z / 2;
-
-        _startPosition.x = -_hexW * 1.5f * (mapTexture.width / 2);
-        _startPosition.z =_hexH * 2 * (mapTexture.width / 2);
+        _startPosition.x = -_hexW * 1.5f * (_mapW / 2);
+        _startPosition.z =_hexH * 2 * (_mapW / 2);
 
         CreateGrid();
         GenerateEnv();
         
         Invoke("BuildRoads", 0.1f );
         Invoke("GenerateWaves", 0.2f );
-        
     }
     
     void CreateGrid()
     {
-        for (int y = 0; y < mapTexture.height; y++)
+        for (int y = 0; y < _mapH; y++)
         {
-            for (int x = 0; x < mapTexture.width; x++)
+            for (int x = 0; x < _mapW; x++)
             {
                 Vector2Int gridPos = new Vector2Int(x,y);
 
-                int index = GetTileFromImage(x, y);
-                Tile hex = Instantiate(hexPrefabs[index], tileRoots[index]).GetComponent<Tile>();
+                int index = GetTileIndexFromImage(x, y);
+                Tile hex = Instantiate(_levelData.configs[index].hexPrefab, tileRoots[index]).GetComponent<Tile>();
                 hex.SetGridPosition(gridPos);
                 hex.transform.localPosition = CalcWorldPos(gridPos);
                 _grid[x,y] = hex;
@@ -103,10 +62,9 @@ public class GridGenerator : MonoBehaviour
         List<Tile> tilesTrees = new List<Tile>();
         List<Tile> tilesProps = new List<Tile>();
         
-        if (_generateTrees)
+        if (_levelData.generateTrees)
         {
-            
-            for (int i = 0; i < _treesAmount; i++)
+            for (int i = 0; i < _levelData.treesAmount; i++)
             {
                 int index = Random.Range(0, tileRoots[0].childCount);
                 Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
@@ -117,21 +75,21 @@ public class GridGenerator : MonoBehaviour
                 }
                 else
                 {
-                    _treesAmount++;
+                    _levelData.treesAmount++;
                 }
             }
             
             foreach (var tile in tilesTrees)
             {
-                int index = Random.Range(0, _treesPrefabs.Length);
+                int index = Random.Range(0, _levelData.treesPrefabs.Length);
                 Quaternion rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-                GameObject tree = Instantiate(_treesPrefabs[index], tile.transform.position, rotation, root);
+                GameObject tree = Instantiate(_levelData.treesPrefabs[index], tile.transform.position, rotation, root);
             }
         }
 
-        if (_generateGrass)
+        if (_levelData.generateGrass)
         {
-            for (int j = 0; j < _grassAmount; j++)
+            for (int j = 0; j < _levelData.grassAmount; j++)
             {
                 int index = Random.Range(0, tileRoots[0].childCount);
                 Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
@@ -139,13 +97,13 @@ public class GridGenerator : MonoBehaviour
                 Vector3 pos = tile.transform.position + Random.insideUnitSphere * 2;
                 pos.y = root.position.y;
                 Quaternion rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-                GameObject gr = Instantiate(_grassPrefabs[Random.Range(0, _grassPrefabs.Length)], pos, rotation, root);
+                GameObject gr = Instantiate(_levelData.grassPrefabs[Random.Range(0, _levelData.grassPrefabs.Length)], pos, rotation, root);
             }
         }
 
-        if (_generateProps)
+        if (_levelData.generateProps)
         {
-            for (int i = 0; i < _propsAmount; i++)
+            for (int i = 0; i < _levelData.propsAmount; i++)
             {
                 int index = Random.Range(0, tileRoots[0].childCount);
                 Tile tile = tileRoots[0].GetChild(index).GetComponent<Tile>();
@@ -158,12 +116,11 @@ public class GridGenerator : MonoBehaviour
             
             foreach (var tile in tilesProps)
             {
-                int index = Random.Range(0, _propsPrefabs.Length);
+                int index = Random.Range(0, _levelData.propsPrefabs.Length);
                 Quaternion rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-                GameObject building = Instantiate(_propsPrefabs[index], tile.transform.position, rotation, root);
+                GameObject building = Instantiate(_levelData.propsPrefabs[index], tile.transform.position, rotation, root);
             }
         }
-
     }
 
     private void BuildRoads()
@@ -175,17 +132,17 @@ public class GridGenerator : MonoBehaviour
 
     private void GenerateWaves()
     {
-        FindObjectOfType<WavesManager>().Init(levelSo);
+        FindObjectOfType<WavesManager>().Init(_levelData);
     }
     
-    int GetTileFromImage(int x, int y)
+    private int GetTileIndexFromImage(int x, int y)
     {
-        Color32 pixelColor = mapTexture.GetPixel(x, mapTexture.height - 1 - y);
+        Color32 pixelColor = _levelData.mapTexture.GetPixel(x, _mapH - 1 - y);    // y offset for converting to hexagonal system
 
-        int index = 0; 
-        for (int i = 0; i < colors.Length; i++)
+        int index = 0;
+        for (int i = 0; i < _levelData.configs.Length; i++)
         {
-            if (colors[i].Equals(pixelColor))
+            if (_levelData.configs[i].color.Equals(pixelColor))
             {
                 index = i;
             }
@@ -198,7 +155,7 @@ public class GridGenerator : MonoBehaviour
     {
         float x = _startPosition.x + gridPos.x * (_hexW * 1.5f);
         float y = _startPosition.z - (gridPos.y * _hexH * 2) - (gridPos.x % 2 * _hexH);
-        
+
         return new Vector3(x,0 ,y);
     }
 }

@@ -1,17 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Level", menuName = "Level/New Level", order = 1)]
 public class LevelSO : ScriptableObject
 {
-    public string levelName;
     public int level;
     public Texture2D mapTexture;
-    public Color32[] colorsOnTheMap;
     
-    public GameObject[] hexPrefabs;
+    public TileColorConfig[] configs;
     
     public bool generateTrees;
     public GameObject[] treesPrefabs;
@@ -28,4 +23,11 @@ public class LevelSO : ScriptableObject
     public Wave[] waves;
     
     public LevelSO nextLevel;
+}
+
+[System.Serializable]
+public class TileColorConfig
+{
+    public Color32 color;
+    public GameObject hexPrefab;
 }
